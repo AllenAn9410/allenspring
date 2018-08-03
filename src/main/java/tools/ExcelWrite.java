@@ -12,7 +12,7 @@ import org.apache.poi.hssf.usermodel.HSSFWorkbook;
  *
  * @author  allen.an
  */
-public class ExcelLoad {
+public class ExcelWrite {
     private String targetPath = null;
     private int startPosition = 0;
     private int excelLine = 1;
@@ -30,11 +30,11 @@ public class ExcelLoad {
      * @param params excel header
      *
      */
-    public ExcelLoad(String path,String[] params){
+    public ExcelWrite(String path,String[] params){
         this(path,params,0);
     }
 
-    public ExcelLoad(String path,String[] params,int startPos){
+    public ExcelWrite(String path,String[] params,int startPos){
         try {
             if (isEmpty(path)){
                 throw new Exception("the path is empty!");

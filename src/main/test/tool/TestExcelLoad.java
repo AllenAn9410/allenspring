@@ -1,7 +1,7 @@
 package tool;
 
 import org.junit.jupiter.api.Test;
-import tools.ExcelLoad;
+import tools.ExcelWrite;
 
 public class TestExcelLoad {
     @Test
@@ -9,7 +9,7 @@ public class TestExcelLoad {
         String excelPath = "./target/target.xls";
         String[] params = {"name","age"};
         String[] values = {"allen","24"};
-        ExcelLoad el = new ExcelLoad(excelPath,params);
+        ExcelWrite el = new ExcelWrite(excelPath,params);
         try{
             el.load(values);
         }catch (Exception e){

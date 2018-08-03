@@ -10,7 +10,7 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import static tools.ExcelLoad.isEmpty;
+import static tools.ExcelWrite.isEmpty;
 
 public class ExcelRead {
     private static int sheetAt = 0;

@@ -13,16 +13,13 @@ import java.util.List;
 import static tools.ExcelLoad.isEmpty;
 
 public class ExcelRead {
-    private int sheetAt = 0;
-    public ExcelRead(String path ){
-        readExcel(path,0);
+    private static int sheetAt = 0;
+
+    public static List<String[]> readExcel(String path){
+        return readExcel(path,sheetAt);
     }
 
-    public ExcelRead(String path,int sheetAt ){
-        readExcel(path,sheetAt);
-    }
-
-    public static List<String[]> readExcel(String path,int sheetAt){
+    public static List<String[]> readExcel(String path,int sheetAt ){
         File file = null;
         InputStream is = null;
         List<String[]> list = new ArrayList<String[]>();

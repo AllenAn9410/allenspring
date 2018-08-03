@@ -8,7 +8,8 @@ public class TestExcelRead {
     public void test(){
         String path = "./target/target2.xls";
         int sheetAt = 1;
-        ExcelRead er = new ExcelRead(path,sheetAt);
+        ExcelRead er = new ExcelRead();
+        er.readExcel(path,sheetAt);
     }
 
 

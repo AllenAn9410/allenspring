@@ -36,7 +36,7 @@ public class ExcelLoad {
 
     public ExcelLoad(String path,String[] params,int startPos){
         try {
-            if (!isEmpty(path)){
+            if (isEmpty(path)){
                 throw new Exception("the path is empty!");
             } else if (!(new File(path)).exists()){
                 throw new Exception("the path do not exist!");

@@ -5,7 +5,7 @@ import java.util.*;
 
 import static tools.ExcelWrite.isEmpty;
 
-public class analyData {
+public class AnalyData {
     public static void main (String[]args){
         collection();
     }
@@ -37,11 +37,5 @@ public class analyData {
             ew.load(row);
         }
         ew.close();
-
-
     }
-
-
-
-
 }

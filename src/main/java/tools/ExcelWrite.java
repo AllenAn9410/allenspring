@@ -7,6 +7,7 @@ import java.io.IOException;
 import org.apache.poi.hssf.usermodel.HSSFRow;
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.json.JSONObject;
 
 /**
  *
@@ -34,18 +35,19 @@ public class ExcelWrite {
         this(path,params,0);
     }
 
-    public ExcelWrite(String path,String[] params,int startPos){
+    public ExcelWrite(String path,String[] params,int startRowPos){
         try {
             if (isEmpty(path)){
                 throw new Exception("the path is empty!");
             } else if (!(new File(path)).exists()){
-                throw new Exception("the path do not exist!");
+                (new File(path)).createNewFile();
+                // throw new Exception("the path do not exist!");
+                System.out.println("the path do not exist and create a new one");
             }
-
             setHeaderLength(params);
 
             this.targetPath = path;
-            this.startPosition = startPos;
+            this.startPosition = startRowPos;
 
             wb=new HSSFWorkbook();
             sheet=wb.createSheet("input");
@@ -106,7 +108,8 @@ public class ExcelWrite {
 
     }
 
-    public void close() {
+    public JSONObject close() {
+        JSONObject jsonObject = new JSONObject();
         try {
             wb.write(out);
         } catch (IOException e) {
@@ -118,6 +121,8 @@ public class ExcelWrite {
                 e.printStackTrace();
             }
         }
+        jsonObject.put("msg",excelLine);
+        return jsonObject;
     }
 
     public static boolean isEmpty(String str){
@@ -126,6 +131,4 @@ public class ExcelWrite {
         }
         return false;
     }
-
-
 }

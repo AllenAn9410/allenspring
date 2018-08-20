@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <tags>
+        <tag>
+            <tag-code>B3</tag-code>
+            <tag-desc>Incoming SWIFT Header 3</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>B4</tag-code>
+            <tag-desc>Incoming SWIFT Header 4</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>B5</tag-code>
+            <tag-desc>Incoming SWIFT Header 5</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>B6</tag-code>
+            <tag-desc>Incoming SWIFT Header 6</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>119</tag-code>
+            <tag-desc>Block 3</tag-desc>
+            <tag-form>3</tag-form>
+            <segment-1 cols="3" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>103</tag-code>
+            <tag-desc>EBA Indication</tag-desc>
+            <tag-form>3</tag-form>
+            <segment-1 cols="3" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>20</tag-code>
+            <tag-desc>Sender's Reference</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="16" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>13C</tag-code>
+            <tag-desc>Time Indication</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="19" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>23B</tag-code>
+            <tag-desc>Bank Operation Code</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="4" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>23E</tag-code>
+            <tag-desc>Instruction Code</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>32A</tag-code>
+            <tag-desc>ValueDate/Currency/InterbankSettled Amt</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="24" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>26T</tag-code>
+            <tag-desc>Transaction Type Code</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="3" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>33B</tag-code>
+            <tag-desc>Currency/Instructed Amount</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="18" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>36</tag-code>
+            <tag-desc>Exchange Rate</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="12" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>50A</tag-code>
+            <tag-desc>Ordering Customer</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="11" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>50K</tag-code>
+            <tag-desc>Ordering Customer</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="35" illegal-char="" rows="4"/>
+        </tag>
+        <tag>
+            <tag-code>50F</tag-code>
+            <tag-desc>Ordering Customer</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="35" illegal-char="" rows="4"/>
+        </tag>
+        <tag>
+            <tag-code>51A</tag-code>
+            <tag-desc>Sending Institution</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="11" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>52A</tag-code>
+            <tag-desc>Ordering Institution</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="11" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>52D</tag-code>
+            <tag-desc>Ordering Institution</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="35" illegal-char="" rows="4"/>
+        </tag>
+        <tag>
+            <tag-code>53A</tag-code>
+            <tag-desc>Sender's Correspondent</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="11" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>53D</tag-code>
+            <tag-desc>Sender's Correspondent</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="35" illegal-char="" rows="4"/>
+        </tag>
+        <tag>
+            <tag-code>53B</tag-code>
+            <tag-desc>Sender's Correspondent</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="35" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>54A</tag-code>
+            <tag-desc>Receiver's Correspondent</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="11" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>54D</tag-code>
+            <tag-desc>Receiver's Correspondent</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="35" illegal-char="" rows="4"/>
+        </tag>
+        <tag>
+            <tag-code>54B</tag-code>
+            <tag-desc>Receiver's Correspondent</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="35" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>55A</tag-code>
+            <tag-desc>Third Reimbursement Institution</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="11" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>55D</tag-code>
+            <tag-desc>Third Reimbursement Institution</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="35" illegal-char="" rows="4"/>
+        </tag>
+        <tag>
+            <tag-code>55B</tag-code>
+            <tag-desc>Third Reimbursement Institution</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="35" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>56A</tag-code>
+            <tag-desc>Intermediary Institution</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="11" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>56D</tag-code>
+            <tag-desc>Intermediary Institution</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="35" illegal-char="" rows="4"/>
+        </tag>
+        <tag>
+            <tag-code>56C</tag-code>
+            <tag-desc>Intermediary Institution</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>57A</tag-code>
+            <tag-desc>Account With Institution</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="11" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>57D</tag-code>
+            <tag-desc>Account With Institution</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="35" illegal-char="" rows="4"/>
+        </tag>
+        <tag>
+            <tag-code>57C</tag-code>
+            <tag-desc>Account With Institution</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>57B</tag-code>
+            <tag-desc>Account With Institution</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="35" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>59</tag-code>
+            <tag-desc>Beneficiary Customer</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="35" illegal-char="" rows="4"/>
+        </tag>
+        <tag>
+            <tag-code>59A</tag-code>
+            <tag-desc>Beneficiary Customer</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="11" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>59F</tag-code>
+            <tag-desc>Beneficiary Customer</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="35" illegal-char="" rows="4"/>
+        </tag>
+        <tag>
+            <tag-code>70</tag-code>
+            <tag-desc>Remittance Information</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="4"/>
+        </tag>
+        <tag>
+            <tag-code>71A</tag-code>
+            <tag-desc>Details of Charges</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="3" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>71F</tag-code>
+            <tag-desc>Sender's Charges</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="18" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>71G</tag-code>
+            <tag-desc>Receiver's Charges</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="18" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>72</tag-code>
+            <tag-desc>Sender to Receiver Information</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="6"/>
+        </tag>
+        <tag>
+            <tag-code>77B</tag-code>
+            <tag-desc>Regulatory Reporting</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="3"/>
+        </tag>
+        <tag>
+            <tag-code>77T</tag-code>
+            <tag-desc>Envelope Contents</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="60" illegal-char="" rows="150"/>
+        </tag>
+        <tag>
+            <tag-code>79</tag-code>
+            <tag-desc>Message Status</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="50" illegal-char="" rows="1"/>
+        </tag>
+    </tags>
+</root>

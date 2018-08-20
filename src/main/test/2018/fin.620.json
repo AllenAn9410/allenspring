@@ -1,0 +1,454 @@
+{
+  "MT620": {
+    "SeqA": {
+      "F15A": "NULL_Type",
+      "F20": "16x",
+      "F21": "16x{0,1}",
+      "F22A": "4!c(AMND|CANC|DUPL|NEWT)",
+      "F94A": "4!c(AGNT|BILA|BROK){0,1}",
+      "F22B": "4!c(CONF|MATU|ROLL)",
+      "F21N": "16x{0,1}",
+      "Choice_82ADJ": {
+        "F82A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F82D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "F82J": "5*40x"
+      },
+      "Choice_87ADJ": {
+        "F87A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F87D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "F87J": "5*40x"
+      },
+      "Choice_83ADJ": {
+        "F83A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F83D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "F83J": "5*40x",
+        "@occur": "{0,1}"
+      },
+      "F26C": {
+        "DeliveryDetails": "3!a(CFR|CIF|CIP|CPT|DAF|DDP|DDU|DEQ|DES|DTD|EXW|FAS|FCA|FOB|LOC|OTH){0,1}",
+        "DeliveryLocation": "'/'15x",
+        "Allocation": "'/'5!a(ALLOC|UNALL)",
+        "Type": "4!a(ALUM|COPP|GOLD|IRID|LEAD|NICK|OSMI|OTHR|PALL|PLAT|POIL|RHOD|RUTH|SILV|STEE|TINA|TITA|ZINC|AMEG|ANUG|BRIT|COIN|CORO|DUCA|FRFR|GECU|KRUG|LBTY|MAPL|MEXP|NBUF|NOBL|NSOV|OSOV|SAEG|SECU|STAT|VREN)",
+        "Denomination": "4x{0,1}",
+        "Form": "'//'8x{0,1}"
+      },
+      "F77D": "6*35x{0,1}"
+    },
+    "SeqB": {
+      "F15B": "NULL_Type",
+      "F17R": "1!a(B|L)",
+      "F30T": "YYYYMMDD",
+      "F30V": "YYYYMMDD",
+      "F30P": "YYYYMMDD",
+      "Choice_32BF": {
+        "F32B": {
+          "Currency": "3!a",
+          "Amount": "15d"
+        },
+        "F32F": {
+          "Unit": "3!a(FOZ|GOZ|GRM|KLO|LIT|LOT|OTH|PND|TAL|TOL|TON|TOZ|UNT)",
+          "Amount": "15d"
+        }
+      },
+      "Choice_32HR": {
+        "F32H": {
+          "Sign": "N{0,1}",
+          "Currency": "3!a",
+          "Amount": "15d"
+        },
+        "F32R": {
+          "Sign": "N{0,1}",
+          "Unit": "3!a(FOZ|GOZ|GRM|KLO|LIT|LOT|OTH|PND|TAL|TOL|TON|TOZ|UNT)",
+          "Amount": "15d"
+        },
+        "@occur": "{0,1}"
+      },
+      "F30X": "YYYYMMDD{0,1}",
+      "Choice_34EJ": {
+        "F34E": {
+          "Sign": "N{0,1}",
+          "Currency": "3!a",
+          "Amount": "15d"
+        },
+        "F34J": {
+          "Sign": "N{0,1}",
+          "Unit": "3!a(FOZ|GOZ|GRM|KLO|LIT|LOT|OTH|PND|TAL|TOL|TON|TOZ|UNT)",
+          "Amount": "15d"
+        }
+      },
+      "F37G": {
+        "Sign": "N{0,1}",
+        "Rate": "12d"
+      },
+      "F14D": "7x(30E/360|360/360|ACT/360|ACT/365|AFI/365)",
+      "F30F": "YYYYMMDD{0,1}",
+      "F38J": {
+        "Indicator": "1!a(D|M)",
+        "Number": "3!n",
+        "@occur": "{0,1}"
+      }
+    },
+    "SeqC": {
+      "F15C": "NULL_Type",
+      "Choice_53ADJ": {
+        "F53A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F53D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "F53J": "5*40x",
+        "@occur": "{0,1}"
+      },
+      "Choice_86ADJ": {
+        "F86A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F86D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "F86J": "5*40x",
+        "@occur": "{0,1}"
+      },
+      "Choice_56ADJ": {
+        "F56A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F56D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "F56J": "5*40x",
+        "@occur": "{0,1}"
+      },
+      "Choice_57ADJ": {
+        "F57A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F57D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "F57J": "5*40x"
+      },
+      "Choice_58ADJ": {
+        "F58A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F58D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "F58J": "5*40x",
+        "@occur": "{0,1}"
+      }
+    },
+    "SeqD": {
+      "F15D": "NULL_Type",
+      "Choice_53ADJ": {
+        "F53A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F53D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "F53J": "5*40x",
+        "@occur": "{0,1}"
+      },
+      "Choice_86ADJ": {
+        "F86A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F86D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "F86J": "5*40x",
+        "@occur": "{0,1}"
+      },
+      "Choice_56ADJ": {
+        "F56A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F56D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "F56J": "5*40x",
+        "@occur": "{0,1}"
+      },
+      "Choice_57ADJ": {
+        "F57A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F57D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "F57J": "5*40x"
+      },
+      "Choice_58ADJ": {
+        "F58A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F58D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "F58J": "5*40x",
+        "@occur": "{0,1}"
+      }
+    },
+    "SeqE": {
+      "F15E": "NULL_Type",
+      "Choice_53ADJ": {
+        "F53A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F53D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "F53J": "5*40x",
+        "@occur": "{0,1}"
+      },
+      "Choice_86ADJ": {
+        "F86A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F86D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "F86J": "5*40x",
+        "@occur": "{0,1}"
+      },
+      "Choice_56ADJ": {
+        "F56A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F56D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "F56J": "5*40x",
+        "@occur": "{0,1}"
+      },
+      "Choice_57ADJ": {
+        "F57A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F57D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "F57J": "5*40x"
+      },
+      "Choice_58ADJ": {
+        "F58A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F58D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "F58J": "5*40x",
+        "@occur": "{0,1}"
+      },
+      "@occur": "{0,1}"
+    },
+    "SeqF": {
+      "F15F": "NULL_Type",
+      "Choice_53ADJ": {
+        "F53A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F53D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "F53J": "5*40x",
+        "@occur": "{0,1}"
+      },
+      "Choice_86ADJ": {
+        "F86A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F86D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "F86J": "5*40x",
+        "@occur": "{0,1}"
+      },
+      "Choice_56ADJ": {
+        "F56A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F56D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "F56J": "5*40x",
+        "@occur": "{0,1}"
+      },
+      "Choice_57ADJ": {
+        "F57A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F57D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "F57J": "5*40x"
+      },
+      "Choice_58ADJ": {
+        "F58A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F58D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "F58J": "5*40x",
+        "@occur": "{0,1}"
+      },
+      "@occur": "{0,1}"
+    },
+    "SeqG": {
+      "F15G": "NULL_Type",
+      "SeqG1": {
+        "F37L": "12d",
+        "Choice_33BJ": {
+          "F33B": {
+            "Currency": "3!a",
+            "Amount": "15d"
+          },
+          "F33J": {
+            "Unit": "3!a(FOZ|GOZ|GRM|KLO|LIT|LOT|OTH|PND|TAL|TOL|TON|TOZ|UNT)",
+            "Amount": "15d"
+          }
+        }
+      },
+      "SeqG2": {
+        "F36": "12d{0,1}",
+        "Choice_33EJ": {
+          "F33E": {
+            "Currency": "3!a",
+            "Amount": "15d"
+          },
+          "F33J": {
+            "Unit": "3!a(FOZ|GOZ|GRM|KLO|LIT|LOT|OTH|PND|TAL|TOL|TON|TOZ|UNT)",
+            "Amount": "15d"
+          },
+          "@occur": "{0,1}"
+        },
+        "@occur": "{0,1}"
+      },
+      "@occur": "{0,1}"
+    },
+    "SeqH": {
+      "F15H": "NULL_Type",
+      "F29A": "4*35x{0,1}",
+      "F24D": {
+        "Code": "4!c(BROK|ELEC|PHON)",
+        "AdditionalInformation": "'/'35x{0,1}",
+        "@occur": "{0,1}"
+      },
+      "Choice_84ABDJ": {
+        "F84A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F84B": {
+          "PartyIdentifier": "/36x{0,1}",
+          "Location": "35x{0,1}"
+        },
+        "F84D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "F84J": "5*40x",
+        "@occur": "{0,1}"
+      },
+      "Choice_85ABDJ": {
+        "F85A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F85B": {
+          "PartyIdentifier": "/36x{0,1}",
+          "Location": "35x{0,1}"
+        },
+        "F85D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "F85J": "5*40x",
+        "@occur": "{0,1}"
+      },
+      "Choice_88ADJ": {
+        "F88A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F88D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "F88J": "5*40x",
+        "@occur": "{0,1}"
+      },
+      "F71F": {
+        "Currency": "3!a",
+        "Amount": "15d",
+        "@occur": "{0,1}"
+      },
+      "F26H": "16x{0,1}",
+      "F21G": "16x{0,1}",
+      "F72": "6*35x{0,1}",
+      "@occur": "{0,1}"
+    }
+  }
+}

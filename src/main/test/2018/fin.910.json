@@ -1,0 +1,64 @@
+{
+  "MT910": {
+    "F20": "16x",
+    "F21": "16x",
+    "Choice_25P": {
+      "F25": "35x",
+      "F25P": {
+        "Account": "35x'\r\n'",
+        "IdentifierCode": "BIC"
+      }
+    },
+    "F13D": {
+      "Date": "YYMMDD",
+      "Time": "HHMM",
+      "Sign": "1!x",
+      "Offset": "4!n",
+      "@occur": "{0,1}"
+    },
+    "F32A": {
+      "Date": "YYMMDD",
+      "Currency": "3!a",
+      "Amount": "15d"
+    },
+    "Choice_50AFK": {
+      "F50A": {
+        "Account": "/34x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F50F": {
+        "PartyIdentifier": "F50FPI'\r\n'",
+        "NameAndAddress": "4*35x"
+      },
+      "F50K": {
+        "Account": "/34x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x"
+      },
+      "@occur": "{0,1}"
+    },
+    "Choice_52AD": {
+      "F52A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F52D": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x"
+      },
+      "@occur": "{0,1}"
+    },
+    "Choice_56AD": {
+      "F56A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F56D": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x"
+      },
+      "@occur": "{0,1}"
+    },
+    "F72": "6*35x{0,1}",
+    "@len": 2000
+  }
+}

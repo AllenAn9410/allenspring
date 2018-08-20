@@ -1,0 +1,136 @@
+{
+  "MT644": {
+    "SeqA": {
+      "F20": "16x",
+      "F21": "16x{0,1}",
+      "F27": {
+        "Number": "1!n'/'",
+        "Total": "1!n",
+        "@occur": "{0,1}"
+      },
+      "F29A": "4*35x{0,1}",
+      "F29B": "4*35x{0,1}",
+      "F88D": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x"
+      },
+      "F32A": {
+        "Date": "YYMMDD",
+        "Currency": "3!a",
+        "Amount": "15d"
+      }
+    },
+    "SeqB": {
+      "Choice_26PN": {
+        "F26P": {
+          "Currency": "3!a",
+          "Identification": "'/'4x"
+        },
+        "F26N": {
+          "Currency": "3!a",
+          "Identification": "'/'4x"
+        }
+      },
+      "F31F": {
+        "StartDate": "YYMMDD",
+        "EndDate": "'/'YYMMDD{0,1}",
+        "Origin": "'//'35x{0,1}"
+      },
+      "F33B": {
+        "Currency": "3!a",
+        "Amount": "15d",
+        "@occur": "{0,1}"
+      },
+      "F36": "12d{0,1}",
+      "F37G": {
+        "Sign": "N{0,1}",
+        "Rate": "12d"
+      },
+      "F37M": {
+        "Sign": "N{0,1}",
+        "Margin": "12d",
+        "@occur": "{0,1}"
+      },
+      "F37R": {
+        "Sign": "N{0,1}",
+        "Interest": "12d",
+        "@occur": "{0,1}"
+      },
+      "Choice_37ABCDEF": {
+        "F37A": {
+          "Rate": "12d",
+          "EndDate": "'//'YYMMDD{0,1}",
+          "Period": "1!a(D|M){0,1}",
+          "Number": "3n{0,1}",
+          "Information": "'/'16x{0,1}"
+        },
+        "F37B": {
+          "Rate": "12d",
+          "EndDate": "'//'YYMMDD{0,1}",
+          "Period": "1!a(D|M){0,1}",
+          "Number": "3n{0,1}",
+          "Information": "'/'16x{0,1}"
+        },
+        "F37C": {
+          "Rate": "12d",
+          "EndDate": "'//'YYMMDD{0,1}",
+          "Period": "1!a(D|M){0,1}",
+          "Number": "3n{0,1}",
+          "Information": "'/'16x{0,1}"
+        },
+        "F37D": {
+          "Rate": "12d",
+          "EndDate": "'//'YYMMDD{0,1}",
+          "Period": "1!a(D|M){0,1}",
+          "Number": "3n{0,1}",
+          "Information": "'/'16x{0,1}"
+        },
+        "F37E": {
+          "Rate": "12d",
+          "EndDate": "'//'YYMMDD{0,1}",
+          "Period": "1!a(D|M){0,1}",
+          "Number": "3n{0,1}",
+          "Information": "'/'16x{0,1}"
+        },
+        "F37F": {
+          "Rate": "12d",
+          "EndDate": "'//'YYMMDD{0,1}",
+          "Period": "1!a(D|M){0,1}",
+          "Number": "3n{0,1}",
+          "Information": "'/'16x{0,1}"
+        },
+        "@occur": "{0,1}"
+      },
+      "Choice_34PR": {
+        "F34P": {
+          "Date": "YYMMDD",
+          "Currency": "3!a",
+          "Amount": "15d"
+        },
+        "F34R": {
+          "Date": "YYMMDD",
+          "Currency": "3!a",
+          "Amount": "15d"
+        },
+        "@occur": "{0,1}"
+      },
+      "Choice_57ABD": {
+        "F57A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F57B": {
+          "PartyIdentifier": "/36x{0,1}",
+          "Location": "35x{0,1}"
+        },
+        "F57D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "@occur": "{0,1}"
+      },
+      "F72": "6*35x{0,1}",
+      "@occur": "{1,999}"
+    }
+  }
+}

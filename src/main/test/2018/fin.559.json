@@ -1,0 +1,89 @@
+{
+  "MT559": {
+    "F19": "17d",
+    "F23": "16x",
+    "Choice_53ACD": {
+      "F53A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F53C": "/34x",
+      "F53D": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x"
+      },
+      "@occur": "{0,1}"
+    },
+    "Choice_57ABD": {
+      "F57A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F57B": {
+        "PartyIdentifier": "/36x{0,1}",
+        "Location": "35x{0,1}"
+      },
+      "F57D": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x"
+      },
+      "@occur": "{0,1}"
+    },
+    "F72": "6*35x{0,1}",
+    "Loop1": {
+      "F20": "16x",
+      "F35A": {
+        "Type": "3!a(BON|CER|CPN|FMT|MSC|OPC|OPS|PRC|PRS|RTE|RTS|SHS|UNT|WTS)",
+        "Quantity": "15d"
+      },
+      "F35B": {
+        "IdentificationOfSecurity": "ISIN1!e12!c{0,1}",
+        "DescriptionOfSecurity": "4*35x{0,1}"
+      },
+      "Choice_35CD": {
+        "F35C": "3!c",
+        "F35D": "YYMMDD",
+        "@occur": "{0,1}"
+      },
+      "F35E": "6*50x{0,1}",
+      "F35U": {
+        "Currency": "3!a",
+        "Price": "15d",
+        "Period": "1!a(A|F|M|Q|S|X){0,1}",
+        "@occur": "{0,1}"
+      },
+      "F31E": "YYMMDD{0,1}",
+      "F31L": "YYMMDD{0,1}",
+      "F31C": "YYMMDD{0,1}",
+      "F31S": "YYMMDD{0,1}",
+      "F80C": "6*35x{0,1}",
+      "F33T": {
+        "Currency": "3!a",
+        "Price": "15d",
+        "@occur": "{0,1}"
+      },
+      "F35L": "4*35x{0,1}",
+      "F32M": {
+        "Currency": "3!a",
+        "Amount": "15d",
+        "@occur": "{0,1}"
+      },
+      "F32G": {
+        "Currency": "3!a",
+        "Amount": "15d",
+        "@occur": "{0,1}"
+      },
+      "F71C": "6*35x{0,1}",
+      "F71B": "6*35x{0,1}",
+      "F36": "12d{0,1}",
+      "F34A": {
+        "Date": "YYMMDD",
+        "Currency": "3!a",
+        "Amount": "15d"
+      },
+      "F75": "6*35x{0,1}",
+      "F72": "6*35x{0,1}",
+      "@occur": "{1,10}"
+    }
+  }
+}

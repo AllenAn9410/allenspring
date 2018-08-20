@@ -1,0 +1,61 @@
+{
+  "MT705": {
+    "F40A": "24x(IRREVOCABLE|IRREVOCABLE TRANSFERABLE|IRREVOCABLE STANDBY|IRREVOC TRANS STANDBY)",
+    "F20": "16x",
+    "F31D": {
+      "Date": "YYMMDD",
+      "Place": "29x"
+    },
+    "F50": "4*35x",
+    "F59": {
+      "Account": "/34x'\r\n'{0,1}",
+      "NameAndAddress": "4*35x"
+    },
+    "F32B": {
+      "Currency": "3!a",
+      "Amount": "15d"
+    },
+    "F39A": {
+      "Tolerance1": "2n'/'",
+      "Tolerance2": "2n",
+      "@occur": "{0,1}"
+    },
+    "F39C": "4*35x{0,1}",
+    "Choice_41AD": {
+      "F41A": {
+        "IdentifierCode": "BIC'\r\n'",
+        "Code": "14x(BY ACCEPTANCE|BY DEF PAYMENT|BY MIXED PYMT|BY NEGOTIATION|BY PAYMENT)"
+      },
+      "F41D": {
+        "NameAndAddress": "4*35x'\r\n'",
+        "Code": "14x(BY ACCEPTANCE|BY DEF PAYMENT|BY MIXED PYMT|BY NEGOTIATION|BY PAYMENT)"
+      },
+      "@occur": "{0,1}"
+    },
+    "F44A": "65x{0,1}",
+    "F44E": "65x{0,1}",
+    "F44F": "65x{0,1}",
+    "F44B": "65x{0,1}",
+    "F44C": "YYMMDD{0,1}",
+    "F44D": "6*65x{0,1}",
+    "F45A": "100*65z{0,1}",
+    "Choice_57ABD": {
+      "F57A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F57B": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "Location": "35x{0,1}"
+      },
+      "F57D": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x"
+      },
+      "@occur": "{0,1}"
+    },
+    "F79Z": "35*50z{0,1}",
+    "F72Z": "6*35z{0,1}",
+    "@len": 2000
+  }
+}

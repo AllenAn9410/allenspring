@@ -1,0 +1,47 @@
+{
+  "MT456": {
+    "F25": "35x{0,1}",
+    "Choice_52ABD": {
+      "F52A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F52B": {
+        "PartyIdentifier": "/36x{0,1}",
+        "Location": "35x{0,1}"
+      },
+      "F52D": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x"
+      },
+      "@occur": "{0,1}"
+    },
+    "F72": "6*35x{0,1}",
+    "Loop1": {
+      "F20": "16x",
+      "F21": "16x",
+      "Choice_32AB": {
+        "F32A": {
+          "Date": "YYMMDD",
+          "Currency": "3!a",
+          "Amount": "15d"
+        },
+        "F32B": {
+          "Currency": "3!a",
+          "Amount": "15d"
+        }
+      },
+      "F33D": {
+        "Date": "YYMMDD",
+        "Currency": "3!a",
+        "Amount": "15d"
+      },
+      "F71B": "6*35x{0,1}",
+      "F77A": "20*35x",
+      "F77D": "6*35x",
+      "F72": "6*35x{0,1}",
+      "@occur": "{1,10}"
+    },
+    "@len": 2000
+  }
+}

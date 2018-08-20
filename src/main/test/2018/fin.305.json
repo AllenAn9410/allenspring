@@ -1,0 +1,248 @@
+{
+  "MT305": {
+    "SeqA": {
+      "F15A": "NULL_Type",
+      "F20": "16x",
+      "F21": "16x",
+      "F22": {
+        "Code": "8a(AMEND|CANCEL|CLOSEOUT|NEW)'/'",
+        "CommonReference": "4!a2!c4!n4!a2!c"
+      },
+      "F23": {
+        "Code1": "4a'/'",
+        "Code2": "4a'/'",
+        "Code3": "1!a(E|A)'/'",
+        "Currency": "3!a"
+      },
+      "F94A": "4!c(AGNT|BILA|BROK){0,1}",
+      "Choice_82ADJ": {
+        "F82A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F82D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "F82J": "5*40x"
+      },
+      "Choice_87ADJ": {
+        "F87A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F87D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "F87J": "5*40x"
+      },
+      "Choice_83ADJ": {
+        "F83A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F83D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "F83J": "5*40x",
+        "@occur": "{0,1}"
+      },
+      "F30": "YYMMDD",
+      "F31C": "YYMMDD{0,1}",
+      "F31G": {
+        "Date": "YYMMDD'/'",
+        "Time": "HHMM'/'",
+        "Location": "12a"
+      },
+      "F31E": "YYMMDD",
+      "F26F": "9a",
+      "F39M": "2!a{0,1}",
+      "F17F": "1!a(N|Y){0,1}",
+      "Loop1": {
+        "F14S": {
+          "RateSource": "3!a2n",
+          "TimeAndLocation": "'/'4!n/4!c{0,1}",
+          "@occur": "{0,1}"
+        },
+        "@occur": "{0,999}"
+      },
+      "F32E": "3!a{0,1}",
+      "F32B": {
+        "Currency": "3!a",
+        "Amount": "15d"
+      },
+      "F36": "12d",
+      "F33B": {
+        "Currency": "3!a",
+        "Amount": "15d"
+      },
+      "F37K": {
+        "Currency": "3!a",
+        "Rate": "12d"
+      },
+      "Choice_34PR": {
+        "F34P": {
+          "Date": "YYMMDD",
+          "Currency": "3!a",
+          "Amount": "15d"
+        },
+        "F34R": {
+          "Date": "YYMMDD",
+          "Currency": "3!a",
+          "Amount": "15d"
+        }
+      },
+      "Choice_53ABD": {
+        "F53A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F53B": {
+          "PartyIdentifier": "/36x{0,1}",
+          "Location": "35x{0,1}"
+        },
+        "F53D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "@occur": "{0,1}"
+      },
+      "Choice_56AD": {
+        "F56A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F56D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "@occur": "{0,1}"
+      },
+      "Choice_57AD": {
+        "F57A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F57D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        }
+      },
+      "F77H": {
+        "TypeOfAgreement": "6a(AFB|DERV|FBF|FEOMA|ICOM|IFEMA|ISDA|ISDACN|OTHER)",
+        "Date": "'/'YYYYMMDD{0,1}",
+        "Version": "'//'YYYY{0,1}",
+        "@occur": "{0,1}"
+      },
+      "F14C": "4!n{0,1}",
+      "F72": "6*35x{0,1}"
+    },
+    "SeqB": {
+      "F15B": "NULL_Type",
+      "LoopB1": {
+        "F22L": "35x",
+        "Choice_91a": {
+          "F91A": {
+            "PartyIdentifier": "/36x'\r\n'{0,1}",
+            "IdentifierCode": "BIC"
+          },
+          "F91D": {
+            "PartyIdentifier": "/36x'\r\n'{0,1}",
+            "NameAndAddress": "4*35x"
+          },
+          "F91J": "5*40x",
+          "@occur": "{0,1}"
+        },
+        "LoopSeqB1a": {
+          "F22M": "30x",
+          "F22N": "32x",
+          "LoopSeqB1a1": {
+            "F22P": "30x",
+            "F22R": "32x",
+            "@occur": "{0,999}"
+          },
+          "@occur": "{0,999}"
+        },
+        "@occur": "{0,999}"
+      },
+      "Choice_81a": {
+        "F81A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F81D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "F81J": "5*40x",
+        "@occur": "{0,1}"
+      },
+      "Choice_89a": {
+        "F89A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F89D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "F89J": "5*40x",
+        "@occur": "{0,1}"
+      },
+      "Choice_96a": {
+        "F96A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F96D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "F96J": "5*40x",
+        "@occur": "{0,1}"
+      },
+      "Loop22S": {
+        "F22S": {
+          "SideIndicator": "1!a(C|P)'/'",
+          "Identification": "35x"
+        },
+        "@occur": "{0,999}"
+      },
+      "F22T": "35x{0,1}",
+      "F17E": "1!a{0,1}",
+      "F22U": "6a{0,1}",
+      "F35B": {
+        "IdentificationOfInstrument": "ISIN1!e12!c{0,1}",
+        "DescriptionOfInstrument": "4*35x{0,1}",
+        "@occur": "{0,1}"
+      },
+      "F17H": "1!a{0,1}",
+      "F17P": "1!a{0,1}",
+      "F22V": "35x{0,1}",
+      "F98D": "35x{0,1}",
+      "F17W": "1!a{0,1}",
+      "F17Y": "1!a{0,1}",
+      "F17Z": "1!a{0,1}",
+      "F22Q": "10x{0,1}",
+      "F17L": "1!a{0,1}",
+      "F17M": "1!a{0,1}",
+      "F17Q": "1!a{0,1}",
+      "F17S": "1!a{0,1}",
+      "F17X": "1!a{0,1}",
+      "Loop34C": {
+        "F34C": {
+          "Type": "4!c'/'",
+          "Sign": "N{0,1}",
+          "Currency": "3!a",
+          "Amount": "15d"
+        },
+        "@occur": "{0,999}"
+      },
+      "F77A": "20*35x{0,1}",
+      "@occur": "{0,1}"
+    },
+    "@len": 2000
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "MT590": {
+    "F20": "16x",
+    "F21": "16x",
+    "F25": "35x",
+    "Choice_32CD": {
+      "F32C": {
+        "Date": "YYMMDD",
+        "Currency": "3!a",
+        "Amount": "15d"
+      },
+      "F32D": {
+        "Date": "YYMMDD",
+        "Currency": "3!a",
+        "Amount": "15d"
+      }
+    },
+    "Choice_52AD": {
+      "F52A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F52D": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x"
+      },
+      "@occur": "{0,1}"
+    },
+    "F71B": "6*35x",
+    "F72": "6*35x{0,1}"
+  }
+}

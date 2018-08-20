@@ -1,0 +1,80 @@
+{
+  "MT416": {
+    "SeqA": {
+      "F20": "16x",
+      "F21": "16x",
+      "F23E": {
+        "Type": "4!c(NACC|NPAY|OTHR)",
+        "Narrative": "'/'30x{0,1}",
+        "@occur": "{0,1}"
+      },
+      "F51A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC",
+        "@occur": "{0,1}"
+      },
+      "Choice_53AB": {
+        "F53A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F53B": {
+          "PartyIdentifier": "/36x{0,1}",
+          "Location": "35x{0,1}"
+        },
+        "@occur": "{0,1}"
+      },
+      "F71F": {
+        "Currency": "3!a",
+        "Amount": "15d",
+        "@occur": "{0,1}"
+      },
+      "F77A": "20*35x{0,1}"
+    },
+    "SeqB": {
+      "F21A": "16x",
+      "F23E": {
+        "Type": "4!c(NACC|NPAY|OTHR)",
+        "Narrative": "'/'30x{0,1}",
+        "@occur": "{0,1}"
+      },
+      "F21C": "35x{0,1}",
+      "Choice_32ABK": {
+        "F32A": {
+          "Date": "YYMMDD",
+          "Currency": "3!a",
+          "Amount": "15d"
+        },
+        "F32B": {
+          "Currency": "3!a",
+          "Amount": "15d"
+        },
+        "F32K": {
+          "DayMonth": "1!a(D|M)",
+          "NumberOfDaysMonths": "3!n",
+          "Code": "2!a(BE|ST)",
+          "Currency": "3!a",
+          "Amount": "15d"
+        }
+      },
+      "F50D": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x",
+        "@occur": "{0,1}"
+      },
+      "F59": {
+        "Account": "/34x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x",
+        "@occur": "{0,1}"
+      },
+      "F71F": {
+        "Currency": "3!a",
+        "Amount": "15d",
+        "@occur": "{0,1}"
+      },
+      "F77A": "20*35x{0,1}",
+      "@occur": "{1,999}"
+    },
+    "@len": 10000
+  }
+}

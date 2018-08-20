@@ -1,0 +1,1090 @@
+{
+  "fin.101": {
+    "desc": "Request for Transfer",
+    "rma": "true"
+  },
+  "fin.102": {
+    "desc": "Multiple Customer Credit Transfer",
+    "rma": "true"
+  },
+  "fin.102.STP": {
+    "desc": "Multiple Customer Credit Transfer",
+    "rma": "true"
+  },
+  "fin.103": {
+    "desc": "Single Customer Credit Transfer",
+    "rma": "true"
+  },
+  "fin.103.REMIT": {
+    "desc": "Single Customer Credit Transfer",
+    "rma": "true"
+  },
+  "fin.103.STP": {
+    "desc": "Single Customer Credit Transfer",
+    "rma": "true"
+  },
+  "fin.104": {
+    "desc": "Direct Debit and Request for Debit Transfer Message",
+    "rma": "true"
+  },
+  "fin.105": {
+    "desc": "EDIFACT Envelope",
+    "rma": "true"
+  },
+  "fin.107": {
+    "desc": "General Direct Debit Message",
+    "rma": "true"
+  },
+  "fin.110": {
+    "desc": "Advice of Cheque(s)",
+    "rma": "true"
+  },
+  "fin.111": {
+    "desc": "Request for Stop Payment of a Cheque",
+    "rma": "true"
+  },
+  "fin.112": {
+    "desc": "Status of a Request for Stop Payment of a Cheque",
+    "rma": "true"
+  },
+  "fin.190": {
+    "desc": "Advice of Charges, Interest and Other Adjustments",
+    "rma": "true"
+  },
+  "fin.191": {
+    "desc": "Request for Payment of Charges, Interest and Other Expenses",
+    "rma": "true"
+  },
+  "fin.192": {
+    "desc": "Request for Cancellation",
+    "rma": "true"
+  },
+  "fin.195": {
+    "desc": "Queries",
+    "rma": "true"
+  },
+  "fin.196": {
+    "desc": "Answers",
+    "rma": "true"
+  },
+  "fin.198": {
+    "desc": "Proprietary Message",
+    "rma": "true"
+  },
+  "fin.199": {
+    "desc": "Free Format Message",
+    "rma": "true"
+  },
+  "fin.200": {
+    "desc": "Financial Institution Transfer for its Own Account",
+    "rma": "true"
+  },
+  "fin.201": {
+    "desc": "Multiple Financial Institution Transfer for its Own Account",
+    "rma": "true"
+  },
+  "fin.202": {
+    "desc": "General Financial Institution Transfer",
+    "rma": "true"
+  },
+  "fin.202.COV": {
+    "desc": "General Financial Institution Transfer",
+    "rma": "true"
+  },
+  "fin.203": {
+    "desc": "Multiple General Financial Institution Transfer",
+    "rma": "true"
+  },
+  "fin.204": {
+    "desc": "Financial Markets Direct Debit Message",
+    "rma": "true"
+  },
+  "fin.205": {
+    "desc": "Financial Institution Transfer Execution",
+    "rma": "true"
+  },
+  "fin.205.COV": {
+    "desc": "Financial Institution Transfer Execution",
+    "rma": "true"
+  },
+  "fin.207": {
+    "desc": "Request For Financial Institution Transfer",
+    "rma": "true"
+  },
+  "fin.210": {
+    "desc": "Notice to Receive",
+    "rma": "true"
+  },
+  "fin.256": {
+    "desc": "Advice of Non-Payment of Cheques",
+    "rma": "true"
+  },
+  "fin.290": {
+    "desc": "Advice of Charges, Interest and Other Adjustments",
+    "rma": "true"
+  },
+  "fin.291": {
+    "desc": "Request for Payment of Charges, Interest and Other Expenses",
+    "rma": "true"
+  },
+  "fin.292": {
+    "desc": "Request for Cancellation",
+    "rma": "true"
+  },
+  "fin.295": {
+    "desc": "Queries",
+    "rma": "true"
+  },
+  "fin.296": {
+    "desc": "Answers",
+    "rma": "true"
+  },
+  "fin.298": {
+    "desc": "Proprietary Message",
+    "rma": "true"
+  },
+  "fin.299": {
+    "desc": "Free Format Message",
+    "rma": "true"
+  },
+  "fin.300": {
+    "desc": "Foreign Exchange Confirmation",
+    "rma": "false"
+  },
+  "fin.303": {
+    "desc": "Forex/Currency Option Allocation Instruction",
+    "rma": "false"
+  },
+  "fin.304": {
+    "desc": "Advice/Instruction of a Third Party Deal",
+    "rma": "true"
+  },
+  "fin.305": {
+    "desc": "Foreign Currency Option Confirmation",
+    "rma": "false"
+  },
+  "fin.306": {
+    "desc": "Foreign Currency Option Confirmation",
+    "rma": "false"
+  },
+  "fin.307": {
+    "desc": "Advice/Instruction of a Third Party FX Deal",
+    "rma": "true"
+  },
+  "fin.320": {
+    "desc": "Fixed Loan/Deposit Confirmation",
+    "rma": "false"
+  },
+  "fin.321": {
+    "desc": "Instruction to Settle a Third Party Loan/Deposit",
+    "rma": "true"
+  },
+  "fin.330": {
+    "desc": "Call/Notice Loan/Deposit Confirmation",
+    "rma": "false"
+  },
+  "fin.340": {
+    "desc": "Forward Rate Agreement Confirmation",
+    "rma": "false"
+  },
+  "fin.341": {
+    "desc": "Forward Rate Agreement Settlement Confirmation",
+    "rma": "false"
+  },
+  "fin.350": {
+    "desc": "Advice of Loan/Deposit Interest Payment",
+    "rma": "false"
+  },
+  "fin.360": {
+    "desc": "Single Currency Interest Rate Derivative Confirmation",
+    "rma": "false"
+  },
+  "fin.361": {
+    "desc": "Cross Currency Interest Rate Swap Confirmation",
+    "rma": "false"
+  },
+  "fin.362": {
+    "desc": "Interest Rate Reset/Advice of Payment",
+    "rma": "false"
+  },
+  "fin.364": {
+    "desc": "Single Currency Interest Rate Derivative Termination/Recouponing Confirmation",
+    "rma": "false"
+  },
+  "fin.365": {
+    "desc": "Cross Currency Interest Rate Swap Termination/Recouponing Confirmation",
+    "rma": "false"
+  },
+  "fin.370": {
+    "desc": "Netting Position Advice",
+    "rma": "false"
+  },
+  "fin.380": {
+    "desc": "Foreign Exchange Order",
+    "rma": "true"
+  },
+  "fin.381": {
+    "desc": "Foreign Exchange Order Confirmation",
+    "rma": "true"
+  },
+  "fin.390": {
+    "desc": "Advice of Charges, Interest and Other Adjustments",
+    "rma": "false"
+  },
+  "fin.391": {
+    "desc": "Request for Payment of Charges, Interest and Other Expenses",
+    "rma": "false"
+  },
+  "fin.392": {
+    "desc": "Request for Cancellation",
+    "rma": "false"
+  },
+  "fin.395": {
+    "desc": "Queries",
+    "rma": "false"
+  },
+  "fin.396": {
+    "desc": "Answers",
+    "rma": "false"
+  },
+  "fin.398": {
+    "desc": "Proprietary Message",
+    "rma": "false"
+  },
+  "fin.399": {
+    "desc": "Free Format Message",
+    "rma": "false"
+  },
+  "fin.400": {
+    "desc": "Advice of Payment",
+    "rma": "true"
+  },
+  "fin.410": {
+    "desc": "Acknowledgement",
+    "rma": "true"
+  },
+  "fin.412": {
+    "desc": "Advice of Acceptance",
+    "rma": "true"
+  },
+  "fin.416": {
+    "desc": "Advice of Non-Payment/Non-Acceptance",
+    "rma": "true"
+  },
+  "fin.420": {
+    "desc": "Tracer",
+    "rma": "true"
+  },
+  "fin.422": {
+    "desc": "Advice of Fate and Request for Instructions",
+    "rma": "true"
+  },
+  "fin.430": {
+    "desc": "Amendment of Instructions",
+    "rma": "true"
+  },
+  "fin.450": {
+    "desc": "Cash Letter Credit Advice",
+    "rma": "true"
+  },
+  "fin.455": {
+    "desc": "Cash Letter Credit Adjustment Advice",
+    "rma": "true"
+  },
+  "fin.456": {
+    "desc": "Advice of Dishonour",
+    "rma": "true"
+  },
+  "fin.490": {
+    "desc": "Advice of Charges, Interest and Other Adjustments",
+    "rma": "true"
+  },
+  "fin.491": {
+    "desc": "Request for Payment of Charges, Interest and Other Expenses",
+    "rma": "true"
+  },
+  "fin.492": {
+    "desc": "Request for Cancellation",
+    "rma": "true"
+  },
+  "fin.495": {
+    "desc": "Queries",
+    "rma": "true"
+  },
+  "fin.496": {
+    "desc": "Answers",
+    "rma": "true"
+  },
+  "fin.498": {
+    "desc": "Proprietary Message",
+    "rma": "true"
+  },
+  "fin.499": {
+    "desc": "Free Format Message",
+    "rma": "true"
+  },
+  "fin.500": {
+    "desc": "Instruction to Register",
+    "rma": "true"
+  },
+  "fin.501": {
+    "desc": "Confirmation of Registration or Modification",
+    "rma": "true"
+  },
+  "fin.502": {
+    "desc": "Order to Buy or Sell",
+    "rma": "true"
+  },
+  "fin.503": {
+    "desc": "Collateral Claim",
+    "rma": "true"
+  },
+  "fin.504": {
+    "desc": "Collateral Proposal",
+    "rma": "true"
+  },
+  "fin.505": {
+    "desc": "Collateral Substitution",
+    "rma": "true"
+  },
+  "fin.506": {
+    "desc": "Collateral and Exposure Statement",
+    "rma": "true"
+  },
+  "fin.507": {
+    "desc": "Collateral Status and Processing Advice",
+    "rma": "true"
+  },
+  "fin.508": {
+    "desc": "Intra-Position Advice",
+    "rma": "true"
+  },
+  "fin.509": {
+    "desc": "Trade Status Message",
+    "rma": "true"
+  },
+  "fin.510": {
+    "desc": "Registration Status and Processing Advice",
+    "rma": "true"
+  },
+  "fin.513": {
+    "desc": "Client Advice Of Execution",
+    "rma": "true"
+  },
+  "fin.514": {
+    "desc": "Trade Allocation Instruction",
+    "rma": "true"
+  },
+  "fin.515": {
+    "desc": "Client Confirmation of Purchase or Sale",
+    "rma": "true"
+  },
+  "fin.516": {
+    "desc": "Securities Loan Confirmation",
+    "rma": "true"
+  },
+  "fin.517": {
+    "desc": "Trade Confirmation Affirmation",
+    "rma": "true"
+  },
+  "fin.518": {
+    "desc": "Market-Side Securities Trade Confirmation",
+    "rma": "true"
+  },
+  "fin.519": {
+    "desc": "Modification of Client Details",
+    "rma": "true"
+  },
+  "fin.524": {
+    "desc": "Intra-Position Instruction",
+    "rma": "true"
+  },
+  "fin.526": {
+    "desc": "General Securities Lending/Borrowing Message",
+    "rma": "true"
+  },
+  "fin.527": {
+    "desc": "Triparty Collateral Instruction",
+    "rma": "true"
+  },
+  "fin.530": {
+    "desc": "Transaction Processing Command",
+    "rma": "true"
+  },
+  "fin.535": {
+    "desc": "Statement of Holdings",
+    "rma": "true"
+  },
+  "fin.536": {
+    "desc": "Statement of Transactions",
+    "rma": "true"
+  },
+  "fin.537": {
+    "desc": "Statement of Pending Transactions",
+    "rma": "true"
+  },
+  "fin.538": {
+    "desc": "Statement of Intra-Position Advices",
+    "rma": "true"
+  },
+  "fin.540": {
+    "desc": "Receive Free",
+    "rma": "true"
+  },
+  "fin.541": {
+    "desc": "Receive Against Payment",
+    "rma": "true"
+  },
+  "fin.542": {
+    "desc": "Deliver Free",
+    "rma": "true"
+  },
+  "fin.543": {
+    "desc": "Deliver Against Payment",
+    "rma": "true"
+  },
+  "fin.544": {
+    "desc": "Receive Free Confirmation",
+    "rma": "true"
+  },
+  "fin.545": {
+    "desc": "Receive Against Payment Confirmation",
+    "rma": "true"
+  },
+  "fin.546": {
+    "desc": "Deliver Free Confirmation",
+    "rma": "true"
+  },
+  "fin.547": {
+    "desc": "Deliver Against Payment Confirmation",
+    "rma": "true"
+  },
+  "fin.548": {
+    "desc": "Settlement Status and Processing Advice",
+    "rma": "true"
+  },
+  "fin.549": {
+    "desc": "Request for Statement/Status Advice",
+    "rma": "true"
+  },
+  "fin.558": {
+    "desc": "Triparty Collateral Status and Processing Advice",
+    "rma": "true"
+  },
+  "fin.559": {
+    "desc": "Paying Agent's Claim",
+    "rma": "true"
+  },
+  "fin.564": {
+    "desc": "Corporate Action Notification",
+    "rma": "true"
+  },
+  "fin.565": {
+    "desc": "Corporate Action Instruction",
+    "rma": "true"
+  },
+  "fin.566": {
+    "desc": "Corporate Action Confirmation",
+    "rma": "true"
+  },
+  "fin.567": {
+    "desc": "Corporate Action Status and Processing Advice",
+    "rma": "true"
+  },
+  "fin.568": {
+    "desc": "Corporate Action Narrative",
+    "rma": "true"
+  },
+  "fin.569": {
+    "desc": "Triparty Collateral and Exposure Statement",
+    "rma": "true"
+  },
+  "fin.574.IRSLST": {
+    "desc": "IRS 1441 NRA",
+    "rma": "true"
+  },
+  "fin.574.W8BENO": {
+    "desc": "IRS 1441 NRA",
+    "rma": "true"
+  },
+  "fin.575": {
+    "desc": "Report of Combined Activity",
+    "rma": "true"
+  },
+  "fin.576": {
+    "desc": "Statement of Open Orders",
+    "rma": "true"
+  },
+  "fin.577": {
+    "desc": "Statement of Numbers",
+    "rma": "true"
+  },
+  "fin.578": {
+    "desc": "Settlement Allegement",
+    "rma": "true"
+  },
+  "fin.579": {
+    "desc": "Certificate Numbers",
+    "rma": "true"
+  },
+  "fin.581": {
+    "desc": "Collateral Adjustment Message",
+    "rma": "true"
+  },
+  "fin.586": {
+    "desc": "Statement of Settlement Allegements",
+    "rma": "true"
+  },
+  "fin.590": {
+    "desc": "Advice of Charges, Interest and Other Adjustments",
+    "rma": "true"
+  },
+  "fin.591": {
+    "desc": "Request for Payment of Charges, Interest and Other Expenses",
+    "rma": "true"
+  },
+  "fin.592": {
+    "desc": "Request for Cancellation",
+    "rma": "true"
+  },
+  "fin.595": {
+    "desc": "Queries",
+    "rma": "true"
+  },
+  "fin.596": {
+    "desc": "Answers",
+    "rma": "true"
+  },
+  "fin.598": {
+    "desc": "Proprietary Message",
+    "rma": "true"
+  },
+  "fin.599": {
+    "desc": "Free Format Message",
+    "rma": "true"
+  },
+  "fin.600": {
+    "desc": "Commodity Trade Confirmation",
+    "rma": "false"
+  },
+  "fin.601": {
+    "desc": "Commodity Option Confirmation",
+    "rma": "false"
+  },
+  "fin.604": {
+    "desc": "Commodity Transfer/Delivery Order",
+    "rma": "true"
+  },
+  "fin.605": {
+    "desc": "Commodity Notice to Receive",
+    "rma": "false"
+  },
+  "fin.606": {
+    "desc": "Commodity Debit Advice",
+    "rma": "false"
+  },
+  "fin.607": {
+    "desc": "Commodity Credit Advice",
+    "rma": "false"
+  },
+  "fin.608": {
+    "desc": "Statement of a Commodity Account",
+    "rma": "false"
+  },
+  "fin.609": {
+    "desc": "Statement of Commodity Contracts",
+    "rma": "false"
+  },
+  "fin.620": {
+    "desc": "Commodity Fixed Loan/Deposit Confirmation",
+    "rma": "false"
+  },
+  "fin.643": {
+    "desc": "Notice of Drawdown/Renewal",
+    "rma": "true"
+  },
+  "fin.644": {
+    "desc": "Advice of Rate and Amount Fixing",
+    "rma": "true"
+  },
+  "fin.646": {
+    "desc": "Payment of Principal and/or of Interest",
+    "rma": "true"
+  },
+  "fin.649": {
+    "desc": "General Syndicated Facility Message",
+    "rma": "true"
+  },
+  "fin.670": {
+    "desc": "Standing Settlement Instruction Update Notification Request",
+    "rma": "true"
+  },
+  "fin.671": {
+    "desc": "Standing Settlement Instruction Update Notification",
+    "rma": "true"
+  },
+  "fin.690": {
+    "desc": "Advice of Charges, Interest and Other Adjustments",
+    "rma": "true"
+  },
+  "fin.691": {
+    "desc": "Request for Payment of Charges, Interest and Other Expenses",
+    "rma": "true"
+  },
+  "fin.692": {
+    "desc": "Request for Cancellation",
+    "rma": "true"
+  },
+  "fin.695": {
+    "desc": "Queries",
+    "rma": "true"
+  },
+  "fin.696": {
+    "desc": "Answers",
+    "rma": "true"
+  },
+  "fin.698": {
+    "desc": "Proprietary Message",
+    "rma": "true"
+  },
+  "fin.699": {
+    "desc": "Free Format Message",
+    "rma": "true"
+  },
+  "fin.700": {
+    "desc": "Issue of a Documentary Credit",
+    "rma": "true"
+  },
+  "fin.701": {
+    "desc": "Issue of a Documentary Credit",
+    "rma": "true"
+  },
+  "fin.705": {
+    "desc": "Pre-Advice of a Documentary Credit",
+    "rma": "true"
+  },
+  "fin.707": {
+    "desc": "Amendment to a Documentary Credit",
+    "rma": "true"
+  },
+  "fin.710": {
+    "desc": "Advice of a Third Bank's or a Non-Bank's Documentary Credit",
+    "rma": "true"
+  },
+  "fin.711": {
+    "desc": "Advice of a Third Bank's or a Non-Bank's Documentary Credit",
+    "rma": "true"
+  },
+  "fin.720": {
+    "desc": "Transfer of a Documentary Credit",
+    "rma": "true"
+  },
+  "fin.721": {
+    "desc": "Transfer of a Documentary Credit",
+    "rma": "true"
+  },
+  "fin.730": {
+    "desc": "Acknowledgement",
+    "rma": "true"
+  },
+  "fin.732": {
+    "desc": "Advice of Discharge",
+    "rma": "true"
+  },
+  "fin.734": {
+    "desc": "Advice of Refusal",
+    "rma": "true"
+  },
+  "fin.740": {
+    "desc": "Authorisation to Reimburse",
+    "rma": "true"
+  },
+  "fin.742": {
+    "desc": "Reimbursement Claim",
+    "rma": "true"
+  },
+  "fin.747": {
+    "desc": "Amendment to an Authorisation to Reimburse",
+    "rma": "true"
+  },
+  "fin.750": {
+    "desc": "Advice of Discrepancy",
+    "rma": "true"
+  },
+  "fin.752": {
+    "desc": "Authorisation to Pay, Accept or Negotiate",
+    "rma": "true"
+  },
+  "fin.754": {
+    "desc": "Advice of Payment/Acceptance/Negotiation",
+    "rma": "true"
+  },
+  "fin.756": {
+    "desc": "Advice of Reimbursement or Payment",
+    "rma": "true"
+  },
+  "fin.760": {
+    "desc": "Guarantee / Standby Letter of Credit",
+    "rma": "true"
+  },
+  "fin.767": {
+    "desc": "Guarantee / Standby Letter of Credit Amendment",
+    "rma": "true"
+  },
+  "fin.768": {
+    "desc": "Acknowledgement of a Guarantee / Standby Message",
+    "rma": "true"
+  },
+  "fin.769": {
+    "desc": "Advice of Reduction or Release",
+    "rma": "true"
+  },
+  "fin.790": {
+    "desc": "Advice of Charges, Interest and Other Adjustments",
+    "rma": "true"
+  },
+  "fin.791": {
+    "desc": "Request for Payment of Charges, Interest and Other Expenses",
+    "rma": "true"
+  },
+  "fin.792": {
+    "desc": "Request for Cancellation",
+    "rma": "true"
+  },
+  "fin.795": {
+    "desc": "Queries",
+    "rma": "true"
+  },
+  "fin.796": {
+    "desc": "Answers",
+    "rma": "true"
+  },
+  "fin.798": {
+    "desc": "Proprietary Message",
+    "rma": "true"
+  },
+  "fin.799": {
+    "desc": "Free Format Message",
+    "rma": "true"
+  },
+  "fin.800": {
+    "desc": "T/C Sales and Settlement Advice [Single]",
+    "rma": "true"
+  },
+  "fin.801": {
+    "desc": "T/C Multiple Sales Advice",
+    "rma": "true"
+  },
+  "fin.802": {
+    "desc": "T/C Settlement Advice",
+    "rma": "true"
+  },
+  "fin.824": {
+    "desc": "T/C Inventory Destruction/Cancellation Notice",
+    "rma": "true"
+  },
+  "fin.890": {
+    "desc": "Advice of Charges, Interest and Other Adjustments",
+    "rma": "true"
+  },
+  "fin.891": {
+    "desc": "Request for Payment of Charges, Interest and Other Expenses",
+    "rma": "true"
+  },
+  "fin.892": {
+    "desc": "Request for Cancellation",
+    "rma": "true"
+  },
+  "fin.895": {
+    "desc": "Queries",
+    "rma": "true"
+  },
+  "fin.896": {
+    "desc": "Answers",
+    "rma": "true"
+  },
+  "fin.898": {
+    "desc": "Proprietary Message",
+    "rma": "true"
+  },
+  "fin.899": {
+    "desc": "Free Format Message",
+    "rma": "true"
+  },
+  "fin.900": {
+    "desc": "Confirmation of Debit",
+    "rma": "false"
+  },
+  "fin.910": {
+    "desc": "Confirmation of Credit",
+    "rma": "false"
+  },
+  "fin.920": {
+    "desc": "Request Message",
+    "rma": "false"
+  },
+  "fin.935": {
+    "desc": "Rate Change Advice",
+    "rma": "false"
+  },
+  "fin.940": {
+    "desc": "Customer Statement Message",
+    "rma": "false"
+  },
+  "fin.941": {
+    "desc": "Balance Report",
+    "rma": "false"
+  },
+  "fin.942": {
+    "desc": "Interim Transaction Report",
+    "rma": "false"
+  },
+  "fin.950": {
+    "desc": "Statement Message",
+    "rma": "false"
+  },
+  "fin.970": {
+    "desc": "Netting Statement",
+    "rma": "false"
+  },
+  "fin.971": {
+    "desc": "Netting Balance Report",
+    "rma": "false"
+  },
+  "fin.972": {
+    "desc": "Netting Interim Statement",
+    "rma": "false"
+  },
+  "fin.973": {
+    "desc": "Netting Request Message",
+    "rma": "false"
+  },
+  "fin.985": {
+    "desc": "Status Enquiry",
+    "rma": "false"
+  },
+  "fin.986": {
+    "desc": "Status Report",
+    "rma": "false"
+  },
+  "fin.990": {
+    "desc": "Advice of Charges, Interest and Other Adjustments",
+    "rma": "false"
+  },
+  "fin.991": {
+    "desc": "Request for Payment of Charges, Interest and Other Expenses",
+    "rma": "false"
+  },
+  "fin.992": {
+    "desc": "Request for Cancellation",
+    "rma": "false"
+  },
+  "fin.995": {
+    "desc": "Queries",
+    "rma": "false"
+  },
+  "fin.996": {
+    "desc": "Answers",
+    "rma": "false"
+  },
+  "fin.998": {
+    "desc": "Proprietary Message",
+    "rma": "false"
+  },
+  "fin.999": {
+    "desc": "Free Format Message",
+    "rma": "false"
+  },
+  "fin.008": {
+    "desc": "System Request to Quit",
+    "rma": "false"
+  },
+  "fin.010": {
+    "desc": "Non-Delivery Warning",
+    "rma": "false"
+  },
+  "fin.011": {
+    "desc": "Delivery Notification",
+    "rma": "false"
+  },
+  "fin.012": {
+    "desc": "Sender Notification",
+    "rma": "false"
+  },
+  "fin.015": {
+    "desc": "Delayed NAK",
+    "rma": "false"
+  },
+  "fin.019": {
+    "desc": "Abort Notification",
+    "rma": "false"
+  },
+  "fin.020": {
+    "desc": "Retrieval Request (Text and History)",
+    "rma": "false"
+  },
+  "fin.021": {
+    "desc": "Retrieved Message (Text and History)",
+    "rma": "false"
+  },
+  "fin.022": {
+    "desc": "Retrieval Request (History)",
+    "rma": "false"
+  },
+  "fin.023": {
+    "desc": "Retrieved Message (History)",
+    "rma": "false"
+  },
+  "fin.024": {
+    "desc": "Bulk Retrieval Request",
+    "rma": "false"
+  },
+  "fin.025": {
+    "desc": "Bulk Retrieval Response",
+    "rma": "false"
+  },
+  "fin.026": {
+    "desc": "FINCopy Bulk Retrieval Request",
+    "rma": "false"
+  },
+  "fin.027": {
+    "desc": "FINCopy Bulk Retrieval Response",
+    "rma": "false"
+  },
+  "fin.028": {
+    "desc": "FINCopy Message Status Request",
+    "rma": "false"
+  },
+  "fin.029": {
+    "desc": "FINCopy Message Status Report",
+    "rma": "false"
+  },
+  "fin.031": {
+    "desc": "Session History Request",
+    "rma": "false"
+  },
+  "fin.032": {
+    "desc": "Delivery Subset Status Request",
+    "rma": "false"
+  },
+  "fin.035": {
+    "desc": "Delivery Instruction Request",
+    "rma": "false"
+  },
+  "fin.037": {
+    "desc": "Time Zone Status Request",
+    "rma": "false"
+  },
+  "fin.041": {
+    "desc": "Select Status Request for FIN",
+    "rma": "false"
+  },
+  "fin.044": {
+    "desc": "Undelivered Report Rules Redefinition",
+    "rma": "false"
+  },
+  "fin.045": {
+    "desc": "Daily Check Time Change Request",
+    "rma": "false"
+  },
+  "fin.046": {
+    "desc": "Undelivered Message Report Request",
+    "rma": "false"
+  },
+  "fin.048": {
+    "desc": "Undelivered Report Rules Request",
+    "rma": "false"
+  },
+  "fin.049": {
+    "desc": "Daily Check Report Time Query",
+    "rma": "false"
+  },
+  "fin.051": {
+    "desc": "Session History Report",
+    "rma": "false"
+  },
+  "fin.052": {
+    "desc": "Delivery Subset Status Report",
+    "rma": "false"
+  },
+  "fin.055": {
+    "desc": "Delivery Instructions Report",
+    "rma": "false"
+  },
+  "fin.057": {
+    "desc": "Time Zone Status Report",
+    "rma": "false"
+  },
+  "fin.061": {
+    "desc": "Select Status Report for FIN",
+    "rma": "false"
+  },
+  "fin.064": {
+    "desc": "Undelivered Report Rules Change Report",
+    "rma": "false"
+  },
+  "fin.065": {
+    "desc": "Time Change Report for Daily Check Report",
+    "rma": "false"
+  },
+  "fin.066": {
+    "desc": "Solicited Undelivered Message Report",
+    "rma": "false"
+  },
+  "fin.068": {
+    "desc": "Undelivered Report Rules",
+    "rma": "false"
+  },
+  "fin.069": {
+    "desc": "Daily Check Report Time Status",
+    "rma": "false"
+  },
+  "fin.070": {
+    "desc": "Undelivered SSI Update Notification Report Request",
+    "rma": "false"
+  },
+  "fin.071": {
+    "desc": "Undelivered SSI Update Notification Report",
+    "rma": "false"
+  },
+  "fin.073": {
+    "desc": "Message Sample Request",
+    "rma": "false"
+  },
+  "fin.074": {
+    "desc": "Broadcast Request",
+    "rma": "false"
+  },
+  "fin.081": {
+    "desc": "Daily Check Report",
+    "rma": "false"
+  },
+  "fin.082": {
+    "desc": "Undelivered Message Report at a Fixed Hour",
+    "rma": "false"
+  },
+  "fin.083": {
+    "desc": "Undelivered Message Report at Cut-off Time",
+    "rma": "false"
+  },
+  "fin.090": {
+    "desc": "User-to-SWIFT Message",
+    "rma": "false"
+  },
+  "fin.092": {
+    "desc": "SWIFT-to-User Message",
+    "rma": "false"
+  },
+  "fin.094": {
+    "desc": "Broadcast",
+    "rma": "false"
+  },
+  "fin.096": {
+    "desc": "FINCopy to Server Destination Message",
+    "rma": "false"
+  },
+  "fin.097": {
+    "desc": "FINCopy Message Authorisation/Refusal Notification",
+    "rma": "false"
+  }
+}

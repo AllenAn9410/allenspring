@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <tags>
+        <tag>
+            <tag-code>B3</tag-code>
+            <tag-desc>Incoming SWIFT Header 3</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>B4</tag-code>
+            <tag-desc>Incoming SWIFT Header 4</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>B5</tag-code>
+            <tag-desc>Incoming SWIFT Header 5</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>B6</tag-code>
+            <tag-desc>Incoming SWIFT Header 6</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>20</tag-code>
+            <tag-desc>Transaction Reference Number</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="16" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>12</tag-code>
+            <tag-desc>Sub-Message Type</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="3" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>27A</tag-code>
+            <tag-desc>Message Index/Total</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="3" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>21A</tag-code>
+            <tag-desc>Customer Reference Number</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="16" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>21R</tag-code>
+            <tag-desc>Bank Reference Number</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="16" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>13E</tag-code>
+            <tag-desc>Message Creation Date Time</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="12" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>29A</tag-code>
+            <tag-desc>Customer Contact</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="4"/>
+        </tag>
+        <tag>
+            <tag-code>72C</tag-code>
+            <tag-desc>Corporate to Bank Information</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="6"/>
+        </tag>
+        <tag>
+            <tag-code>23X</tag-code>
+            <tag-desc>File Identification</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="70" illegal-char="" rows="1"/>
+        </tag>
+    </tags>
+</root>

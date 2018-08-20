@@ -1,0 +1,42 @@
+{
+  "MT455": {
+    "F20": "16x",
+    "F21": "16x",
+    "F25": "35x{0,1}",
+    "F30": "YYMMDD",
+    "F32A": {
+      "Date": "YYMMDD",
+      "Currency": "3!a",
+      "Amount": "15d"
+    },
+    "Choice_33CD": {
+      "F33C": {
+        "Date": "YYMMDD",
+        "Currency": "3!a",
+        "Amount": "15d"
+      },
+      "F33D": {
+        "Date": "YYMMDD",
+        "Currency": "3!a",
+        "Amount": "15d"
+      }
+    },
+    "Choice_52ABD": {
+      "F52A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F52B": {
+        "PartyIdentifier": "/36x{0,1}",
+        "Location": "35x{0,1}"
+      },
+      "F52D": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x"
+      },
+      "@occur": "{0,1}"
+    },
+    "F77A": "20*35x",
+    "@len": 2000
+  }
+}

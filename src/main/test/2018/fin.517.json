@@ -1,0 +1,80 @@
+{
+  "MT517": {
+    "SeqA": {
+      "F16R": "16c(GENL)",
+      "F20C": {
+        "Qualifier": "':'4!c(SEME)'/'",
+        "Reference": "'/'16x"
+      },
+      "F23G": {
+        "Function": "4!c(CANC|NEWM)",
+        "Subfunction": "'/'4!c(CODU|COPY|DUPL){0,1}"
+      },
+      "Choice_98ACE": {
+        "F98A": {
+          "Qualifier": "':'4!c(PREP)'/'",
+          "Date": "'/'YYYYMMDD"
+        },
+        "F98C": {
+          "Qualifier": "':'4!c(PREP)'/'",
+          "Date": "'/'YYYYMMDD",
+          "Time": "HHMMSS"
+        },
+        "F98E": {
+          "Qualifier": "':'4!c(PREP)'/'",
+          "Date": "'/'YYYYMMDD",
+          "Time": "HHMMSS",
+          "Decimals": "','3n{0,1}",
+          "UTCIndicator": "'/'6d{0,1}"
+        },
+        "@occur": "{0,1}"
+      },
+      "Loop1": {
+        "Choice_95PQR": {
+          "F95P": {
+            "Qualifier": "':'4!c(AFFM|BUYR|SELL|DEAG|REAG)'/'",
+            "IdentifierCode": "'/'BIC"
+          },
+          "F95Q": {
+            "Qualifier": "':'4!c(AFFM|BUYR|SELL|DEAG|REAG)'/'",
+            "NameAndAddress": "'/'4*35x"
+          },
+          "F95R": {
+            "Qualifier": "':'4!c(AFFM|BUYR|SELL|DEAG|REAG)'/'",
+            "DataSourceScheme": "8c",
+            "ProprietaryCode": "'/'34x"
+          }
+        },
+        "@occur": "{1,5}"
+      },
+      "F25D": {
+        "Qualifier": "':'4!c(AFFM)'/'",
+        "DataSourceScheme": "8c{0,1}",
+        "StatusCode": "'/'4!c",
+        "@occur": "{0,1}"
+      },
+      "SeqA1": {
+        "F16R": "16c(LINK)",
+        "Choice_13AB": {
+          "F13A": {
+            "Qualifier": "':'4!c(LINK)'/'",
+            "NumberId": "'/'3!c"
+          },
+          "F13B": {
+            "Qualifier": "':'4!c(LINK)'/'",
+            "DataSourceScheme": "8c{0,1}",
+            "Number": "'/'30x"
+          },
+          "@occur": "{0,1}"
+        },
+        "F20C": {
+          "Qualifier": "':'4!c(RELA|PREV|MAST|BASK|INDX|LIST|PROG|TRRF|COMM|COLR|ISSU)'/'",
+          "Reference": "'/'16x"
+        },
+        "F16S": "16c(LINK)",
+        "@occur": "{1,999}"
+      },
+      "F16S": "16c(GENL)"
+    }
+  }
+}

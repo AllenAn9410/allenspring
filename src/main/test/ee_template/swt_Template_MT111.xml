@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <tags>
+        <tag>
+            <tag-code>B3</tag-code>
+            <tag-desc>Incoming SWIFT Header 3</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>B4</tag-code>
+            <tag-desc>Incoming SWIFT Header 4</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>B5</tag-code>
+            <tag-desc>Incoming SWIFT Header 5</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>B6</tag-code>
+            <tag-desc>Incoming SWIFT Header 6</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>20</tag-code>
+            <tag-desc>Transaction Reference Number</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="16" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>21</tag-code>
+            <tag-desc>Cheque Number</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="16" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>30</tag-code>
+            <tag-desc>Date of Issue</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="6" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>32A</tag-code>
+            <tag-desc>Amount</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="24" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>32B</tag-code>
+            <tag-desc>Amount</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="18" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>52A</tag-code>
+            <tag-desc>Drawer Bank</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="11" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>52D</tag-code>
+            <tag-desc>Drawer Bank</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="35" illegal-char="" rows="4"/>
+        </tag>
+        <tag>
+            <tag-code>52B</tag-code>
+            <tag-desc>Drawer Bank</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="35" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>59</tag-code>
+            <tag-desc>Payee</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="35" illegal-char="" rows="4"/>
+        </tag>
+        <tag>
+            <tag-code>75</tag-code>
+            <tag-desc>Queries</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="6"/>
+        </tag>
+    </tags>
+</root>

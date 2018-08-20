@@ -1,0 +1,84 @@
+{
+  "MT800": {
+    "F20": "16x",
+    "Choice_51AC": {
+      "F51A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F51C": "/34x"
+    },
+    "SeqA": {
+      "F23": "16x",
+      "F30": "YYMMDD{0,1}",
+      "Loop1": {
+        "F26A": {
+          "Number1": "16x",
+          "Number2": "'/'4!x{0,1}"
+        },
+        "@occur": "{1,999}"
+      },
+      "F33B": {
+        "Currency": "3!a",
+        "Amount": "15d"
+      },
+      "F73": "6*35x{0,1}",
+      "@occur": "{1,999}"
+    },
+    "SeqB": {
+      "F34B": {
+        "Currency": "3!a",
+        "Amount": "15d"
+      },
+      "F16A": "5n",
+      "F32A": {
+        "Date": "YYMMDD",
+        "Currency": "3!a",
+        "Amount": "15d"
+      },
+      "Choice_52AD": {
+        "F52A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F52D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "@occur": "{0,1}"
+      },
+      "Choice_53ABD": {
+        "F53A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F53B": {
+          "PartyIdentifier": "/36x{0,1}",
+          "Location": "35x{0,1}"
+        },
+        "F53D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "@occur": "{0,1}"
+      },
+      "Choice_54ABD": {
+        "F54A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F54B": {
+          "PartyIdentifier": "/36x{0,1}",
+          "Location": "35x{0,1}"
+        },
+        "F54D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "@occur": "{0,1}"
+      },
+      "F72": "6*35x{0,1}"
+    },
+    "@len": 2000
+  }
+}

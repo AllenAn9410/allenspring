@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <tags>
+        <tag>
+            <tag-code>B3</tag-code>
+            <tag-desc>Incoming SWIFT Header 3</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>B4</tag-code>
+            <tag-desc>Incoming SWIFT Header 4</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>B5</tag-code>
+            <tag-desc>Incoming SWIFT Header 5</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>B6</tag-code>
+            <tag-desc>Incoming SWIFT Header 6</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>12</tag-code>
+            <tag-desc>Sub-Message Type</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="3" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>20</tag-code>
+            <tag-desc>Documentary Credit Number</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="16" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>21P</tag-code>
+            <tag-desc>Bank Reference Number</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="16" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>20Z</tag-code>
+            <tag-desc>Transaction Reference Number</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="16" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>31C</tag-code>
+            <tag-desc>Date of Issue</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="6" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>13E</tag-code>
+            <tag-desc>Message Creation Date Time</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="12" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>52A</tag-code>
+            <tag-desc>Issuing Bank</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="11" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>52D</tag-code>
+            <tag-desc>Issuing Bank</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="35" illegal-char="" rows="4"/>
+        </tag>
+        <tag>
+            <tag-code>58A</tag-code>
+            <tag-desc>Nominated/Confirming Bank</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="11" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>58D</tag-code>
+            <tag-desc>Nominated/Confirming Bank</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="35" illegal-char="" rows="4"/>
+        </tag>
+        <tag>
+            <tag-code>29B</tag-code>
+            <tag-desc>Nominated/Confirming Bank Contact</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="4"/>
+        </tag>
+        <tag>
+            <tag-code>22R</tag-code>
+            <tag-desc>Reason for Message</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="4" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>31S</tag-code>
+            <tag-desc>Date of Presentation</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="6" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>32B</tag-code>
+            <tag-desc>Credit Amount</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="18" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>39D</tag-code>
+            <tag-desc>Drawing Amount</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="18" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>32G</tag-code>
+            <tag-desc>Amount of Commission and Charges</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="18" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>33A</tag-code>
+            <tag-desc>Net Amount</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="24" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>33B</tag-code>
+            <tag-desc>Net Amount</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="18" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>71M</tag-code>
+            <tag-desc>Details of Commission and Charges</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="15"/>
+        </tag>
+        <tag>
+            <tag-code>57A</tag-code>
+            <tag-desc>Account With Bank</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="11" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>57B</tag-code>
+            <tag-desc>Account With Bank</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="35" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>57D</tag-code>
+            <tag-desc>Account With Bank</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="35" illegal-char="" rows="4"/>
+        </tag>
+        <tag>
+            <tag-code>53C</tag-code>
+            <tag-desc>Settlement Account</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>34Y</tag-code>
+            <tag-desc>Total Amount For Settlement Account</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="18" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>25A</tag-code>
+            <tag-desc>Alternative Charges Account</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>34W</tag-code>
+            <tag-desc>Total Amount For Alternative Charges Account</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="18" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>22N</tag-code>
+            <tag-desc>Recourse Indicator</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="4" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>36</tag-code>
+            <tag-desc>Exchange Rate</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="12" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>34X</tag-code>
+            <tag-desc>Countervalue in Local Currency</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="18" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>72C</tag-code>
+            <tag-desc>Bank to Corporate Information</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="6"/>
+        </tag>
+        <tag>
+            <tag-code>23X</tag-code>
+            <tag-desc>File Identification</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="70" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>B9</tag-code>
+            <tag-desc>Customer Address</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="16" illegal-char="" rows="1"/>
+        </tag>
+    </tags>
+</root>

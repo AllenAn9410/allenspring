@@ -1,0 +1,139 @@
+{
+  "MT370": {
+    "SeqA": {
+      "F16R": "16c(GENL)",
+      "F20C": {
+        "Qualifier": "':'4!c(SEME)'/'",
+        "Reference": "'/'16x"
+      },
+      "F23G": {
+        "Function": "4!c(AMND|CANC|NEWM)",
+        "Subfunction": "'/'4!c(CODU|COPY|DUPL){0,1}"
+      },
+      "Choice_98ACE": {
+        "F98A": {
+          "Qualifier": "':'4!c(PREP)'/'",
+          "Date": "'/'YYYYMMDD"
+        },
+        "F98C": {
+          "Qualifier": "':'4!c(PREP)'/'",
+          "Date": "'/'YYYYMMDD",
+          "Time": "HHMMSS"
+        },
+        "F98E": {
+          "Qualifier": "':'4!c(PREP)'/'",
+          "Date": "'/'YYYYMMDD",
+          "Time": "HHMMSS",
+          "Decimals": "','3n{0,1}",
+          "UTCIndicator": "'/'6d{0,1}"
+        },
+        "@occur": "{0,1}"
+      },
+      "SeqA1": {
+        "F16R": "16c(LINK)",
+        "F20C": {
+          "Qualifier": "':'4!c(RELA|PREV)'/'",
+          "Reference": "'/'16x"
+        },
+        "F16S": "16c(LINK)",
+        "@occur": "{0,999}"
+      },
+      "F95P": {
+        "Qualifier": "':'4!c(PTYA)'/'",
+        "IdentifierCode": "'/'BIC"
+      },
+      "F95P_9": {
+        "Qualifier": "':'4!c(PTYB)'/'",
+        "IdentifierCode": "'/'BIC"
+      },
+      "F16S": "16c(GENL)"
+    },
+    "SeqB": {
+      "F16R": "16c(NETPOS)",
+      "F20C": {
+        "Qualifier": "':'4!c(NETT)'/'",
+        "Reference": "'/'16x"
+      },
+      "Choice_98AC": {
+        "F98A": {
+          "Qualifier": "':'4!c(NETT)'/'",
+          "Date": "'/'YYYYMMDD"
+        },
+        "F98C": {
+          "Qualifier": "':'4!c(NETT)'/'",
+          "Date": "'/'YYYYMMDD",
+          "Time": "HHMMSS"
+        },
+        "@occur": "{0,1}"
+      },
+      "F97A": {
+        "Qualifier": "':'4!c(CASH)'/'",
+        "AccountNumber": "'/'35x",
+        "@occur": "{0,1}"
+      },
+      "F19A": {
+        "Qualifier": "':'4!c(NETT)'//'",
+        "Sign": "N{0,1}",
+        "CurrencyCode": "3!a",
+        "Amount": "15d"
+      },
+      "F22H": {
+        "Qualifier": "':'4!c(RECP)'/'",
+        "Indicator": "'/'4!c(NOPA|PAYO|RECE)"
+      },
+      "F98A": {
+        "Qualifier": "':'4!c(VALU)'/'",
+        "Date": "'/'YYYYMMDD"
+      },
+      "F99A": {
+        "Qualifier": "':'4!c(TRAD)'//'",
+        "Sign": "N{0,1}",
+        "Number": "3!n",
+        "@occur": "{0,1}"
+      },
+      "Loop1": {
+        "F22F": {
+          "Qualifier": "':'4!c(TRAN)'/'",
+          "DataSourceScheme": "8c{0,1}",
+          "Indicator": "'/'4!c",
+          "@occur": "{0,1}"
+        },
+        "@occur": "{0,999}"
+      },
+      "Loop2": {
+        "F70E": {
+          "Qualifier": "':'4!c(ADTX)'/'",
+          "Narrative": "'/'10*35x",
+          "@occur": "{0,1}"
+        },
+        "@occur": "{0,999}"
+      },
+      "SeqB1": {
+        "F16R": "16c(CSHPRTY)",
+        "Choice_95PQR": {
+          "F95P": {
+            "Qualifier": "':'4!c(BENM|ACCW|INT1|INT2)'/'",
+            "IdentifierCode": "'/'BIC"
+          },
+          "F95Q": {
+            "Qualifier": "':'4!c(BENM|ACCW|INT1|INT2)'/'",
+            "NameAndAddress": "'/'4*35x"
+          },
+          "F95R": {
+            "Qualifier": "':'4!c(BENM|ACCW|INT1|INT2)'/'",
+            "DataSourceScheme": "8c",
+            "ProprietaryCode": "'/'34x"
+          }
+        },
+        "F97A": {
+          "Qualifier": "':'4!c(CASH)'/'",
+          "AccountNumber": "'/'35x",
+          "@occur": "{0,1}"
+        },
+        "F16S": "16c(CSHPRTY)",
+        "@occur": "{0,999}"
+      },
+      "F16S": "16c(NETPOS)"
+    }
+  }
+}

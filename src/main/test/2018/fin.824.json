@@ -1,0 +1,38 @@
+{
+  "MT824": {
+    "F20": "16x",
+    "F30": "YYMMDD{0,1}",
+    "Choice_51AC": {
+      "F51A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F51C": "/34x"
+    },
+    "Loop1": {
+      "Loop2": {
+        "F68A": {
+          "Number": "6n",
+          "Currency": "3!a",
+          "Denomination": "6n'/'",
+          "Mode": "2n",
+          "Amount": "'/'15d{0,1}",
+          "ProductCode": "'//'10x{0,1}"
+        },
+        "Loop3": {
+          "F26B": {
+            "Number1": "16x",
+            "Number2": "'/'16x{0,1}"
+          },
+          "@occur": "{1,999}"
+        },
+        "@occur": "{1,999}"
+      },
+      "F19": "17d",
+      "@occur": "{1,999}"
+    },
+    "F77B": "3*35x",
+    "F72": "6*35x{0,1}",
+    "@len": 2000
+  }
+}

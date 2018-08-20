@@ -1,0 +1,62 @@
+{
+  "MT970": {
+    "F20": "16x",
+    "F25": "35x",
+    "F28C": {
+      "StatementNumber": "5n",
+      "SequenceNumber": "'/'5n{0,1}"
+    },
+    "Choice_60FM": {
+      "F60F": {
+        "DCMark": "1!a(C|D)",
+        "Date": "YYMMDD",
+        "Currency": "3!a",
+        "Amount": "15d"
+      },
+      "F60M": {
+        "DCMark": "1!a(C|D)",
+        "Date": "YYMMDD",
+        "Currency": "3!a",
+        "Amount": "15d"
+      }
+    },
+    "Loop1": {
+      "F61": {
+        "ValueDate": "YYMMDD",
+        "EntryDate": "MMDD{0,1}",
+        "DebitCreditMark": "2a(C|D|RC|RD)",
+        "FundsCode": "1!a{0,1}",
+        "Amount": "15d",
+        "TransactionType": "1!a(S|N|F)",
+        "IdentificationCode": "3!c",
+        "ReferenceForTheAccountOwner": "16x",
+        "ReferenceOfTheAccountServicingInstitution": "'//'16x{0,1}",
+        "SupplementaryDetails": "'\r\n'34x{0,1}",
+        "@occur": "{0,1}"
+      },
+      "@occur": "{0,999}"
+    },
+    "Choice_62FM": {
+      "F62F": {
+        "DCMark": "1!a(C|D)",
+        "Date": "YYMMDD",
+        "Currency": "3!a",
+        "Amount": "15d"
+      },
+      "F62M": {
+        "DCMark": "1!a(C|D)",
+        "Date": "YYMMDD",
+        "Currency": "3!a",
+        "Amount": "15d"
+      }
+    },
+    "F64": {
+      "DCMark": "1!a(C|D)",
+      "Date": "YYMMDD",
+      "Currency": "3!a",
+      "Amount": "15d",
+      "@occur": "{0,1}"
+    },
+    "F20Z": "16x"
+  }
+}

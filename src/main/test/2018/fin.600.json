@@ -1,0 +1,230 @@
+{
+  "MT600": {
+    "SeqA": {
+      "F15A": "NULL_Type",
+      "F20": "16x",
+      "F21": "16x",
+      "F22": {
+        "Code": "8a'/'",
+        "CommonReference": "4!a2!c4!n4!a2!c"
+      },
+      "F94A": "4!c(AGNT|BILA|BROK){0,1}",
+      "Choice_82ADJ": {
+        "F82A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F82D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "F82J": "5*40x"
+      },
+      "Choice_87ADJ": {
+        "F87A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F87D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "F87J": "5*40x"
+      },
+      "Choice_83ADJ": {
+        "F83A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F83D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "F83J": "5*40x",
+        "@occur": "{0,1}"
+      },
+      "F30": "YYMMDD",
+      "F26C": {
+        "DeliveryDetails": "3!a(CFR|CIF|CIP|CPT|DAF|DDP|DDU|DEQ|DES|DTD|EXW|FAS|FCA|FOB|LOC|OTH){0,1}",
+        "DeliveryLocation": "'/'15x",
+        "Allocation": "'/'5!a(ALLOC|UNALL)",
+        "Type": "4!a(ALUM|COPP|GOLD|IRID|LEAD|NICK|OSMI|OTHR|PALL|PLAT|POIL|RHOD|RUTH|SILV|STEE|TINA|TITA|ZINC|AMEG|ANUG|BRIT|COIN|CORO|DUCA|FRFR|GECU|KRUG|LBTY|MAPL|MEXP|NBUF|NOBL|NSOV|OSOV|SAEG|SECU|STAT|VREN)",
+        "Denomination": "4x{0,1}",
+        "Form": "'//'8x{0,1}"
+      },
+      "F26H": "16x{0,1}",
+      "F33G": {
+        "Currency": "3!a",
+        "Price": "15d",
+        "Code": "5!c(SEE72){0,1}"
+      },
+      "F71C": "6*35x{0,1}",
+      "F77H": {
+        "Type": "6a(ISDA|OTHER)",
+        "Date": "'/'YYYYMMDD{0,1}",
+        "Version": "'//'YYYY{0,1}",
+        "@occur": "{0,1}"
+      },
+      "F77D": "6*35x{0,1}",
+      "F14C": "4!n{0,1}",
+      "F72": "6*35x{0,1}"
+    },
+    "SeqB": {
+      "F15B": "NULL_Type",
+      "F32F": {
+        "Unit": "3!a(FOZ|GOZ|GRM|KLO|LIT|LOT|OTH|PND|TAL|TOL|TON|TOZ|UNT)",
+        "Amount": "15d"
+      },
+      "Choice_86ABD": {
+        "F86A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F86B": {
+          "PartyIdentifier": "/36x{0,1}",
+          "Location": "35x{0,1}"
+        },
+        "F86D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "@occur": "{0,1}"
+      },
+      "Choice_87ABD": {
+        "F87A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F87B": {
+          "PartyIdentifier": "/36x{0,1}",
+          "Location": "35x{0,1}"
+        },
+        "F87D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        }
+      },
+      "F34P": {
+        "Date": "YYMMDD",
+        "Currency": "3!a",
+        "Amount": "15d"
+      },
+      "Choice_53ABD": {
+        "F53A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F53B": {
+          "PartyIdentifier": "/36x{0,1}",
+          "Location": "35x{0,1}"
+        },
+        "F53D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "@occur": "{0,1}"
+      },
+      "Choice_56ABD": {
+        "F56A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F56B": {
+          "PartyIdentifier": "/36x{0,1}",
+          "Location": "35x{0,1}"
+        },
+        "F56D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "@occur": "{0,1}"
+      },
+      "Choice_57ABD": {
+        "F57A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F57B": {
+          "PartyIdentifier": "/36x{0,1}",
+          "Location": "35x{0,1}"
+        },
+        "F57D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        }
+      },
+      "@occur": "{0,1}"
+    },
+    "SeqC": {
+      "F15C": "NULL_Type",
+      "F32F": {
+        "Unit": "3!a(FOZ|GOZ|GRM|KLO|LIT|LOT|OTH|PND|TAL|TOL|TON|TOZ|UNT)",
+        "Amount": "15d"
+      },
+      "Choice_86ABD": {
+        "F86A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F86B": {
+          "PartyIdentifier": "/36x{0,1}",
+          "Location": "35x{0,1}"
+        },
+        "F86D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "@occur": "{0,1}"
+      },
+      "Choice_87ABD": {
+        "F87A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F87B": {
+          "PartyIdentifier": "/36x{0,1}",
+          "Location": "35x{0,1}"
+        },
+        "F87D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        }
+      },
+      "F34R": {
+        "Date": "YYMMDD",
+        "Currency": "3!a",
+        "Amount": "15d"
+      },
+      "Choice_56ABD": {
+        "F56A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F56B": {
+          "PartyIdentifier": "/36x{0,1}",
+          "Location": "35x{0,1}"
+        },
+        "F56D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "@occur": "{0,1}"
+      },
+      "Choice_57ABD": {
+        "F57A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F57B": {
+          "PartyIdentifier": "/36x{0,1}",
+          "Location": "35x{0,1}"
+        },
+        "F57D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        }
+      },
+      "@occur": "{0,1}"
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "MT110": {
+    "F20": "16x",
+    "Choice_53ABD": {
+      "F53A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F53B": {
+        "PartyIdentifier": "/36x{0,1}",
+        "Location": "35x{0,1}"
+      },
+      "F53D": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x"
+      },
+      "@occur": "{0,1}"
+    },
+    "Choice_54ABD": {
+      "F54A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F54B": {
+        "PartyIdentifier": "/36x{0,1}",
+        "Location": "35x{0,1}"
+      },
+      "F54D": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x"
+      },
+      "@occur": "{0,1}"
+    },
+    "F72": "6*35x{0,1}",
+    "Loop1": {
+      "F21": "16x",
+      "F30": "YYMMDD",
+      "Choice_32AB": {
+        "F32A": {
+          "Date": "YYMMDD",
+          "Currency": "3!a",
+          "Amount": "15d"
+        },
+        "F32B": {
+          "Currency": "3!a",
+          "Amount": "15d"
+        }
+      },
+      "Choice_50AFK": {
+        "F50A": {
+          "Account": "/34x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F50F": {
+          "PartyIdentifier": "F50FPI'\r\n'",
+          "NameAndAddress": "4*35x"
+        },
+        "F50K": {
+          "Account": "/34x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "@occur": "{0,1}"
+      },
+      "Choice_52ABD": {
+        "F52A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F52B": {
+          "PartyIdentifier": "/36x{0,1}",
+          "Location": "35x{0,1}"
+        },
+        "F52D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "@occur": "{0,1}"
+      },
+      "Choice_59A": {
+        "F59": {
+          "Account": "/34x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "F59F": {
+          "Account": "/34x'\r\n'{0,1}",
+          "NameAndAddressDetails": "4*(1!n/33x)"
+        }
+      },
+      "@occur": "{1,10}"
+    },
+    "@len": 2000
+  }
+}

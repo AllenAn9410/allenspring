@@ -1,0 +1,31 @@
+{
+  "MT759": {
+    "F27": {
+      "Number": "1!n'/'",
+      "Total": "1!n"
+    },
+    "F20": "16x",
+    "F21": "16x{0,1}",
+    "F22D": "4!c(DGAR|DOCR|STBY|UNDK)",
+    "F23": "16x{0,1}",
+    "Choice_52AD": {
+      "F52A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F52D": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x"
+      },
+      "@occur": "{0,1}"
+    },
+    "F23H": "8!c(CLSVOPEN|CLSVCLOS|FRAUDMSG|GENINFAD|ISSAMEND|ISSUANCE|OTHERFNC|REIMBURS|REQAMEND|REQFINAN|REQISSUE|TRANSFER)",
+    "F45D": "150*65z",
+    "F23X": {
+      "Code": "4!c(COUR|EMAL|FACT|FAXT|HOST|MAIL|OTHR)'/'",
+      "Narrative": "65x",
+      "@occur": "{0,1}"
+    },
+    "@len": 10000
+  }
+}

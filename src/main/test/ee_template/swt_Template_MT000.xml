@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <tags>
+        <tag>
+            <tag-code>B3</tag-code>
+            <tag-desc>Incoming SWIFT Header 3</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>B4</tag-code>
+            <tag-desc>Incoming SWIFT Header 4</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>B5</tag-code>
+            <tag-desc>Incoming SWIFT Header 5</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>B6</tag-code>
+            <tag-desc>Incoming SWIFT Header 6</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>B1</tag-code>
+            <tag-desc>Outgoing SWIFT Header 1</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="25" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>B2</tag-code>
+            <tag-desc>Receiver's BIC Code</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="21" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>B3</tag-code>
+            <tag-desc>Incoming SWIFT Header 3</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="25" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>B4</tag-code>
+            <tag-desc>Incoming SWIFT Header 4</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="37" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>B5</tag-code>
+            <tag-desc>Incoming SWIFT Header 5</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="25" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>B6</tag-code>
+            <tag-desc>Incoming SWIFT Header 6</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="51" illegal-char="" rows="1"/>
+        </tag>
+    </tags>
+</root>

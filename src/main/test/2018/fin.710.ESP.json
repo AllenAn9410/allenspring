@@ -1,0 +1,147 @@
+{
+  "MT710": {
+    "F27": {
+      "Number": "1!n'/'",
+      "Total": "1!n"
+    },
+    "F40B": {
+      "Type": "24x(IRREVOCABLE|IRREVOCABLE TRANSFERABLE|IRREVOCABLE STANDBY|IRREVOC TRANS STANDBY)'\r\n'",
+      "Code": "24x(ADDING OUR CONFIRMATION|WITHOUT OUR CONFIRMATION)"
+    },
+    "F20": "16x",
+    "F21": "16x",
+    "F23": "16x{0,1}",
+    "F31C": "YYMMDD",
+    "F40E": {
+      "ApplicableRules": "30x(EUCP LATEST VERSION|EUCPURR LATEST VERSION|ISP LATEST VERSION|OTHR|UCP LATEST VERSION|UCPURR LATEST VERSION)",
+      "Narrative": "'/'35x{0,1}"
+    },
+    "F31D": {
+      "Date": "YYMMDD",
+      "Place": "29x"
+    },
+    "Choice_52AD": {
+      "F52A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F52D": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x"
+      },
+      "@occur": "{0,1}"
+    },
+    "F50B": "4*35x{0,1}",
+    "Choice_51AD": {
+      "F51A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F51D": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x"
+      },
+      "@occur": "{0,1}"
+    },
+    "F50": "4*35x",
+    "F59": {
+      "Account": "/34x'\r\n'{0,1}",
+      "NameAndAddress": "4*35x"
+    },
+    "F32B": {
+      "Currency": "3!a",
+      "Amount": "15d"
+    },
+    "F39A": {
+      "Tolerance1": "2n'/'",
+      "Tolerance2": "2n",
+      "@occur": "{0,1}"
+    },
+    "F39C": "4*35x{0,1}",
+    "Choice_41AD": {
+      "F41A": {
+        "IdentifierCode": "BIC'\r\n'",
+        "Code": "14x(BY ACCEPTANCE|BY DEF PAYMENT|BY MIXED PYMT|BY NEGOTIATION|BY PAYMENT)"
+      },
+      "F41D": {
+        "NameAndAddress": "4*35x'\r\n'",
+        "Code": "14x(BY ACCEPTANCE|BY DEF PAYMENT|BY MIXED PYMT|BY NEGOTIATION|BY PAYMENT)"
+      }
+    },
+    "F42C": "3*35x{0,1}",
+    "Choice_42AD": {
+      "F42A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F42D": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x"
+      },
+      "@occur": "{0,1}"
+    },
+    "F42M": "4*35x{0,1}",
+    "F42P": "4*35x{0,1}",
+    "F43P": "11x(ALLOWED|CONDITIONAL|NOT ALLOWED){0,1}",
+    "F43T": "11x(ALLOWED|CONDITIONAL|NOT ALLOWED){0,1}",
+    "F44A": "65x{0,1}",
+    "F44E": "65x{0,1}",
+    "F44F": "65x{0,1}",
+    "F44B": "65x{0,1}",
+    "F44C": "YYMMDD{0,1}",
+    "F44D": "6*65x{0,1}",
+    "F45A": "900*65z{0,1}",
+    "F46A": "900*65z{0,1}",
+    "F47A": "900*65z{0,1}",
+    "F49G": "900*65z{0,1}",
+    "F49H": "900*65z{0,1}",
+    "F71D": "6*35z{0,1}",
+    "F48": {
+      "Days": "3n",
+      "Narrative": "'/'35x{0,1}",
+      "@occur": "{0,1}"
+    },
+    "F49": "7!x(CONFIRM|MAY ADD|WITHOUT)",
+    "Choice_58AD": {
+      "F58A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F58D": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x"
+      },
+      "@occur": "{0,1}"
+    },
+    "Choice_53AD": {
+      "F53A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F53D": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x"
+      },
+      "@occur": "{0,1}"
+    },
+    "F78": "12*65x{0,1}",
+    "Choice_57ABD": {
+      "F57A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F57B": {
+        "PartyIdentifier": "/36x{0,1}",
+        "Location": "35x{0,1}"
+      },
+      "F57D": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x"
+      },
+      "@occur": "{0,1}"
+    },
+    "F72Z": "6*35z{0,1}",
+    "F20Z": "16x{0,1}",
+    "@len": 80000
+  }
+}

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <tags>
+        <tag>
+            <tag-code>B3</tag-code>
+            <tag-desc>Incoming SWIFT Header 3</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>B4</tag-code>
+            <tag-desc>Incoming SWIFT Header 4</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>B5</tag-code>
+            <tag-desc>Incoming SWIFT Header 5</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>B6</tag-code>
+            <tag-desc>Incoming SWIFT Header 6</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>27</tag-code>
+            <tag-desc>Sequence of Total</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="3" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>20</tag-code>
+            <tag-desc>Sender's Reference</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="16" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>21</tag-code>
+            <tag-desc>Documentary Credit Number</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="16" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>45B</tag-code>
+            <tag-desc>Description of Goods and/or Services</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="65" illegal-char="" rows="100"/>
+        </tag>
+        <tag>
+            <tag-code>46B</tag-code>
+            <tag-desc>Documnets Required</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="65" illegal-char="" rows="100"/>
+        </tag>
+        <tag>
+            <tag-code>47B</tag-code>
+            <tag-desc>Additional Conditions</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="65" illegal-char="" rows="100"/>
+        </tag>
+        <tag>
+            <tag-code>B9</tag-code>
+            <tag-desc>Customer Address</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="16" illegal-char="" rows="1"/>
+        </tag>
+    </tags>
+</root>

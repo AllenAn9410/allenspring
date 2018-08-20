@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <tags>
+        <tag>
+            <tag-code>B3</tag-code>
+            <tag-desc>Incoming SWIFT Header 3</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>B4</tag-code>
+            <tag-desc>Incoming SWIFT Header 4</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>B5</tag-code>
+            <tag-desc>Incoming SWIFT Header 5</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>B6</tag-code>
+            <tag-desc>Incoming SWIFT Header 6</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>20</tag-code>
+            <tag-desc>Documentary Credit Number</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="16" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>21</tag-code>
+            <tag-desc>Reimbursing Bank's Reference</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="16" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>30</tag-code>
+            <tag-desc>Date of the Original Authorisation to Re</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="6" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>31E</tag-code>
+            <tag-desc>New Date of Expiry</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="6" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>32B</tag-code>
+            <tag-desc>Increase of Credit Amount</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="18" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>33B</tag-code>
+            <tag-desc>Decrease of Documentary Credit Amount</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="18" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>34B</tag-code>
+            <tag-desc>New Credit Amount After Amd</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="18" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>39A</tag-code>
+            <tag-desc>Percentage Credit Amount Tolerance</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="5" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>39B</tag-code>
+            <tag-desc>Maximum Credit Amount</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="13" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>39C</tag-code>
+            <tag-desc>Additional Amounts Covered</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="4"/>
+        </tag>
+        <tag>
+            <tag-code>72</tag-code>
+            <tag-desc>Sender to Receiver Information</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="6"/>
+        </tag>
+        <tag>
+            <tag-code>77A</tag-code>
+            <tag-desc>Narrative</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="20"/>
+        </tag>
+    </tags>
+</root>

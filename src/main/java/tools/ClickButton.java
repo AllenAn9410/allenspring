@@ -10,20 +10,20 @@ public class ClickButton {
     private int buttonY = 2;
     private int buttonWidth;
     private int buttonHeight;
-    int[] levels = {5,10,15};
+    int[] levels = {5, 10, 15};
     JFrame frame;
     JPanel panel;
     JButton clickButton;
 
-    public ClickButton(int indexLevel){
-        if( indexLevel < 0 || indexLevel > levels.length){
+    public ClickButton(int indexLevel) {
+        if (indexLevel < 0 || indexLevel > levels.length) {
             buttonWidth = 1;
-        } else{
+        } else {
             buttonWidth = levels[indexLevel];
         }
         buttonHeight = buttonWidth;
         frame = new JFrame("CLICK TEST");
-        frame.setSize(700,700);
+        frame.setSize(700, 700);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         panel = new JPanel();
@@ -39,6 +39,7 @@ public class ClickButton {
         clickButton.addActionListener(new ButtonClick());
 
     }
+
     private class ButtonClick implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             buttonX = getNum();
@@ -48,7 +49,8 @@ public class ClickButton {
             panel.repaint();
         }
     }
-    private int getNum(){
+
+    private int getNum() {
         Random a = new Random();
         return a.nextInt(685);
     }

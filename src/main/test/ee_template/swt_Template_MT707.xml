@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <tags>
+        <tag>
+            <tag-code>B3</tag-code>
+            <tag-desc>Incoming SWIFT Header 3</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>B4</tag-code>
+            <tag-desc>Incoming SWIFT Header 4</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>B5</tag-code>
+            <tag-desc>Incoming SWIFT Header 5</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>B6</tag-code>
+            <tag-desc>Incoming SWIFT Header 6</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>20</tag-code>
+            <tag-desc>Sender's Reference</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="16" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>21</tag-code>
+            <tag-desc>Receiver's Reference</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="16" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>23</tag-code>
+            <tag-desc>Issuing Bank's Reference</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="16" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>52A</tag-code>
+            <tag-desc>Issuing Bank</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="11" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>52D</tag-code>
+            <tag-desc>Issuing Bank</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="35" illegal-char="" rows="4"/>
+        </tag>
+        <tag>
+            <tag-code>31C</tag-code>
+            <tag-desc>Date of Issue</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="6" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>30</tag-code>
+            <tag-desc>Date of Amendment</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="6" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>26E</tag-code>
+            <tag-desc>Number of Amendment</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="2" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>59</tag-code>
+            <tag-desc>Beneficiary (before this amendment)</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="35" illegal-char="" rows="4"/>
+        </tag>
+        <tag>
+            <tag-code>31E</tag-code>
+            <tag-desc>New Date of Expiry</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="6" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>32B</tag-code>
+            <tag-desc>Increase of Documentary Credit Amount</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="18" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>33B</tag-code>
+            <tag-desc>Decrease of Documentary Credit Amount</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="18" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>34B</tag-code>
+            <tag-desc>New Documentary Credit Amount</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="18" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>39A</tag-code>
+            <tag-desc>Percentage Credit Amount Tolerance</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="5" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>39B</tag-code>
+            <tag-desc>Maximum Credit Amount</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="13" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>39C</tag-code>
+            <tag-desc>Additional Amounts Covered</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="4"/>
+        </tag>
+        <tag>
+            <tag-code>44A</tag-code>
+            <tag-desc>Loading on Board/Dispatch/Taking in Char</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="65" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>44E</tag-code>
+            <tag-desc>Port of Loading/Airport of Departure</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="65" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>44F</tag-code>
+            <tag-desc>Port of Discharge/Airport of Destination</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="65" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>44B</tag-code>
+            <tag-desc>For Transportation to...</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="65" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>44C</tag-code>
+            <tag-desc>Latest Date of Shipment</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="6" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>44D</tag-code>
+            <tag-desc>Shipment Period</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="65" illegal-char="" rows="6"/>
+        </tag>
+        <tag>
+            <tag-code>79</tag-code>
+            <tag-desc>Narrative</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="50" illegal-char="" rows="35"/>
+        </tag>
+        <tag>
+            <tag-code>72</tag-code>
+            <tag-desc>Sender to Receiver Information</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="6"/>
+        </tag>
+        <tag>
+            <tag-code>12</tag-code>
+            <tag-desc>Sub-Message Type</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="3" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>27A</tag-code>
+            <tag-desc>Message Index/Total</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="3" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>21A</tag-code>
+            <tag-desc>Customer Reference Number</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="16" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>21P</tag-code>
+            <tag-desc>Advising Bank Reference Number</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="16" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>20Z</tag-code>
+            <tag-desc>Transaction Reference Number</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="16" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>13E</tag-code>
+            <tag-desc>Message Creation Date Time</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="12" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>24D</tag-code>
+            <tag-desc>Method of Issue</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="40" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>71A</tag-code>
+            <tag-desc>Amendment Bank Charges Payable By</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="3" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>73</tag-code>
+            <tag-desc>Charges Information</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="6"/>
+        </tag>
+        <tag>
+            <tag-code>58A</tag-code>
+            <tag-desc>Advising Bank</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="11" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>58D</tag-code>
+            <tag-desc>Advising Bank</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="35" illegal-char="" rows="4"/>
+        </tag>
+        <tag>
+            <tag-code>29A</tag-code>
+            <tag-desc>Customer Contact</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="4"/>
+        </tag>
+        <tag>
+            <tag-code>49D</tag-code>
+            <tag-desc>Confirmation Indicator</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="7" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>49F</tag-code>
+            <tag-desc>Confirmation Information</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="65" illegal-char="" rows="50"/>
+        </tag>
+        <tag>
+            <tag-code>49G</tag-code>
+            <tag-desc>Charges Information</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="65" illegal-char="" rows="50"/>
+        </tag>
+        <tag>
+            <tag-code>47E</tag-code>
+            <tag-desc>Information from Advising Bank</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="65" illegal-char="" rows="100"/>
+        </tag>
+        <tag>
+            <tag-code>29B</tag-code>
+            <tag-desc>Bank Contact</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="4"/>
+        </tag>
+        <tag>
+            <tag-code>72C</tag-code>
+            <tag-desc>Corporate to Bank Information</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="6"/>
+        </tag>
+        <tag>
+            <tag-code>23X</tag-code>
+            <tag-desc>File Identification</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="70" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>29S</tag-code>
+            <tag-desc>Customer Identifier</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="40" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>B9</tag-code>
+            <tag-desc>Customer Address</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="16" illegal-char="" rows="1"/>
+        </tag>
+    </tags>
+</root>

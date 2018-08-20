@@ -1,0 +1,62 @@
+{
+  "MT204": {
+    "SeqA": {
+      "F20": "16x",
+      "F19": "17d",
+      "F30": "YYMMDD",
+      "Choice_57ABD": {
+        "F57A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F57B": {
+          "PartyIdentifier": "/36x{0,1}",
+          "Location": "35x{0,1}"
+        },
+        "F57D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "@occur": "{0,1}"
+      },
+      "Choice_58AD": {
+        "F58A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F58D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "@occur": "{0,1}"
+      },
+      "F72": "6*35x{0,1}"
+    },
+    "SeqB": {
+      "F20": "16x",
+      "F21": "16x{0,1}",
+      "F32B": {
+        "Currency": "3!a",
+        "Amount": "15d"
+      },
+      "Choice_53ABD": {
+        "F53A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F53B": {
+          "PartyIdentifier": "/36x{0,1}",
+          "Location": "35x{0,1}"
+        },
+        "F53D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        }
+      },
+      "F72": "6*35x{0,1}",
+      "@occur": "{1,10}"
+    },
+    "F20Z": "16x",
+    "@len": 2000
+  }
+}

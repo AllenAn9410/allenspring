@@ -1,0 +1,163 @@
+{
+  "MT102": {
+    "SeqA": {
+      "F20": "16x",
+      "F23": "6a",
+      "F51A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC",
+        "@occur": "{0,1}"
+      },
+      "Choice_50AFK": {
+        "F50A": {
+          "Account": "/34x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F50F": {
+          "PartyIdentifier": "F50FPI'\r\n'",
+          "NameAndAddress": "4*35x"
+        },
+        "F50K": {
+          "Account": "/34x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "@occur": "{0,1}"
+      },
+      "Choice_52ABC": {
+        "F52A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F52B": {
+          "PartyIdentifier": "/36x{0,1}",
+          "Location": "35x{0,1}"
+        },
+        "F52C": "/34x",
+        "@occur": "{0,1}"
+      },
+      "F26T": "3!c{0,1}",
+      "F77B": "3*35x{0,1}",
+      "F71A": "3!a(BEN|OUR|SHA){0,1}",
+      "F36": "12d{0,1}"
+    },
+    "SeqB": {
+      "F21": "16x",
+      "F32B": {
+        "Currency": "3!a",
+        "Amount": "15d"
+      },
+      "Choice_50AFK": {
+        "F50A": {
+          "Account": "/34x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F50F": {
+          "PartyIdentifier": "F50FPI'\r\n'",
+          "NameAndAddress": "4*35x"
+        },
+        "F50K": {
+          "Account": "/34x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "@occur": "{0,1}"
+      },
+      "Choice_52ABC": {
+        "F52A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F52B": {
+          "PartyIdentifier": "/36x{0,1}",
+          "Location": "35x{0,1}"
+        },
+        "F52C": "/34x",
+        "@occur": "{0,1}"
+      },
+      "Choice_57AC": {
+        "F57A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F57C": "/34x",
+        "@occur": "{0,1}"
+      },
+      "Choice_59A": {
+        "F59": {
+          "Account": "/34x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "F59A": {
+          "Account": "/34x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F59F": {
+          "Account": "/34x'\r\n'{0,1}",
+          "NameAndAddressDetails": "4*(1!n/33x)"
+        }
+      },
+      "F70": "4*35x{0,1}",
+      "F26T": "3!c{0,1}",
+      "F77B": "3*35x{0,1}",
+      "F33B": {
+        "Currency": "3!a",
+        "Amount": "15d",
+        "@occur": "{0,1}"
+      },
+      "F71A": "3!a(BEN|OUR|SHA){0,1}",
+      "Loop1": {
+        "F71F": {
+          "Currency": "3!a",
+          "Amount": "15d",
+          "@occur": "{0,1}"
+        },
+        "@occur": "{0,999}"
+      },
+      "F71G": {
+        "Currency": "3!a",
+        "Amount": "15d",
+        "@occur": "{0,1}"
+      },
+      "F36": "12d{0,1}",
+      "@occur": "{1,999}"
+    },
+    "SeqC": {
+      "F32A": {
+        "Date": "YYMMDD",
+        "Currency": "3!a",
+        "Amount": "15d"
+      },
+      "F19": "17d{0,1}",
+      "F71G": {
+        "Currency": "3!a",
+        "Amount": "15d",
+        "@occur": "{0,1}"
+      },
+      "Loop2": {
+        "F13C": {
+          "Code": "'/'8c'/'",
+          "TimeIndication": "HHMM",
+          "Sign": "1!x(+|-)",
+          "TimeOffset": "HHMM",
+          "@occur": "{0,1}"
+        },
+        "@occur": "{0,999}"
+      },
+      "Choice_53AC": {
+        "F53A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F53C": "/34x",
+        "@occur": "{0,1}"
+      },
+      "F54A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC",
+        "@occur": "{0,1}"
+      },
+      "F72": "6*35x{0,1}"
+    },
+    "F20Z": "16x",
+    "@len": 10000
+  }
+}

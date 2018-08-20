@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <tags>
+        <tag>
+            <tag-code>B3</tag-code>
+            <tag-desc>Incoming SWIFT Header 3</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>B4</tag-code>
+            <tag-desc>Incoming SWIFT Header 4</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>B5</tag-code>
+            <tag-desc>Incoming SWIFT Header 5</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>B6</tag-code>
+            <tag-desc>Incoming SWIFT Header 6</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>20</tag-code>
+            <tag-desc>Sender's Reference</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="16" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>21</tag-code>
+            <tag-desc>Related</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="16" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>23E</tag-code>
+            <tag-desc>Advice Type</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>71F</tag-code>
+            <tag-desc>Sender's Charges</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="18" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>77A</tag-code>
+            <tag-desc>Reason for Non-Payment</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="20"/>
+        </tag>
+        <tag>
+            <tag-code>51A</tag-code>
+            <tag-desc>Sending Institution</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>53A</tag-code>
+            <tag-desc>Sender's Correspondent</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="11" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>53B</tag-code>
+            <tag-desc>Sender's Correspondent</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="35" illegal-char="" rows="3"/>
+        </tag>
+    </tags>
+</root>

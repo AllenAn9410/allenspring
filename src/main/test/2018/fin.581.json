@@ -1,0 +1,25 @@
+{
+  "MT581": {
+    "F20": "16x",
+    "F21": "16x",
+    "F23": "16x",
+    "F30": "YYMMDD{0,1}",
+    "F35H": {
+      "Sign": "N{0,1}",
+      "Currency": "3!a",
+      "Quantity": "15d"
+    },
+    "F35B": {
+      "IdentificationOfSecurity": "ISIN1!e12!c{0,1}",
+      "DescriptionOfSecurity": "4*35x{0,1}",
+      "@occur": "{0,1}"
+    },
+    "F80C": "6*35x",
+    "F34B": {
+      "Currency": "3!a",
+      "Amount": "15d",
+      "@occur": "{0,1}"
+    },
+    "F72": "6*35x{0,1}"
+  }
+}

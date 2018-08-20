@@ -1,0 +1,68 @@
+{
+  "MT941": {
+    "F20": "16x",
+    "F21": "16x{0,1}",
+    "Choice_25P": {
+      "F25": "35x",
+      "F25P": {
+        "Account": "35x'\r\n'",
+        "IdentifierCode": "BIC"
+      }
+    },
+    "F28": {
+      "StatementNumber": "5n",
+      "SequenceNumber": "'/'2n{0,1}"
+    },
+    "F13D": {
+      "Date": "YYMMDD",
+      "Time": "HHMM",
+      "Sign": "1!x(+|-)",
+      "Offset": "HHMM",
+      "@occur": "{0,1}"
+    },
+    "F60F": {
+      "DCMark": "1!a(C|D)",
+      "Date": "YYMMDD",
+      "Currency": "3!a",
+      "Amount": "15d",
+      "@occur": "{0,1}"
+    },
+    "F90D": {
+      "Number": "5n",
+      "Currency": "3!a",
+      "Amount": "15d",
+      "@occur": "{0,1}"
+    },
+    "F90C": {
+      "Number": "5n",
+      "Currency": "3!a",
+      "Amount": "15d",
+      "@occur": "{0,1}"
+    },
+    "F62F": {
+      "DCMark": "1!a(C|D)",
+      "Date": "YYMMDD",
+      "Currency": "3!a",
+      "Amount": "15d"
+    },
+    "F64": {
+      "DCMark": "1!a(C|D)",
+      "Date": "YYMMDD",
+      "Currency": "3!a",
+      "Amount": "15d",
+      "@occur": "{0,1}"
+    },
+    "Loop1": {
+      "F65": {
+        "DCMark": "1!a(C|D)",
+        "Date": "YYMMDD",
+        "Currency": "3!a",
+        "Amount": "15d",
+        "@occur": "{0,1}"
+      },
+      "@occur": "{0,999}"
+    },
+    "F86": "6*65x{0,1}",
+    "F20Z": "16x{0,1}"
+  }
+}

@@ -1,0 +1,402 @@
+{
+  "MT565": {
+    "SeqA": {
+      "F16R": "16c(GENL)",
+      "Loop1": {
+        "F20C": {
+          "Qualifier": "':'4!c(CORP|SEME|COAF)'/'",
+          "Reference": "'/'16x"
+        },
+        "@occur": "{2,3}"
+      },
+      "F23G": {
+        "Function": "4!c(CANC|NEWM)",
+        "Subfunction": "'/'4!c(CODU|COPY|DUPL){0,1}"
+      },
+      "F22F": {
+        "Qualifier": "':'4!c(CAEV)'/'",
+        "DataSourceScheme": "8c{0,1}",
+        "Indicator": "'/'4!c"
+      },
+      "Choice_98AC": {
+        "F98A": {
+          "Qualifier": "':'4!c(PREP)'/'",
+          "Date": "'/'YYYYMMDD"
+        },
+        "F98C": {
+          "Qualifier": "':'4!c(PREP)'/'",
+          "Date": "'/'YYYYMMDD",
+          "Time": "HHMMSS"
+        },
+        "@occur": "{0,1}"
+      },
+      "SeqA1": {
+        "F16R": "16c(LINK)",
+        "F22F": {
+          "Qualifier": "':'4!c(LINK)'/'",
+          "DataSourceScheme": "8c{0,1}",
+          "Indicator": "'/'4!c",
+          "@occur": "{0,1}"
+        },
+        "Choice_13AB": {
+          "F13A": {
+            "Qualifier": "':'4!c(LINK)'/'",
+            "NumberId": "'/'3!c"
+          },
+          "F13B": {
+            "Qualifier": "':'4!c(LINK)'/'",
+            "DataSourceScheme": "8c{0,1}",
+            "Number": "'/'30x"
+          },
+          "@occur": "{0,1}"
+        },
+        "F20C": {
+          "Qualifier": "':'4!c(CORP|PREV|RELA|COAF)'/'",
+          "Reference": "'/'16x"
+        },
+        "F16S": "16c(LINK)",
+        "@occur": "{0,999}"
+      },
+      "F16S": "16c(GENL)"
+    },
+    "SeqB": {
+      "F16R": "16c(USECU)",
+      "F35B": {
+        "IdentificationOfSecurity": "ISIN1!e12!c{0,1}",
+        "DescriptionOfSecurity": "4*35x{0,1}",
+        "@occur": "{0,1}"
+      },
+      "SeqB1": {
+        "F16R": "16c(FIA)",
+        "F94B": {
+          "Qualifier": "':'4!c(PLIS)'/'",
+          "DataSourceScheme": "8c{0,1}",
+          "PlaceCode": "'/'4!c",
+          "Narrative": "'/'30x{0,1}",
+          "@occur": "{0,1}"
+        },
+        "F22F": {
+          "Qualifier": "':'4!c(MICO)'/'",
+          "DataSourceScheme": "8c{0,1}",
+          "Indicator": "'/'4!c",
+          "@occur": "{0,1}"
+        },
+        "Choice_12AC": {
+          "F12A": {
+            "Qualifier": "':'4!c(CLAS)'/'",
+            "DataSourceScheme": "8c{0,1}",
+            "InstrumentCodeOrDescription": "'/'30x"
+          },
+          "F12C": {
+            "Qualifier": "':'4!c(CLAS)'/'",
+            "CFICode": "'/'6!c"
+          },
+          "@occur": "{0,1}"
+        },
+        "F11A": {
+          "Qualifier": "':'4!c(DENO)'/'",
+          "CurrencyCode": "'/'3!a",
+          "@occur": "{0,1}"
+        },
+        "Loop2": {
+          "F98A": {
+            "Qualifier": "':'4!c(COUP|EXPI|FRNR|MATU|ISSU|CALD|PUTT|DDTE|CONV)'/'",
+            "Date": "'/'YYYYMMDD",
+            "@occur": "{0,1}"
+          },
+          "@occur": "{0,9}"
+        },
+        "Loop3": {
+          "F92A": {
+            "Qualifier": "':'4!c(PRFC|NWFC|INTR|NXRT)'//'",
+            "Sign": "N{0,1}",
+            "Rate": "15d",
+            "@occur": "{0,1}"
+          },
+          "@occur": "{0,4}"
+        },
+        "Loop4": {
+          "F36B": {
+            "Qualifier": "':'4!c(MINO|MIEX|MILT|SIZE)'/'",
+            "QuantityTypeCode": "'/'4!c(AMOR|FAMT|UNIT)'/'",
+            "Quantity": "15d",
+            "@occur": "{0,1}"
+          },
+          "@occur": "{0,4}"
+        },
+        "F16S": "16c(FIA)",
+        "@occur": "{0,1}"
+      },
+      "SeqB2": {
+        "F16R": "16c(ACCTINFO)",
+        "Choice_95PR": {
+          "F95P": {
+            "Qualifier": "':'4!c(ACOW)'/'",
+            "IdentifierCode": "'/'BIC"
+          },
+          "F95R": {
+            "Qualifier": "':'4!c(ACOW)'/'",
+            "DataSourceScheme": "8c",
+            "ProprietaryCode": "'/'34x"
+          },
+          "@occur": "{0,1}"
+        },
+        "F97A": {
+          "Qualifier": "':'4!c(SAFE)'/'",
+          "AccountNumber": "'/'35x"
+        },
+        "Choice_94BCF": {
+          "F94B": {
+            "Qualifier": "':'4!c(SAFE)'/'",
+            "DataSourceScheme": "8c{0,1}",
+            "PlaceCode": "'/'4!c",
+            "Narrative": "'/'30x{0,1}"
+          },
+          "F94C": {
+            "Qualifier": "':'4!c(SAFE)'/'",
+            "CountryCode": "'/'2!a"
+          },
+          "F94F": {
+            "Qualifier": "':'4!c(SAFE)'/'",
+            "PlaceCode": "'/'4!c(CUST|ICSD|NCSD|SHHE)'/'",
+            "IdentifierCode": "BIC"
+          },
+          "@occur": "{0,1}"
+        },
+        "Loop5": {
+          "Choice_93BC": {
+            "F93B": {
+              "Qualifier": "':'4!c(ELIG|BLOK|BORR|COLI|COLO|LOAN|PEND|PENR|REGO|SETT|SPOS|TRAD|TRAN|NOMI)'/'",
+              "DataSourceScheme": "8c{0,1}",
+              "QuantityTypeCode": "'/'4!c'/'",
+              "Sign": "N{0,1}",
+              "Balance": "15d"
+            },
+            "F93C": {
+              "Qualifier": "':'4!c(BLOK|BORR|COLI|COLO|LOAN|PEND|PENR|REGO|SETT|SPOS|TRAD|TRAN|NOMI)'/'",
+              "QuantityTypeCode": "'/'4!c(AMOR|FAMT|UNIT)'/'",
+              "BalanceTypeCode": "4!c(ELIG|NELG)'/'",
+              "Sign": "N{0,1}",
+              "Balance": "15d"
+            },
+            "@occur": "{0,1}"
+          },
+          "@occur": "{0,999}"
+        },
+        "F16S": "16c(ACCTINFO)"
+      },
+      "F16S": "16c(USECU)"
+    },
+    "SeqC": {
+      "F16R": "16c(BENODET)",
+      "Loop6": {
+        "Choice_95PRSV": {
+          "F95P": {
+            "Qualifier": "':'4!c(OWND)'/'",
+            "IdentifierCode": "'/'BIC"
+          },
+          "F95R": {
+            "Qualifier": "':'4!c(OWND)'/'",
+            "DataSourceScheme": "8c",
+            "ProprietaryCode": "'/'34x"
+          },
+          "F95S": {
+            "Qualifier": "':'4!c(ALTE)'/'",
+            "DataSourceScheme": "8c{0,1}",
+            "TypeOfID": "'/'4!c",
+            "CountryCode": "'/'2!a",
+            "AlternateID": "'/'30x"
+          },
+          "F95V": {
+            "Qualifier": "':'4!c(OWND)'/'",
+            "NameAndAddress": "'/'10*35x"
+          }
+        },
+        "@occur": "{1,999}"
+      },
+      "Loop7": {
+        "F94C": {
+          "Qualifier": "':'4!c(DOMI|NDOM)'/'",
+          "CountryCode": "'/'2!a",
+          "@occur": "{0,1}"
+        },
+        "@occur": "{0,999}"
+      },
+      "F36B": {
+        "Qualifier": "':'4!c(OWND)'/'",
+        "QuantityTypeCode": "'/'4!c(AMOR|FAMT|UNIT)'/'",
+        "Quantity": "15d"
+      },
+      "Loop8": {
+        "F22F": {
+          "Qualifier": "':'4!c(CETI)'/'",
+          "DataSourceScheme": "8c{0,1}",
+          "Indicator": "'/'4!c",
+          "@occur": "{0,1}"
+        },
+        "@occur": "{0,999}"
+      },
+      "F70E": {
+        "Qualifier": "':'4!c(DECL)'/'",
+        "Narrative": "'/'10*35x",
+        "@occur": "{0,1}"
+      },
+      "F16S": "16c(BENODET)",
+      "@occur": "{0,999}"
+    },
+    "SeqD": {
+      "F16R": "16c(CAINST)",
+      "F13A": {
+        "Qualifier": "':'4!c(CAON)'/'",
+        "NumberId": "'/'3!c"
+      },
+      "Loop9": {
+        "Choice_22FH": {
+          "F22F": {
+            "Qualifier": "':'4!c(CAOP|DISF|CHAN|COLE)'/'",
+            "DataSourceScheme": "8c{0,1}",
+            "Indicator": "'/'4!c"
+          },
+          "F22H": {
+            "Qualifier": "':'4!c(CAOP)'/'",
+            "Indicator": "'/'4!c(ABST|AMGT|BSPL|BUYA|CASE|CASH|CERT|CEXC|CONN|CONY|CTEN|EXER|LAPS|MKDW|MKUP|MNGT|MPUT|NOAC|NOQU|OFFR|OTHR|OVER|PROX|PRUN|QINV|SECU|SLLE|SPLI|TAXI)"
+          }
+        },
+        "@occur": "{1,999}"
+      },
+      "Loop10": {
+        "F11A": {
+          "Qualifier": "':'4!c(FXIB|FXIS|OPTN)'/'",
+          "CurrencyCode": "'/'3!a",
+          "@occur": "{0,1}"
+        },
+        "@occur": "{0,3}"
+      },
+      "F35B": {
+        "IdentificationOfSecurity": "ISIN1!e12!c{0,1}",
+        "DescriptionOfSecurity": "4*35x{0,1}",
+        "@occur": "{0,1}"
+      },
+      "Loop11": {
+        "Choice_36BC": {
+          "F36B": {
+            "Qualifier": "':'4!c(QINS|QREC|COND|QOVE)'/'",
+            "QuantityTypeCode": "'/'4!c(AMOR|FAMT|UNIT)'/'",
+            "Quantity": "15d"
+          },
+          "F36C": {
+            "Qualifier": "':'4!c(QINS|QREC)'/'",
+            "QuantityCode": "'/'4!c(QALL)"
+          }
+        },
+        "@occur": "{1,999}"
+      },
+      "Choice_98AC": {
+        "F98A": {
+          "Qualifier": "':'4!c(EXRQ)'/'",
+          "Date": "'/'YYYYMMDD"
+        },
+        "F98C": {
+          "Qualifier": "':'4!c(EXRQ)'/'",
+          "Date": "'/'YYYYMMDD",
+          "Time": "HHMMSS"
+        },
+        "@occur": "{0,1}"
+      },
+      "Loop12": {
+        "Choice_92AF": {
+          "F92A": {
+            "Qualifier": "':'4!c(OFFR|OSUB|TAXB)'//'",
+            "Sign": "N{0,1}",
+            "Rate": "15d"
+          },
+          "F92F": {
+            "Qualifier": "':'4!c(OSUB)'/'",
+            "CurrencyCode": "'/'3!a",
+            "Amount": "15d"
+          },
+          "@occur": "{0,1}"
+        },
+        "@occur": "{0,3}"
+      },
+      "Loop13": {
+        "Choice_90ABEFJ": {
+          "F90A": {
+            "Qualifier": "':'4!c(INDC|MRKT|ISSU|OFFR|PRPP)'/'",
+            "PercentageTypeCode": "'/'4!c(DISC|PRCT|PREM|YIEL)'/'",
+            "Price": "15d"
+          },
+          "F90B": {
+            "Qualifier": "':'4!c(INDC|MRKT|ISSU|OFFR|PRPP)'/'",
+            "AmountTypeCode": "'/'4!c(ACTU|DISC|PLOT|PREM)'/'",
+            "CurrencyCode": "3!a",
+            "Price": "15d"
+          },
+          "F90E": {
+            "Qualifier": "':'4!c(OFFR)'/'",
+            "PriceCode": "'/'4!c"
+          },
+          "F90F": {
+            "Qualifier": "':'4!c(OFFR)'/'",
+            "AmountTypeCode": "'/'4!c(ACTU|DISC|PLOT|PREM)",
+            "CurrencyCode": "'/'3!a",
+            "Amount": "15d",
+            "QuantityTypeCode": "'/'4!c(AMOR|FAMT|UNIT)",
+            "Quantity": "'/'15d"
+          },
+          "F90J": {
+            "Qualifier": "':'4!c(OFFR)'/'",
+            "AmountTypeCode": "'/'4!c(ACTU|DISC|PLOT|PREM)",
+            "CurrencyCode1": "'/'3!a",
+            "Amount1": "15d",
+            "CurrencyCode2": "'/'3!a",
+            "Amount2": "15d"
+          },
+          "@occur": "{0,1}"
+        },
+        "@occur": "{0,4}"
+      },
+      "Loop14": {
+        "F70E": {
+          "Qualifier": "':'4!c(COMP|DLVR|FXIN|INST|DISC)'/'",
+          "Narrative": "'/'10*35x",
+          "@occur": "{0,1}"
+        },
+        "@occur": "{0,999}"
+      },
+      "F16S": "16c(CAINST)"
+    },
+    "SeqE": {
+      "F16R": "16c(ADDINFO)",
+      "Loop15": {
+        "F70E": {
+          "Qualifier": "':'4!c(ADTX|TXNR|REGI|PACO|DISC|BAIN|CETI)'/'",
+          "Narrative": "'/'10*35x",
+          "@occur": "{0,1}"
+        },
+        "@occur": "{0,999}"
+      },
+      "Loop16": {
+        "Choice_95PQR": {
+          "F95P": {
+            "Qualifier": "':'4!c(MEOR|MERE)'/'",
+            "IdentifierCode": "'/'BIC"
+          },
+          "F95Q": {
+            "Qualifier": "':'4!c(MEOR|MERE)'/'",
+            "NameAndAddress": "'/'4*35x"
+          },
+          "F95R": {
+            "Qualifier": "':'4!c(MEOR|MERE)'/'",
+            "DataSourceScheme": "8c",
+            "ProprietaryCode": "'/'34x"
+          },
+          "@occur": "{0,1}"
+        },
+        "@occur": "{0,2}"
+      },
+      "F16S": "16c(ADDINFO)",
+      "@occur": "{0,1}"
+    }
+  }
+}

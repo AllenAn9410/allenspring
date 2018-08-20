@@ -1,0 +1,26 @@
+{
+  "MT985": {
+    "F20": "16x",
+    "Choice_57ABD": {
+      "F57A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F57B": {
+        "PartyIdentifier": "/36x{0,1}",
+        "Location": "35x{0,1}"
+      },
+      "F57D": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x"
+      },
+      "@occur": "{0,1}"
+    },
+    "F59": {
+      "Account": "/34x'\r\n'{0,1}",
+      "NameAndAddress": "4*35x"
+    },
+    "F75": "6*35x{0,1}",
+    "@len": 2000
+  }
+}

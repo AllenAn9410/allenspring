@@ -1,0 +1,59 @@
+{
+  "MT609": {
+    "F27": {
+      "Number": "1!n'/'",
+      "Total": "1!n"
+    },
+    "F20": "16x",
+    "F31C": "YYMMDD",
+    "F30": "YYMMDD{0,1}",
+    "Loop1": {
+      "F23": "8a(FORWARDS|OPTIONS|SPOTS)",
+      "Loop2": {
+        "F26C": {
+          "DeliveryDetails": "3!a(CFR|CIF|CIP|CPT|DAF|DDP|DDU|DEQ|DES|DTD|EXW|FAS|FCA|FOB|LOC|OTH){0,1}",
+          "DeliveryLocation": "'/'15x",
+          "Allocation": "'/'5!a(ALLOC|UNALL)",
+          "Type": "4!a(ALUM|COPP|GOLD|IRID|LEAD|NICK|OSMI|OTHR|PALL|PLAT|POIL|RHOD|RUTH|SILV|STEE|TINA|TITA|ZINC|AMEG|ANUG|BRIT|COIN|CORO|DUCA|FRFR|GECU|KRUG|LBTY|MAPL|MEXP|NBUF|NOBL|NSOV|OSOV|SAEG|SECU|STAT|VREN)",
+          "Denomination": "4x{0,1}",
+          "Form": "'//'8x{0,1}"
+        },
+        "Loop3": {
+          "Choice_68BC": {
+            "F68B": {
+              "TradeDate": "YYMMDD",
+              "MaturityDate": "YYMMDD",
+              "ContractNumber": "16x'/'",
+              "Indicator": "1!a(B|S)",
+              "Unit": "3!a(FOZ|GOZ|GRM|KLO|LIT|LOT|OTH|PND|TAL|TOL|TON|TOZ|UNT)",
+              "QuantityOfTheCommodity": "15d'\r\n'",
+              "Currency1": "3!a",
+              "PricePerUnit": "15d'/'",
+              "ValueDateOfTheConsideration": "YYMMDD",
+              "Currency2": "3!a",
+              "Consideration": "15d"
+            },
+            "F68C": {
+              "BuySellIndicator": "4a'/'",
+              "CallPutIndicator": "4a'/'",
+              "StyleIndicator": "1!a(A|E|V)",
+              "DateContractAgreed": "YYMMDD{0,1}",
+              "Unit": "3!a(FOZ|GOZ|GRM|KLO|LIT|LOT|OTH|PND|TAL|TOL|TON|TOZ|UNT)",
+              "AmountOfTheUnderlyingCommodity": "15d'\r\n'",
+              "Currency1": "3!a",
+              "StrikePricePerUnit": "15d",
+              "Currency2": "3!a",
+              "PremiumPricePerUnit": "15d",
+              "Currency3": "3!a",
+              "PremiumPayment": "15d"
+            }
+          },
+          "@occur": "{1,999}"
+        },
+        "@occur": "{1,999}"
+      },
+      "F72": "6*35x{0,1}",
+      "@occur": "{1,999}"
+    }
+  }
+}

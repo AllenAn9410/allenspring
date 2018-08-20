@@ -1,0 +1,100 @@
+{
+  "MT400": {
+    "F20": "16x",
+    "F21": "16x",
+    "Choice_32ABK": {
+      "F32A": {
+        "Date": "YYMMDD",
+        "Currency": "3!a",
+        "Amount": "15d"
+      },
+      "F32B": {
+        "Currency": "3!a",
+        "Amount": "15d"
+      },
+      "F32K": {
+        "DayMonth": "1!a(D|M)",
+        "NumberOfDaysMonths": "3!n",
+        "Code": "2!a(BE|CC|FD|FP|GA|ID|ST|TD|XX)",
+        "Currency": "3!a",
+        "Amount": "15d"
+      }
+    },
+    "F33A": {
+      "Date": "YYMMDD",
+      "Currency": "3!a",
+      "Amount": "15d"
+    },
+    "Choice_52AD": {
+      "F52A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F52D": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x"
+      },
+      "@occur": "{0,1}"
+    },
+    "Choice_53ABD": {
+      "F53A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F53B": {
+        "PartyIdentifier": "/36x{0,1}",
+        "Location": "35x{0,1}"
+      },
+      "F53D": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x"
+      },
+      "@occur": "{0,1}"
+    },
+    "Choice_54ABD": {
+      "F54A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F54B": {
+        "PartyIdentifier": "/36x{0,1}",
+        "Location": "35x{0,1}"
+      },
+      "F54D": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x"
+      },
+      "@occur": "{0,1}"
+    },
+    "Choice_57AD": {
+      "F57A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F57D": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x"
+      },
+      "@occur": "{0,1}"
+    },
+    "Choice_58ABD": {
+      "F58A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F58B": {
+        "PartyIdentifier": "/36x{0,1}",
+        "Location": "35x{0,1}"
+      },
+      "F58D": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x"
+      },
+      "@occur": "{0,1}"
+    },
+    "F71B": "6*35x{0,1}",
+    "F72": "6*35x{0,1}",
+    "F73": "6*35x{0,1}",
+    "@len": 2000
+  }
+}

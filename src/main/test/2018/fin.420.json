@@ -1,0 +1,35 @@
+{
+  "MT420": {
+    "Loop1": {
+      "F20": "16x",
+      "F21": "16x",
+      "Choice_32ABK": {
+        "F32A": {
+          "Date": "YYMMDD",
+          "Currency": "3!a",
+          "Amount": "15d"
+        },
+        "F32B": {
+          "Currency": "3!a",
+          "Amount": "15d"
+        },
+        "F32K": {
+          "DayMonth": "1!a(D|M)",
+          "NumberOfDaysMonths": "3!n",
+          "Code": "2!a(BE|CC|FD|FP|GA|ID|ST|TD|XX)",
+          "Currency": "3!a",
+          "Amount": "15d"
+        }
+      },
+      "@occur": "{1,10}"
+    },
+    "F30": "YYMMDD{0,1}",
+    "F59": {
+      "Account": "/34x'\r\n'{0,1}",
+      "NameAndAddress": "4*35x",
+      "@occur": "{0,1}"
+    },
+    "F72": "6*35x{0,1}",
+    "@len": 2000
+  }
+}

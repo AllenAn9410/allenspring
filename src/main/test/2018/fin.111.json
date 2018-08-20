@@ -1,0 +1,40 @@
+{
+  "MT111": {
+    "F20": "16x",
+    "F21": "16x",
+    "F30": "YYMMDD",
+    "Choice_32AB": {
+      "F32A": {
+        "Date": "YYMMDD",
+        "Currency": "3!a",
+        "Amount": "15d"
+      },
+      "F32B": {
+        "Currency": "3!a",
+        "Amount": "15d"
+      }
+    },
+    "Choice_52ABD": {
+      "F52A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F52B": {
+        "PartyIdentifier": "/36x{0,1}",
+        "Location": "35x{0,1}"
+      },
+      "F52D": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x"
+      },
+      "@occur": "{0,1}"
+    },
+    "F59": {
+      "Account": "/34x'\r\n'{0,1}",
+      "NameAndAddress": "4*35x",
+      "@occur": "{0,1}"
+    },
+    "F75": "6*35x{0,1}",
+    "@len": 2000
+  }
+}

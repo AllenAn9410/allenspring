@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <tags>
+        <tag>
+            <tag-code>B3</tag-code>
+            <tag-desc>Incoming SWIFT Header 3</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>B4</tag-code>
+            <tag-desc>Incoming SWIFT Header 4</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>B5</tag-code>
+            <tag-desc>Incoming SWIFT Header 5</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>B6</tag-code>
+            <tag-desc>Incoming SWIFT Header 6</tag-desc>
+            <tag-form>2</tag-form>
+        </tag>
+        <tag>
+            <tag-code>20</tag-code>
+            <tag-desc>Sending Bank's TRN</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="16" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>21</tag-code>
+            <tag-desc>Related Reference</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="16" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>32A</tag-code>
+            <tag-desc>Existing CCY Amt Maturity Date Code</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="24" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>32K</tag-code>
+            <tag-desc>Existing CCY Amt Maturity Date Code</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="24" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>33A</tag-code>
+            <tag-desc>Amend CCY Amount Maturity Date Code</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="24" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>33K</tag-code>
+            <tag-desc>Amended Currency Amount Maturity Date Cd</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="24" illegal-char="" rows="1"/>
+        </tag>
+        <tag>
+            <tag-code>59</tag-code>
+            <tag-desc>Drawee</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="1"/>
+            <segment-2 cols="35" illegal-char="" rows="4"/>
+        </tag>
+        <tag>
+            <tag-code>72</tag-code>
+            <tag-desc>Sender to Receiver Information</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="6"/>
+        </tag>
+        <tag>
+            <tag-code>74</tag-code>
+            <tag-desc>Amendments</tag-desc>
+            <tag-form>7</tag-form>
+            <segment-1 cols="35" illegal-char="" rows="6"/>
+        </tag>
+    </tags>
+</root>

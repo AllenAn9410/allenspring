@@ -1,0 +1,79 @@
+{
+  "MT608": {
+    "F20": "16x",
+    "F26C": {
+      "DeliveryDetails": "3!a(CFR|CIF|CIP|CPT|DAF|DDP|DDU|DEQ|DES|DTD|EXW|FAS|FCA|FOB|LOC|OTH){0,1}",
+      "DeliveryLocation": "'/'15x",
+      "Allocation": "'/'5!a(ALLOC|UNALL)",
+      "Type": "4!a(ALUM|COPP|GOLD|IRID|LEAD|NICK|OSMI|OTHR|PALL|PLAT|POIL|RHOD|RUTH|SILV|STEE|TINA|TITA|ZINC|AMEG|ANUG|BRIT|COIN|CORO|DUCA|FRFR|GECU|KRUG|LBTY|MAPL|MEXP|NBUF|NOBL|NSOV|OSOV|SAEG|SECU|STAT|VREN)",
+      "Denomination": "4x{0,1}",
+      "Form": "'//'8x{0,1}"
+    },
+    "F25": "35x{0,1}",
+    "F28": {
+      "StatementNumber": "5n",
+      "SequenceNumber": "'/'2n{0,1}"
+    },
+    "Choice_60FM": {
+      "F60F": {
+        "DCMark": "1!a(C|D)",
+        "Date": "YYMMDD",
+        "Unit": "3!a(FOZ|GOZ|GRM|KLO|LIT|LOT|OTH|PND|TAL|TOL|TON|TOZ|UNT)",
+        "Amount": "15d"
+      },
+      "F60M": {
+        "DCMark": "1!a(C|D)",
+        "Date": "YYMMDD",
+        "Unit": "3!a(FOZ|GOZ|GRM|KLO|LIT|LOT|OTH|PND|TAL|TOL|TON|TOZ|UNT)",
+        "Amount": "15d"
+      }
+    },
+    "Loop1": {
+      "F61": {
+        "Date": "YYMMDD",
+        "EntryDate": "MMDD{0,1}",
+        "DebitCreditMark": "2a(C|D)",
+        "FundsCode": "1!a{0,1}",
+        "Amount": "15d",
+        "TransactionType": "1!a(S|N|F)",
+        "IdentificationCode": "3!c",
+        "ReferenceForTheAccountOwner": "16x",
+        "ReferenceOfTheAccountServicingInstitution": "'//'16x{0,1}",
+        "SupplementaryDetails": "'\r\n'34x{0,1}",
+        "@occur": "{0,1}"
+      },
+      "@occur": "{0,999}"
+    },
+    "Choice_62FM": {
+      "F62F": {
+        "DCMark": "1!a(C|D)",
+        "Date": "YYMMDD",
+        "Unit": "3!a(FOZ|GOZ|GRM|KLO|LIT|LOT|OTH|PND|TAL|TOL|TON|TOZ|UNT)",
+        "Amount": "15d"
+      },
+      "F62M": {
+        "DCMark": "1!a(C|D)",
+        "Date": "YYMMDD",
+        "Unit": "3!a(FOZ|GOZ|GRM|KLO|LIT|LOT|OTH|PND|TAL|TOL|TON|TOZ|UNT)",
+        "Amount": "15d"
+      }
+    },
+    "F64": {
+      "DCMark": "1!a(C|D)",
+      "Date": "YYMMDD",
+      "Unit": "3!a(FOZ|GOZ|GRM|KLO|LIT|LOT|OTH|PND|TAL|TOL|TON|TOZ|UNT)",
+      "Amount": "15d",
+      "@occur": "{0,1}"
+    },
+    "Loop2": {
+      "F65": {
+        "DCMark": "1!a(C|D)",
+        "Date": "YYMMDD",
+        "Unit": "3!a(FOZ|GOZ|GRM|KLO|LIT|LOT|OTH|PND|TAL|TOL|TON|TOZ|UNT)",
+        "Amount": "15d",
+        "@occur": "{0,1}"
+      },
+      "@occur": "{0,999}"
+    }
+  }
+}

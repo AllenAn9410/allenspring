@@ -1,0 +1,66 @@
+{
+  "MT740": {
+    "F20": "16x",
+    "F25": "35x{0,1}",
+    "F40F": "30x(NOTURR|URR LATEST VERSION)",
+    "F31D": {
+      "Date": "YYMMDD",
+      "Place": "29x",
+      "@occur": "{0,1}"
+    },
+    "Choice_58AD": {
+      "F58A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F58D": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x"
+      },
+      "@occur": "{0,1}"
+    },
+    "F59": {
+      "Account": "/34x'\r\n'{0,1}",
+      "NameAndAddress": "4*35x",
+      "@occur": "{0,1}"
+    },
+    "F32B": {
+      "Currency": "3!a",
+      "Amount": "15d"
+    },
+    "F39A": {
+      "Tolerance1": "2n'/'",
+      "Tolerance2": "2n",
+      "@occur": "{0,1}"
+    },
+    "F39C": "4*35x{0,1}",
+    "Choice_41AD": {
+      "F41A": {
+        "IdentifierCode": "BIC'\r\n'",
+        "Code": "14x(BY ACCEPTANCE|BY DEF PAYMENT|BY MIXED PYMT|BY NEGOTIATION|BY PAYMENT)"
+      },
+      "F41D": {
+        "NameAndAddress": "4*35x'\r\n'",
+        "Code": "14x(BY ACCEPTANCE|BY DEF PAYMENT|BY MIXED PYMT|BY NEGOTIATION|BY PAYMENT)"
+      }
+    },
+    "F42C": "3*35x{0,1}",
+    "Choice_42AD": {
+      "F42A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F42D": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x"
+      },
+      "@occur": "{0,1}"
+    },
+    "F42M": "4*35x{0,1}",
+    "F42P": "4*35x{0,1}",
+    "F71A": "3!a(CLM|OUR){0,1}",
+    "F71D": "6*35z{0,1}",
+    "F72Z": "6*35z{0,1}",
+    "@len": 2000
+  }
+}

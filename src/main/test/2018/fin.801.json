@@ -1,0 +1,42 @@
+{
+  "MT801": {
+    "F20": "16x",
+    "F28": {
+      "SettlementNumber": "5n",
+      "PageNumber": "'/'2n{0,1}"
+    },
+    "Loop1": {
+      "Choice_51AC": {
+        "F51A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F51C": "/34x"
+      },
+      "Loop2": {
+        "F23": "16x",
+        "F30": "YYMMDD{0,1}",
+        "Loop3": {
+          "F26A": {
+            "Number1": "16x",
+            "Number2": "'/'4!x{0,1}"
+          },
+          "@occur": "{1,999}"
+        },
+        "F33B": {
+          "Currency": "3!a",
+          "Amount": "15d"
+        },
+        "F73": "6*35x{0,1}",
+        "@occur": "{1,999}"
+      },
+      "F34B": {
+        "Currency": "3!a",
+        "Amount": "15d"
+      },
+      "F16A": "5n",
+      "@occur": "{1,999}"
+    },
+    "@len": 2000
+  }
+}

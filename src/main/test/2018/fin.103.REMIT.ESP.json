@@ -1,0 +1,173 @@
+{
+  "MT103_REMIT": {
+    "F20": "16x",
+    "Loop1": {
+      "F13C": {
+        "Code": "'/'8c'/'",
+        "TimeIndication": "HHMM",
+        "Sign": "1!x(+|-)",
+        "TimeOffset": "HHMM",
+        "@occur": "{0,1}"
+      },
+      "@occur": "{0,999}"
+    },
+    "F23B": "4!c(CRED|CRTS|SPAY|SPRI|SSTD)",
+    "Loop2": {
+      "F23E": {
+        "InstructionCode": "4!c(SDVA|INTC|REPA|CORT|HOLD|CHQB|PHOB|TELB|PHON|TELE|PHOI|TELI)",
+        "AdditionalInformation": "'/'30x{0,1}",
+        "@occur": "{0,1}"
+      },
+      "@occur": "{0,999}"
+    },
+    "F26T": "3!c{0,1}",
+    "F32A": {
+      "Date": "YYMMDD",
+      "Currency": "3!a",
+      "Amount": "15d"
+    },
+    "F33B": {
+      "Currency": "3!a",
+      "Amount": "15d",
+      "@occur": "{0,1}"
+    },
+    "F36": "12d{0,1}",
+    "Choice_50AFK": {
+      "F50A": {
+        "Account": "/34x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F50F": {
+        "PartyIdentifier": "/36x'\r\n'",
+        "NameAndAddress": "4*35x"
+      },
+      "F50K": {
+        "Account": "/34x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x"
+      }
+    },
+    "F51A": {
+      "PartyIdentifier": "/36x'\r\n'{0,1}",
+      "IdentifierCode": "BIC",
+      "@occur": "{0,1}"
+    },
+    "Choice_52AD": {
+      "F52A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F52D": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x"
+      },
+      "@occur": "{0,1}"
+    },
+    "Choice_53ABD": {
+      "F53A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F53B": {
+        "PartyIdentifier": "/36x{0,1}",
+        "Location": "35x{0,1}"
+      },
+      "F53D": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x"
+      },
+      "@occur": "{0,1}"
+    },
+    "Choice_54ABD": {
+      "F54A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F54B": {
+        "PartyIdentifier": "/36x{0,1}",
+        "Location": "35x{0,1}"
+      },
+      "F54D": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x"
+      },
+      "@occur": "{0,1}"
+    },
+    "Choice_55ABD": {
+      "F55A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F55B": {
+        "PartyIdentifier": "/36x{0,1}",
+        "Location": "35x{0,1}"
+      },
+      "F55D": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x"
+      },
+      "@occur": "{0,1}"
+    },
+    "Choice_56ACD": {
+      "F56A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F56C": "/34x",
+      "F56D": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x"
+      },
+      "@occur": "{0,1}"
+    },
+    "Choice_57ABCD": {
+      "F57A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F57B": {
+        "PartyIdentifier": "/36x{0,1}",
+        "Location": "35x{0,1}"
+      },
+      "F57C": "/34x",
+      "F57D": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x"
+      },
+      "@occur": "{0,1}"
+    },
+    "Choice_59A": {
+      "F59": {
+        "Account": "/34x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x"
+      },
+      "F59A": {
+        "Account": "/34x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F59F": {
+        "Account": "/34x'\r\n'{0,1}",
+        "NameAndAddressDetails": "4*(1!n/33x)"
+      }
+    },
+    "F70": "4*35x{0,1}",
+    "F71A": "3!a(BEN|OUR|SHA)",
+    "Loop3": {
+      "F71F": {
+        "Currency": "3!a",
+        "Amount": "15d",
+        "@occur": "{0,1}"
+      },
+      "@occur": "{0,999}"
+    },
+    "F71G": {
+      "Currency": "3!a",
+      "Amount": "15d",
+      "@occur": "{0,1}"
+    },
+    "F72": "6*35x{0,1}",
+    "F77B": "3*35x{0,1}",
+    "F77T": "9000z{0,1}",
+    "F20Z": "16x",
+    "@len": 10000
+  }
+}

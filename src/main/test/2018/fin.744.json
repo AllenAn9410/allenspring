@@ -1,0 +1,40 @@
+{
+  "MT744": {
+    "F20": "16x",
+    "F21": "16x",
+    "Choice_52AD": {
+      "F52A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F52D": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x"
+      }
+    },
+    "F21A": "16x",
+    "F31C": "YYMMDD{0,1}",
+    "Choice_34AB": {
+      "F34A": {
+        "Date": "YYMMDD",
+        "Currency": "3!a",
+        "Amount": "15d"
+      },
+      "F34B": {
+        "Currency": "3!a",
+        "Amount": "15d"
+      }
+    },
+    "F73R": {
+      "Code": "4!c(DIFF|DUPL|INSU|NAUT|OTHR|OVER|REFE|TTNA|WINF|XAMT)",
+      "Narrative": "'/'35x{0,1}"
+    },
+    "F73S": {
+      "Code": "4!c(CANC|HOLD|RETD)",
+      "Narrative": "'/'35x{0,1}"
+    },
+    "F71D": "6*35z{0,1}",
+    "F72Z": "6*35z{0,1}",
+    "@len": 2000
+  }
+}

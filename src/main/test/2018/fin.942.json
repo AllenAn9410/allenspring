@@ -1,0 +1,65 @@
+{
+  "MT942": {
+    "F20": "16x",
+    "F21": "16x{0,1}",
+    "Choice_25P": {
+      "F25": "35x",
+      "F25P": {
+        "Account": "35x'\r\n'",
+        "IdentifierCode": "BIC"
+      }
+    },
+    "F28C": {
+      "StatementNumber": "5n",
+      "SequenceNumber": "'/'5n{0,1}"
+    },
+    "F34F": {
+      "Currency": "3!a",
+      "DCMark": "1!a(D){0,1}",
+      "Amount": "15d"
+    },
+    "F34F_6": {
+      "Currency": "3!a",
+      "DCMark": "1!a(C){0,1}",
+      "Amount": "15d",
+      "@occur": "{0,1}"
+    },
+    "F13D": {
+      "Date": "YYMMDD",
+      "Time": "HHMM",
+      "Sign": "1!x(+|-)",
+      "Offset": "HHMM"
+    },
+    "Loop1": {
+      "F61": {
+        "ValueDate": "YYMMDD",
+        "EntryDate": "MMDD{0,1}",
+        "DebitCreditMark": "2a(C|D|EC|ED|RC|RD)",
+        "FundsCode": "1!a{0,1}",
+        "Amount": "15d",
+        "TransactionType": "1!a(S|N|F)",
+        "IdentificationCode": "3!c",
+        "ReferenceForTheAccountOwner": "16x",
+        "ReferenceOfTheAccountServicingInstitution": "'//'16x{0,1}",
+        "SupplementaryDetails": "'\r\n'34x{0,1}",
+        "@occur": "{0,1}"
+      },
+      "F86": "6*65x{0,1}",
+      "@occur": "{0,999}"
+    },
+    "F90D": {
+      "Number": "5n",
+      "Currency": "3!a",
+      "Amount": "15d",
+      "@occur": "{0,1}"
+    },
+    "F90C": {
+      "Number": "5n",
+      "Currency": "3!a",
+      "Amount": "15d",
+      "@occur": "{0,1}"
+    },
+    "F86": "6*65x{0,1}",
+    "@len": 2000
+  }
+}

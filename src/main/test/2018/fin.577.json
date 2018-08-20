@@ -1,0 +1,37 @@
+{
+  "MT577": {
+    "F28": {
+      "PageNumber": "5n",
+      "Indicator": "'/'2n{0,1}"
+    },
+    "F20": "16x",
+    "F21": "16x{0,1}",
+    "Choice_83ACD": {
+      "F83A": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "IdentifierCode": "BIC"
+      },
+      "F83C": "/34x",
+      "F83D": {
+        "PartyIdentifier": "/36x'\r\n'{0,1}",
+        "NameAndAddress": "4*35x"
+      },
+      "@occur": "{0,1}"
+    },
+    "F67A": {
+      "Date1": "YYMMDD",
+      "Date2": "'/'YYMMDD{0,1}"
+    },
+    "F35A": {
+      "Type": "3!a(BON|CER|CPN|FMT|MSC|OPC|OPS|PRC|PRS|RTE|RTS|SHS|UNT|WTS)",
+      "Quantity": "15d",
+      "@occur": "{0,1}"
+    },
+    "F35B": {
+      "IdentificationOfSecurity": "ISIN1!e12!c{0,1}",
+      "DescriptionOfSecurity": "4*35x{0,1}"
+    },
+    "F35F": "35*50x",
+    "F72": "6*35x{0,1}"
+  }
+}

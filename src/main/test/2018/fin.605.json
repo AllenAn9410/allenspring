@@ -1,0 +1,86 @@
+{
+  "MT605": {
+    "F20": "16x",
+    "F26C": {
+      "DeliveryDetails": "3!a(CFR|CIF|CIP|CPT|DAF|DDP|DDU|DEQ|DES|DTD|EXW|FAS|FCA|FOB|LOC|OTH){0,1}",
+      "DeliveryLocation": "'/'15x",
+      "Allocation": "'/'5!a(ALLOC|UNALL)",
+      "Type": "4!a(ALUM|COPP|GOLD|IRID|LEAD|NICK|OSMI|OTHR|PALL|PLAT|POIL|RHOD|RUTH|SILV|STEE|TINA|TITA|ZINC|AMEG|ANUG|BRIT|COIN|CORO|DUCA|FRFR|GECU|KRUG|LBTY|MAPL|MEXP|NBUF|NOBL|NSOV|OSOV|SAEG|SECU|STAT|VREN)",
+      "Denomination": "4x{0,1}",
+      "Form": "'//'8x{0,1}"
+    },
+    "F25": "35x{0,1}",
+    "F30": "YYMMDD",
+    "F72": "6*35x{0,1}",
+    "Loop1": {
+      "F21": "16x",
+      "F23": "16x",
+      "F26D": "30*65x{0,1}",
+      "F32F": {
+        "Unit": "3!a(FOZ|GOZ|GRM|KLO|LIT|LOT|OTH|PND|TAL|TOL|TON|TOZ|UNT)",
+        "Amount": "15d"
+      },
+      "Choice_82ABD": {
+        "F82A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F82B": {
+          "PartyIdentifier": "/36x{0,1}",
+          "Location": "35x{0,1}"
+        },
+        "F82D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "@occur": "{0,1}"
+      },
+      "Choice_86ABD": {
+        "F86A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F86B": {
+          "PartyIdentifier": "/36x{0,1}",
+          "Location": "35x{0,1}"
+        },
+        "F86D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "@occur": "{0,1}"
+      },
+      "Choice_87ABD": {
+        "F87A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F87B": {
+          "PartyIdentifier": "/36x{0,1}",
+          "Location": "35x{0,1}"
+        },
+        "F87D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        }
+      },
+      "Choice_88ABD": {
+        "F88A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F88B": {
+          "PartyIdentifier": "/36x{0,1}",
+          "Location": "35x{0,1}"
+        },
+        "F88D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "@occur": "{0,1}"
+      },
+      "F72": "6*35x{0,1}",
+      "@occur": "{1,10}"
+    }
+  }
+}

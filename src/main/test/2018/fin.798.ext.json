@@ -1,0 +1,3686 @@
+{
+  "@id": "fin.798.ext",
+  "@def": {
+    "corp_": {
+      "Account": "'/'34x'\r\n'{0,1}",
+      "NameAndAddress": "4*35x"
+    },
+    "corp_a": {
+      "Account": "'/'34x'\r\n'{0,1}",
+      "IdentifierCode": "BIC"
+    },
+    "bank_a": {
+      PartyIdentifier: "'/'36x'\r\n'{0,1}",
+      IdentifierCode: "BIC"
+    },
+    "bank_b": {
+      PartyIdentifier: "'/'36x'\r\n'{0,1}",
+      Location: "35x{0,1}"
+    },
+    "bank_c": {
+      PartyIdentifier: "'/'36x"
+    },
+    "bank_d": {
+      PartyIdentifier: "'/'36x'\r\n'{0,1}",
+      NameAndAddress: "4*35x"
+    }
+  },
+  "note": {
+    fld_name: "Mnn - mandotory; Onn - optional; Cnn - choice; Lnn - loop mandatory; Pnn - loop optional ",
+    O20: "16x@'Transaction Reference Number'",
+    M27: {
+      Number: "1!n'/'",
+      Total: "1!n",
+      @name: "Message Index/Total"
+    },
+    C41: {
+      @name: "",
+      M41A: {
+        IdentifierCode: "BIC{'\r\n'}",
+        Code: "14x"
+      },
+      M41D: {
+        NameAndAddress: "4*35x{'\r\n'}",
+        Code: "14x"
+      }
+    }
+  },
+  MT798_700: {
+    @name: "LC Detail, 21A use for applicant reference, 21P use for advising bank ref",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21A: "16x{0,1}",
+    F21P: "16x{0,1}",
+    F27: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F40A: "24x",
+    F20: "16x",
+    F23: "16x{0,1}",
+    F31C: "YYMMDD{0,1}",
+    F40E: {
+      ApplicableRules: "30x",
+      Narrative: "/35x{0,1}"
+    },
+    F31D: {
+      Date: "YYMMDD",
+      Place: "29x"
+    },
+    Choice_51AD: {
+      F51A: {
+        @type: "bank_a"
+      },
+      F51D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F50: "4*35x",
+    F59: {
+      @type: "corp_"
+    },
+    F32B: {
+      Currency: "3!a",
+      Amount: "15d"
+    },
+    F39A: {
+      Tolerance1: "2n'/'",
+      Tolerance2: "2n",
+      @occur: "{0,1}"
+    },
+    F39B: "13x{0,1}",
+    F39C: "4*35x{0,1}",
+    Choice_41AD: {
+      F41A: {
+        IdentifierCode: "BIC'\r\n'",
+        Code: "14x"
+      },
+      F41D: {
+        NameAndAddress: "4*35x'\r\n'",
+        Code: "14x"
+      }
+    },
+    F42C: "3*35x{0,1}",
+    Choice_42AD: {
+      F42A: {
+        @type: "bank_a"
+      },
+      F42D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F42M: "4*35x{0,1}",
+    F42P: "4*35x{0,1}",
+    F43P: "35x{0,1}",
+    F43T: "35x{0,1}",
+    F44A: "65x{0,1}",
+    F44E: "65x{0,1}",
+    F44F: "65x{0,1}",
+    F44B: "65x{0,1}",
+    F44C: "YYMMDD{0,1}",
+    F44D: "6*65x{0,1}",
+    F45A: "100*65x{0,1}",
+    F46A: "100*65x{0,1}",
+    F47A: "100*65x{0,1}",
+    F71B: "6*35x{0,1}",
+    F48: "4*35x{0,1}",
+    F49: "7!x",
+    Choice_53AD: {
+      F53A: {
+        @type: "bank_a"
+      },
+      F53D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F78: "12*65x{0,1}",
+    Choice_57ABD: {
+      F57A: {
+        @type: "bank_a"
+      },
+      F57B: {
+        @type: "bank_b"
+      },
+      F57D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F72: "6*35x{0,1}"
+  },
+  MT798_701: {
+    @name: "LC Extension",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21A: "16x{0,1}",
+    F21P: "16x{0,1}",
+    F27: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F20: "16x",
+    F45B: "100*65x{0,1}",
+    F46B: "100*65x{0,1}",
+    F47B: "100*65x{0,1}"
+  },
+  MT798_707: {
+    @name: "LC Amendment detail",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21A: "16x{0,1}",
+    F21P: "16x{0,1}",
+    F20: "16x",
+    F21: "16x",
+    F23: "16x{0,1}",
+    Choice_52AD: {
+      F52A: {
+        @type: "bank_a"
+      },
+      F52C: {
+        PartyIdentifier: "/34x"
+      },
+      F52D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F31C: "YYMMDD{0,1}",
+    F30: "YYMMDD{0,1}",
+    F26E: "2n",
+    F59: {
+      @type: "corp_"
+    },
+    F31E: "YYMMDD{0,1}",
+    F32B: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F33B: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F34B: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F39A: {
+      Tolerance1: "2n'/'",
+      Tolerance2: "2n",
+      @occur: "{0,1}"
+    },
+    F39B: "13x{0,1}",
+    F39C: "4*35x{0,1}",
+    F44A: "65x{0,1}",
+    F44E: "65x{0,1}",
+    F44F: "65x{0,1}",
+    F44B: "65x{0,1}",
+    F44C: "YYMMDD{0,1}",
+    F44D: "6*65x{0,1}",
+    F79: "35*50x{0,1}",
+    F79_0: "35*50x{0,1}",
+    F72: "6*35x{0,1}"
+  },
+  MT798_710: {
+    @name: "LC Third Bank Advice Detail",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21P: "16x",
+    F27: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F40B: {
+      Type: "24x{'\r\n'}",
+      Code: "24x"
+    },
+    F20: "16x",
+    F21: "16x",
+    F23: "16x{0,1}",
+    F31C: "YYMMDD{0,1}",
+    F40E: {
+      ApplicableRules: "30x",
+      Narrative: "35x{0,1}"
+    },
+    F31D: {
+      Date: "YYMMDD",
+      Place: "29x"
+    },
+    Choice_52AD: {
+      F52A: {
+        @type: "bank_a"
+      },
+      F52D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F50B: "4*35x{0,1}",
+    Choice_51AD: {
+      F51A: {
+        @type: "bank_a"
+      },
+      F51D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F50: "4*35x",
+    F59: {
+      Account: "/34x{0,1'\r\n'}",
+      NameAndAddress: "4*35x"
+    },
+    F32B: {
+      Currency: "3!a",
+      Amount: "15d"
+    },
+    F39A: {
+      Tolerance1: "2n'/'",
+      Tolerance2: "2n",
+      @occur: "{0,1}"
+    },
+    F39B: "13x{0,1}",
+    F39C: "4*35x{0,1}",
+    Choice_41AD: {
+      F41A: {
+        IdentifierCode: "BIC{'\r\n'}",
+        Code: "14x"
+      },
+      F41D: {
+        NameAndAddress: "4*35x{'\r\n'}",
+        Code: "14x"
+      }
+    },
+    F42C: "3*35x{0,1}",
+    Choice_42AD: {
+      F42A: {
+        @type: "bank_a"
+      },
+      F42D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F42M: "4*35x{0,1}",
+    F42P: "4*35x{0,1}",
+    F43P: "35x{0,1}",
+    F43T: "35x{0,1}",
+    F44A: "65x{0,1}",
+    F44E: "65x{0,1}",
+    F44F: "65x{0,1}",
+    F44B: "65x{0,1}",
+    F44C: "YYMMDD{0,1}",
+    F44D: "6*65x{0,1}",
+    F45A: "100*65x{0,1}",
+    F46A: "100*65x{0,1}",
+    F47A: "100*65x{0,1}",
+    F71B: "6*35x{0,1}",
+    F48: "4*35x{0,1}",
+    F49: "7!x",
+    Choice_53AD: {
+      F53A: {
+        @type: "bank_a"
+      },
+      F53D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F78: "12*65x{0,1}",
+    Choice_57ABD: {
+      F57A: {
+        @type: "bank_a"
+      },
+      F57B: {
+        @type: "bank_b"
+      },
+      F57D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F72: "6*35x{0,1}"
+  },
+  MT798_711: {
+    @name: "LC Third Bank Advice Detail",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21P: "16x",
+    F27: {
+      Number: "1!n{'/'}",
+      Total: "1!n"
+    },
+    F20: "16x",
+    F21: "16x",
+    F45B: "100*65x{0,1}",
+    F46B: "100*65x{0,1}",
+    F47B: "100*65x{0,1}"
+  },
+  MT798_720: {
+    @name: "LC Transfer Advice Detail",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21P: "16x",
+    F27: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F40B: {
+      Type: "24x{'\r\n'}",
+      Code: "24x"
+    },
+    F20: "16x",
+    F21: "16x",
+    F31C: "YYMMDD{0,1}",
+    F40E: {
+      ApplicableRules: "30x",
+      Narrative: "35x{0,1}"
+    },
+    F31D: {
+      Date: "YYMMDD",
+      Place: "29x"
+    },
+    Choice_52AD: {
+      F52A: {
+        @type: "bank_a"
+      },
+      F52D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F50B: "4*35x{0,1}",
+    F50: "4*35x",
+    F59: {
+      Account: "/34x{0,1'\r\n'}",
+      NameAndAddress: "4*35x"
+    },
+    F32B: {
+      Currency: "3!a",
+      Amount: "15d"
+    },
+    F39A: {
+      Tolerance1: "2n'/'",
+      Tolerance2: "2n",
+      @occur: "{0,1}"
+    },
+    F39B: "13x{0,1}",
+    F39C: "4*35x{0,1}",
+    Choice_41AD: {
+      F41A: {
+        IdentifierCode: "BIC'\r\n'",
+        Code: "14x"
+      },
+      F41D: {
+        NameAndAddress: "4*35x'\r\n'",
+        Code: "14x"
+      }
+    },
+    F42C: "3*35x{0,1}",
+    Choice_42AD: {
+      F42A: {
+        @type: "bank_a"
+      },
+      F42D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F42M: "4*35x{0,1}",
+    F42P: "4*35x{0,1}",
+    F43P: "35x{0,1}",
+    F43T: "35x{0,1}",
+    F44A: "65x{0,1}",
+    F44E: "65x{0,1}",
+    F44F: "65x{0,1}",
+    F44B: "65x{0,1}",
+    F44C: "YYMMDD{0,1}",
+    F44D: "6*65x{0,1}",
+    F45A: "100*65x{0,1}",
+    F46A: "100*65x{0,1}",
+    F47A: "100*65x{0,1}",
+    F71B: "6*35x{0,1}",
+    F48: "4*35x{0,1}",
+    F49: "7!x{CONFIRM|MAY ADD|WITHOUT}",
+    F78: "12*65x{0,1}",
+    Choice_57ABD: {
+      F57A: {
+        @type: "bank_a"
+      },
+      F57B: {
+        @type: "bank_b"
+      },
+      F57D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F72: "6*35x{0,1}"
+  },
+  MT798_721: {
+    @name: "LC Transfer Advice Detail",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21P: "16x",
+    F27: {
+      Number: "1!n{'/'}",
+      Total: "1!n"
+    },
+    F20: "16x",
+    F21: "16x",
+    F45B: "100*65x{0,1}",
+    F46B: "100*65x{0,1}",
+    F47B: "100*65x{0,1}"
+  },
+  MT798_722: {
+    @name: "Request for Transfer of LC index",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21A: "16x",
+    F20: "16x",
+    F31C: "YYMMDD{0,1}",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    F32B: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    Choice_52AD: {
+      F52A: {
+        @type: "bank_a"
+      },
+      F52D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    Choice_58AD: {
+      F58A: {
+        @type: "bank_a"
+      },
+      F58D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F59K: {
+      @type: "corp_"
+    },
+    F21F: "16x{0,1}",
+    F29F: "4*35x{0,1}",
+    F59: {
+      @type: "corp_"
+    },
+    F29A: "4*35x{0,1}",
+    F31E: "YYMMDD{0,1}",
+    F48: "4*35x{0,1}",
+    F39A: {
+      Tolerance1: "2n'/'",
+      Tolerance2: "2n",
+      @occur: "{0,1}"
+    },
+    F39B: "13x{0,1}",
+    F44C: "YYMMDD{0,1}",
+    F44D: "6*65x{0,1}",
+    F37J: "12d{0,1}",
+    F45C: "100*65x{0,1}",
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29S: {
+      Code: "4!c",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_731: {
+    @name: "Notification of Advice of Discharge index",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21P: "16x",
+    F20: "16x",
+    F21A: "16x{0,1}",
+    F31C: "YYMMDD{0,1}",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    Choice_52AD: {
+      F52A: {
+        @type: "bank_a"
+      },
+      F52D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F29B: "4*35x{0,1}",
+    Choice_58AD: {
+      F58A: {
+        @type: "bank_a"
+      },
+      F58D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F29D: "4*35x{0,1}",
+    F32B: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F39D: {
+      Currency: "3!a",
+      Amount: "15d"
+    },
+    F32G: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    Choice_33AB: {
+      F33A: {
+        Date: "YYMMDD",
+        Currency: "3!a",
+        Amount: "15d"
+      },
+      F33B: {
+        Currency: "3!a",
+        Amount: "15d"
+      },
+      @occur: "{0,1}"
+    },
+    F22R: "4!c{0,1}",
+    F22S: "4!c{0,1}",
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29S: {
+      Code: "4!c",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_732: {
+    @name: "Notification of Advice of Discharge detail",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21P: "16x",
+    F20: "16x",
+    F21: "16x",
+    F30: "YYMMDD",
+    F32B: {
+      Currency: "3!a",
+      Amount: "15d"
+    },
+    F72: "6*35x{0,1}"
+  },
+  MT798_733: {
+    @name: "Notification of Advice of Refusal index",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21P: "16x",
+    F20: "16x",
+    F21A: "16x{0,1}",
+    F31C: "YYMMDD{0,1}",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    F32B: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    Choice_52AD: {
+      F52A: {
+        @type: "bank_a"
+      },
+      F52D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F29B: "4*35x{0,1}",
+    Choice_58AD: {
+      F58A: {
+        @type: "bank_a"
+      },
+      F58D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F29D: "4*35x{0,1}",
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29S: {
+      Code: "4!c",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_734: {
+    @name: "Notification of Advice of Refusal detail",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21P: "16x",
+    F20: "16x",
+    F21: "16x",
+    F32A: {
+      Date: "YYMMDD",
+      Currency: "3!a",
+      Amount: "15d"
+    },
+    F73: "6*35x{0,1}",
+    Choice_33AB: {
+      F33A: {
+        Date: "YYMMDD",
+        Currency: "3!a",
+        Amount: "15d"
+      },
+      F33B: {
+        Currency: "3!a",
+        Amount: "15d"
+      },
+      @occur: "{0,1}"
+    },
+    Choice_57ABD: {
+      F57A: {
+        @type: "bank_a"
+      },
+      F57B: {
+        @type: "bank_b"
+      },
+      F57D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F72: "6*35x{0,1}",
+    F77J: "70*50x",
+    F77B: "3*35x"
+  },
+  MT798_735: {
+    @name: "Advice of Acceptance/Refusal of Amendment index",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21A: "16x",
+    F20: "16x",
+    F21P: "16x{0,1}",
+    F30: "YYMMDD{0,1}",
+    F26E: "2n{0,1}",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    F31C: "YYMMDD{0,1}",
+    Choice_52AD: {
+      F52A: {
+        @type: "bank_a"
+      },
+      F52D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F22M: "4!c",
+    F29A: "4*35x{0,1}",
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29S: {
+      Code: "4!c",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_736: {
+    @name: "Notification of Acceptance/Refusal of Amendment index",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21P: "16x",
+    F20: "16x",
+    F21A: "16x{0,1}",
+    F31C: "YYMMDD{0,1}",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    Choice_52AD: {
+      F52A: {
+        @type: "bank_a"
+      },
+      F52D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F29B: "4*35x{0,1}",
+    F30: "YYMMDD{0,1}",
+    F26E: "2n{0,1}",
+    F59: {
+      @type: "corp_"
+    },
+    F22M: "4!c",
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29S: {
+      Code: "4!c",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_737: {
+    @name: "Response of LC Presentation index",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21P: "16x",
+    F20: "16x",
+    F21A: "16x{0,1}",
+    F31C: "YYMMDD{0,1}",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    Choice_52AD: {
+      F52A: {
+        @type: "bank_a"
+      },
+      F52D: {
+        @type: "bank_d"
+      }
+    },
+    Choice_58AD: {
+      F58A: {
+        @type: "bank_a"
+      },
+      F58D: {
+        @type: "bank_d"
+      }
+    },
+    F29B: "4*35x{0,1}",
+    F31S: "YYMMDD",
+    F24E: {
+      Type: "4!c",
+      AdditionalInformation: "30x{0,1}",
+      @occur: "{0,1}"
+    },
+    F77J: "70*50x{0,1}",
+    F78B: "50*65x{0,1}",
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F34O: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F21R: "16x{0,1}",
+    F31N: "YYMMDD{0,1}",
+    F29S: {
+      Code: "4!c",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_748: {
+    @name: "Advice of Discrepancy index",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21P: "16x",
+    F20: "16x",
+    F21A: "16x{0,1}",
+    F31C: "YYMMDD",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    Choice_52AD: {
+      F52A: {
+        @type: "bank_a"
+      },
+      F52D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F29B: "4*35x{0,1}",
+    Choice_58AD: {
+      F58A: {
+        @type: "bank_a"
+      },
+      F58D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F59: {
+      @type: "corp_",
+      @occur: "{0,1}"
+    },
+    F31S: "YYMMDD{0,1}",
+    F31T: "YYMMDD{0,1}",
+    F32B: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F33B: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F71B: "6*35x{0,1}",
+    F73: "6*35x{0,1}",
+    F34B: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F77J: "70*50x{0,1}",
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29S: {
+      Code: "4!c",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_749: {
+    @name: "Resp to Advice of Discrepancy index",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21A: "16x",
+    F20: "16x",
+    F21P: "16x{0,1}",
+    F31C: "YYMMDD",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    F31S: "YYMMDD{0,1}",
+    F22M: "4!c",
+    F32B: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F32G: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F34B: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F30: "YYMMDD{0,1}",
+    Choice_57ABD: {
+      F57A: {
+        @type: "bank_a"
+      },
+      F57B: {
+        @type: "bank_b"
+      },
+      F57D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F53C: "/34x{0,1}",
+    F25A: "/34x{0,1}",
+    F29A: "4*35x{0,1}",
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29S: {
+      Code: "4!c",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_750: {
+    @name: "Advice of Discrepancy detail",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21P: "16x",
+    F20: "16x",
+    F21: "16x",
+    F32B: {
+      Currency: "3!a",
+      Amount: "15d"
+    },
+    F33B: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F71B: "6*35x{0,1}",
+    F73: "6*35x{0,1}",
+    F34B: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    Choice_57ABD: {
+      F57A: {
+        @type: "bank_a"
+      },
+      F57B: {
+        @type: "bank_b"
+      },
+      F57D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F72: "6*35x{0,1}",
+    F77J: "70*50x"
+  },
+  MT798_751: {
+    @name: "Notification of authorisation to Pay/Acpt/Nego index",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21P: "16x",
+    F20: "16x",
+    F31C: "YYMMDD",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    Choice_52AD: {
+      F52A: {
+        @type: "bank_a"
+      },
+      F52D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    Choice_58AD: {
+      F58A: {
+        @type: "bank_a"
+      },
+      F58D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F29D: "4*35x{0,1}",
+    F50: "4*35x{0,1}",
+    F32B: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F22R: "4!c",
+    F22S: "4!c",
+    F31M: "YYMMDD{0,1}",
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29S: {
+      Code: "4!c",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_752: {
+    @name: "Notification of authorisation to Pay/Acpt/Nego detail",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21P: "16x",
+    F20: "16x",
+    F21: "16x",
+    F23: "16x",
+    F30: "YYMMDD",
+    F32B: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F71B: "6*35x{0,1}",
+    Choice_33AB: {
+      F33A: {
+        Date: "YYMMDD",
+        Currency: "3!a",
+        Amount: "15d"
+      },
+      F33B: {
+        Currency: "3!a",
+        Amount: "15d"
+      },
+      @occur: "{0,1}"
+    },
+    Choice_53ABD: {
+      F53A: {
+        @type: "bank_a"
+      },
+      F53B: {
+        @type: "bank_b"
+      },
+      F53D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    Choice_54ABD: {
+      F54A: {
+        @type: "bank_a"
+      },
+      F54B: {
+        @type: "bank_b"
+      },
+      F54D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F72: "6*35x{0,1}"
+  },
+  MT798_753: {
+    @name: "Notification of Advice of Payment/Acceptance/Negotiation",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21P: "16x",
+    F20: "16x",
+    F21A: "16x{0,1}",
+    F31C: "YYMMDD",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    Choice_52AD: {
+      F52A: {
+        @type: "bank_a"
+      },
+      F52D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F29B: "4*35x{0,1}",
+    Choice_58AD: {
+      F58A: {
+        @type: "bank_a"
+      },
+      F58D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F29D: "4*35x{0,1}",
+    F32B: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F31M: "YYMMDD{0,1}",
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29S: {
+      Code: "4!c",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_754: {
+    @name: "Notification of Advice of Payment detail",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21P: "16x",
+    F20: "16x",
+    F21: "16x",
+    Choice_32AB: {
+      F32A: {
+        Date: "YYMMDD",
+        Currency: "3!a",
+        Amount: "15d"
+      },
+      F32B: {
+        Currency: "3!a",
+        Amount: "15d"
+      }
+    },
+    F33B: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F71B: "6*35x{0,1}",
+    F73: "6*35x{0,1}",
+    Choice_34AB: {
+      F34A: {
+        Date: "YYMMDD",
+        Currency: "3!a",
+        Amount: "15d"
+      },
+      F34B: {
+        Currency: "3!a",
+        Amount: "15d"
+      },
+      @occur: "{0,1}"
+    },
+    Choice_53ABD: {
+      F53A: {
+        @type: "bank_a"
+      },
+      F53B: {
+        @type: "bank_b"
+      },
+      F53D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    Choice_57ABD: {
+      F57A: {
+        @type: "bank_a"
+      },
+      F57B: {
+        @type: "bank_b"
+      },
+      F57D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    Choice_58AD: {
+      F58A: {
+        @type: "bank_a"
+      },
+      F58D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F72: "6*35x{0,1}",
+    F77A: "20*35x{0,1}"
+  },
+  MT798_755: {
+    @name: "Notification of Advice of Reimbursement or Payment Index",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21P: "16x",
+    F20: "16x",
+    F21A: "16x{0,1}",
+    F31C: "YYMMDD",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    Choice_52AD: {
+      F52A: {
+        @type: "bank_a"
+      },
+      F52D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F29B: "4*35x{0,1}",
+    Choice_58AD: {
+      F58A: {
+        @type: "bank_a"
+      },
+      F58D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F29D: "4*35x{0,1}",
+    F32B: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29S: {
+      Code: "4!c",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_756: {
+    @name: "Notification of Advice of Reimbursement or Payment detail",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21P: "16x",
+    F20: "16x",
+    F21: "16x",
+    F32B: {
+      Currency: "3!a",
+      Amount: "15d"
+    },
+    F33A: {
+      Date: "YYMMDD",
+      Currency: "3!a",
+      Amount: "15d"
+    },
+    Choice_53ABD: {
+      F53A: {
+        @type: "bank_a"
+      },
+      F53B: {
+        @type: "bank_b"
+      },
+      F53D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    Choice_54ABD: {
+      F54A: {
+        @type: "bank_a"
+      },
+      F54B: {
+        @type: "bank_b"
+      },
+      F54D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F72: "6*35x{0,1}"
+  },
+  MT798_757: {
+    @name: "Settlement of LC Index",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21P: "16x",
+    F20: "16x",
+    F21A: "16x{0,1}",
+    F31C: "YYMMDD",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    Choice_52AD: {
+      F52A: {
+        @type: "bank_a"
+      },
+      F52D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F29B: "4*35x{0,1}",
+    Choice_58AD: {
+      F58A: {
+        @type: "bank_a"
+      },
+      F58D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F22R: "4!c",
+    F31S: "YYMMDD{0,1}",
+    F32B: {
+      Currency: "3!a",
+      Amount: "15d"
+    },
+    F39D: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F32G: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    Choice_33AB: {
+      F33A: {
+        Date: "YYMMDD",
+        Currency: "3!a",
+        Amount: "15d"
+      },
+      F33B: {
+        Currency: "3!a",
+        Amount: "15d"
+      },
+      @occur: "{0,1}"
+    },
+    F71M: "15*35x{0,1}",
+    Choice_57ABD: {
+      F57A: {
+        @type: "bank_a"
+      },
+      F57B: {
+        @type: "bank_b"
+      },
+      F57D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F53C: "/34x{0,1}",
+    F34V: {
+      Currency: "3!a",
+      Amount: "15d"
+    },
+    F25A: "/34x{0,1}",
+    F34W: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F36: "12d{0,1}",
+    F34X: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29S: {
+      Code: "4!c",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_758: {
+    @name: "Settlement of Export LC Index",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21P: "16x",
+    F20: "16x",
+    F31C: "YYMMDD",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    Choice_52AD: {
+      F52A: {
+        @type: "bank_a"
+      },
+      F52D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    Choice_58AD: {
+      F58A: {
+        @type: "bank_a"
+      },
+      F58D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F29B: "4*35x{0,1}",
+    F22R: "4!c",
+    F31S: "YYMMDD{0,1}",
+    F32B: {
+      Currency: "3!a",
+      Amount: "15d"
+    },
+    F39D: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F32G: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    Choice_33AB: {
+      F33A: {
+        Date: "YYMMDD",
+        Currency: "3!a",
+        Amount: "15d"
+      },
+      F33B: {
+        Currency: "3!a",
+        Amount: "15d"
+      },
+      @occur: "{0,1}"
+    },
+    F71M: "15*35x{0,1}",
+    Choice_57ABD: {
+      F57A: {
+        @type: "bank_a"
+      },
+      F57B: {
+        @type: "bank_b"
+      },
+      F57D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F53C: "/34x{0,1}",
+    F34Y: {
+      Currency: "3!a",
+      Amount: "15d"
+    },
+    F25A: "/34x{0,1}",
+    F34W: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F22N: "4!c{0,1}",
+    F36: "12d{0,1}",
+    F34X: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29S: {
+      Code: "4!c",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_770: {
+    @name: "LC Application index",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21A: "16x",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    F24D: {
+      Code: "4!c",
+      AdditionalInformation: "/35x{0,1}"
+    },
+    F53C: "/34x{0,1}",
+    F71A: "3!a",
+    F73: "6*35x{0,1}",
+    F25A: "/34x{0,1}",
+    F71N: "3!a{0,1}",
+    Choice_58AD: {
+      F58A: {
+        @type: "bank_a"
+      },
+      F58D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F29T: {
+      Code: "4!c{0,1}",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F21E: "35x{0,1}",
+    F45C: "100*65x{0,1}",
+    F29A: "4*35x{0,1}",
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c{0,1}",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29S: {
+      Code: "4!c{0,1}",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "4*35x{0,1}",
+    F29U: "4*35x{0,1}",
+    F21R: "16x{0,1}"
+  },
+  MT798_771: {
+    @name: "LC Notification of Issuance index",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21A: "16x",
+    F20: "16x",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    Choice_52AC: {
+      F52A: {
+        @type: "bank_a"
+      },
+      F52C: "/34x{0,1}"
+    },
+    Choice_58AD: {
+      F58A: {
+        @type: "bank_a"
+      },
+      F58D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F29B: "4*35x{0,1}",
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4c'/'{0,1}",
+      Narrative: "65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29S: {
+      Code: "4!c'/'{0,1}",
+      Narrative: "35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "4*35x{0,1}",
+    F29U: "4*35x{0,1}"
+  },
+  MT798_772: {
+    @name: "LC Request for Amendment index",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21A: "16x",
+    F20: "16x",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    F24D: {
+      Code: "4!c",
+      AdditionalInformation: "35x{0,1}"
+    },
+    F71A: "3!a",
+    F73: "6*35x{0,1}",
+    F29A: "4*35x{0,1}",
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F26E: "2n{0,1}",
+    F29S: {
+      Code: "4!c",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_773: {
+    @name: "LC Notification of Amendment index",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21A: "16x",
+    F20: "16x",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    F29B: "4*35x{0,1}",
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F26E: "2n{0,1}",
+    F29S: {
+      Code: "4!c",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_774: {
+    @name: "LC Advice index",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21P: "16x",
+    F20: "16x",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    F31C: "YYMMDD{0,1}",
+    Choice_52AD: {
+      F52A: {
+        @type: "bank_a"
+      },
+      F52D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    Choice_58AD: {
+      F58A: {
+        @type: "bank_a"
+      },
+      F58D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F29A: "4*35x{0,1}",
+    F21A: "16x{0,1}",
+    F49D: "7x",
+    F49F: "50*65x{0,1}",
+    F49G: "50*65x{0,1}",
+    F47E: "100*35x{0,1}",
+    F23X: {
+      Code: "4c{0,1}",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29S: {
+      Code: "4!c{0,1}",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_776: {
+    @name: "LC Amendment index",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21P: "16x",
+    F20: "16x",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    F31C: "YYMMDD{0,1}",
+    Choice_52AD: {
+      F52A: {
+        @type: "bank_a"
+      },
+      F52D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    Choice_58AD: {
+      F58A: {
+        @type: "bank_a"
+      },
+      F58D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F29A: "4*35x{0,1}",
+    F21A: "16x",
+    F49D: "7x",
+    F49F: "50*65x{0,1}",
+    F49G: "50*65x{0,1}",
+    F47E: "100*35x{0,1}",
+    F23X: {
+      Code: "4c{0,1}",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F26E: "2n{0,1}",
+    F29S: {
+      Code: "4!c{0,1}",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_780: {
+    @name: "LC Third Bank Advice index",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21P: "16x",
+    F21: "16x",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    F31C: "YYMMDD{0,1}",
+    Choice_52AD: {
+      F52A: {
+        @type: "bank_a"
+      },
+      F52D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    Choice_58AD: {
+      F58A: {
+        @type: "bank_a"
+      },
+      F58D: {
+        @type: "bank_d"
+      }
+    },
+    F29A: "4*35x{0,1}",
+    Choice_56ACD: {
+      F56A: {
+        @type: "bank_a"
+      },
+      F56C: {
+        @type: "bank_c"
+      },
+      F56D: {
+        @type: "bank_d"
+      }
+    },
+    F21B: "16x",
+    F21A: "16x{0,1}",
+    F49D: "7x",
+    F49F: "50*65x{0,1}",
+    F49G: "50*65x{0,1}",
+    F47E: "6*35x{0,1}",
+    F23X: {
+      Code: "4c{0,1}",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29S: {
+      Code: "4!c{0,1}",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_782: {
+    @name: "LC Transfer Advice index",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21P: "16x",
+    F21: "16x",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    F31C: "YYMMDD{0,1}",
+    Choice_52AD: {
+      F52A: {
+        @type: "bank_a"
+      },
+      F52D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    Choice_58AD: {
+      F58A: {
+        @type: "bank_a"
+      },
+      F58D: {
+        @type: "bank_d"
+      }
+    },
+    F29A: "4*35x{0,1}",
+    Choice_55ABD: {
+      F55A: {
+        @type: "bank_a"
+      },
+      F55B: {
+        @type: "bank_b"
+      },
+      F55D: {
+        @type: "bank_d"
+      }
+    },
+    F21N: "16x",
+    F21A: "16x{0,1}",
+    F49D: "7x",
+    F49F: "50*65x{0,1}",
+    F49G: "50*65x{0,1}",
+    F47E: "6*35x{0,1}",
+    F23X: {
+      Code: "4c{0,1}",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29S: {
+      Code: "4!c{0,1}",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_743: {
+    @name: "Advice of amendment Guarantee index",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21P: "16x",
+    F20: "16x",
+    F21A: "16x{0,1}",
+    F31C: "YYMMDD",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    Choice_52AD: {
+      F52A: {
+        @type: "bank_a"
+      },
+      F52D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F29B: "4*35x{0,1}",
+    Choice_58AD: {
+      F58A: {
+        @type: "bank_a"
+      },
+      F58D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F29D: "4*35x{0,1}",
+    F50: "4*35x{0,1}",
+    F78B: "50*65x{0,1}",
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F26E: "2n{0,1}",
+    F29S: {
+      Code: "4!c",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_744: {
+    @name: "Advice of amendment Standby LC index",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21P: "16x",
+    F20: "16x",
+    F21A: "16x{0,1}",
+    F31C: "YYMMDD",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    Choice_52AD: {
+      F52A: {
+        @type: "bank_a"
+      },
+      F52D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F29B: "4*35x{0,1}",
+    Choice_58AD: {
+      F58A: {
+        @type: "bank_a"
+      },
+      F58D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F29D: "4*35x{0,1}",
+    F50: "4*35x{0,1}",
+    F78B: "50*65x{0,1}",
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F26E: "2n{0,1}",
+    F29S: {
+      Code: "4!c",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_745: {
+    @name: "Advice of issued Guarantee index",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21P: "16x",
+    F20: "16x",
+    F21A: "16x{0,1}",
+    F31C: "YYMMDD",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    Choice_52AD: {
+      F52A: {
+        @type: "bank_a"
+      },
+      F52D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F29B: "4*35x{0,1}",
+    Choice_58AD: {
+      F58A: {
+        @type: "bank_a"
+      },
+      F58D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F29D: "4*35x{0,1}",
+    F50: "4*35x{0,1}",
+    F78B: "50*65x{0,1}",
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29S: {
+      Code: "4!c",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_746: {
+    @name: "Advice of issued Standby LC index",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21P: "16x",
+    F20: "16x",
+    F21A: "16x{0,1}",
+    F31C: "YYMMDD",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    Choice_52AD: {
+      F52A: {
+        @type: "bank_a"
+      },
+      F52D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F29B: "4*35x{0,1}",
+    Choice_58AD: {
+      F58A: {
+        @type: "bank_a"
+      },
+      F58D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F29D: "4*35x{0,1}",
+    F50: "4*35x{0,1}",
+    F78B: "50*65x{0,1}",
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29S: {
+      Code: "4!c",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_760: {
+    @name: "Application for GTEE detail",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21A: "16x{0,1}",
+    F21P: "16x{0,1}",
+    F27: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F20: "16x",
+    F23: "16x",
+    F30: "YYMMDD{0,1}",
+    F40C: {
+      Type: "4!a",
+      Narrative: "35x{0,1}"
+    },
+    F77C: "150*65x",
+    F72: "6*35x{0,1}"
+  },
+  MT798_761: {
+    @name: "Application for GTEE index",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21A: "16x",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    F22D: "4!c",
+    F22K: {
+      TypeOfEvent: "4!c",
+      Narrative: "35x{0,1}"
+    },
+    F22E: "4!c",
+    F22J: "4!c",
+    F22B: "4!c{0,1}",
+    F22L: "2!c{0,1}",
+    F50: "4*35x",
+    F50M: "4*35x{0,1}",
+    F12E: "4!c{0,1}",
+    F39P: {
+      Type: "4!c'/'",
+      Currency: "3!a",
+      Amount: "15d"
+    },
+    F39C: "4*35x{0,1}",
+    F23B: "4!c",
+    F31L: "YYMMDD{0,1}",
+    F31S: "YYMMDD{0,1}",
+    F35L: "4*35x{0,1}",
+    F23E: {
+      Type: "4!c",
+      AdditionalInformation: "30x{0,1}",
+      @occur: "{0,1}"
+    },
+    F24E: {
+      Type: "4!c",
+      AdditionalInformation: "30x{0,1}",
+      @occur: "{0,1}"
+    },
+    F22G: "4!c{0,1}",
+    F50B: "4*35x{0,1}",
+    F53C: "/34x{0,1}",
+    F25A: "/34x{0,1}",
+    F59: {
+      Account: "/34x'\r\n'{0,1}",
+      NameAndAddress: "4*35x"
+    },
+    Choice_52AD: {
+      F52A: {
+        @type: "bank_a"
+      },
+      F52D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    Choice_58AD: {
+      F58A: {
+        @type: "bank_a"
+      },
+      F58D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F49: "7!x{0,1}",
+    F26D: "30*65x",
+    F20E: {
+      Code: "4!c",
+      Reference: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F31R: {
+      Date1: "YYMMDD",
+      Date2: "YYMMDD{0,1}",
+      @occur: "{0,1}"
+    },
+    F71F: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F37J: "12d{0,1}",
+    F29A: "4*35x{0,1}",
+    F29D: "4*35x{0,1}",
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29S: {
+      Code: "4!c",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}",
+    F21R: "16x{0,1}"
+  },
+  MT798_762: {
+    @name: "Notification of Guarantee index",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21A: "16x",
+    F20: "16x",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    F39P: {
+      Type: "4!c'/'",
+      Currency: "3!a",
+      Amount: "15d"
+    },
+    F23B: "4!c",
+    F31L: "YYMMDD{0,1}",
+    F31S: "YYMMDD{0,1}",
+    F50: "4*35x",
+    F50M: "4*35x{0,1}",
+    F59: {
+      @type: "corp_"
+    },
+    Choice_52AD: {
+      F52A: {
+        @type: "bank_a"
+      },
+      F52D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    Choice_58AD: {
+      F58A: {
+        @type: "bank_a"
+      },
+      F58D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F49H: "50*65x{0,1}",
+    F29B: "4*35x{0,1}",
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29S: {
+      Code: "4!c",
+      Narrative: "35x",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}",
+    F22D: "4!c{0,1}",
+    F22K: {
+      TypeOfEvent: "4!c",
+      Narrative: "35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F35L: "4*35x{0,1}"
+  },
+  MT798_763: {
+    @name: "Request for Amendment of Guarantee index",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21A: "16x",
+    F20: "16x",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    F32B: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F33B: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F23B: "4!c{0,1}",
+    F31L: "YYMMDD{0,1}",
+    F31S: "YYMMDD{0,1}",
+    F23E: {
+      Type: "4!c",
+      AdditionalInformation: "30x{0,1}",
+      @occur: "{0,1}"
+    },
+    F24E: {
+      Type: "4!c",
+      AdditionalInformation: "35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F22G: "4!c{0,1}",
+    F50B: "4*35x{0,1}",
+    F29A: "4*35x{0,1}",
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F26E: "2n{0,1}",
+    F29S: {
+      Code: "4!c",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_764: {
+    @name: "Notification of Amendment of Guarantee detail",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21A: "16x",
+    F20: "16x",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    F32B: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F33B: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F34B: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F23B: "4!c{0,1}",
+    F31L: "YYMMDD{0,1}",
+    F31S: "YYMMDD{0,1}",
+    F49H: "50*65x{0,1}",
+    F29B: "4*35x{0,1}",
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F26E: "2n{0,1}",
+    F29S: {
+      Code: "4!c",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_767: {
+    @name: "Amendment of Guarantee detail",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21A: "16x{0,1}",
+    F21P: "16x{0,1}",
+    F27: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F20: "16x",
+    F21: "16x",
+    F23: "16x",
+    F30: "YYMMDD{0,1}",
+    F26E: "2n{0,1}",
+    F31C: "YYMMDD{0,1}",
+    F77C: "150*65x",
+    F72: "6*35x{0,1}"
+  },
+  MT798_777: {
+    @name: "Query to extend or pay of Guarantee",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21A: "16x{0,1}",
+    F20: "16x",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    F31C: "YYMMDD",
+    F39D: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F31L: "YYMMDD{0,1}",
+    F49J: "50*65x{0,1}",
+    F78B: "50*65x{0,1}",
+    F31T: "YYMMDD",
+    F29B: "4*35x{0,1}",
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29S: {
+      Code: "4!c",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_778: {
+    @name: "Response to extend or pay of Guarantee",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21A: "16x{0,1}",
+    F20: "16x",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    F31C: "YYMMDD",
+    F39D: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F31L: "YYMMDD{0,1}",
+    F22M: "4!c",
+    F53C: "/34x{0,1}",
+    F25A: "/34x{0,1}",
+    F29A: "4*35x{0,1}",
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29S: {
+      Code: "4!c",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_712: {
+    @name: "Claim for payment under Guarantee",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21A: "16x{0,1}",
+    F20: "16x",
+    F31C: "YYMMDD",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    Choice_52AD: {
+      F52A: {
+        @type: "bank_a"
+      },
+      F52D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F32B: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F39D: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F49J: "50*65x{0,1}",
+    Choice_57ABD: {
+      F57A: {
+        @type: "bank_a"
+      },
+      F57B: {
+        @type: "bank_b"
+      },
+      F57D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F53C: "/34x{0,1}",
+    F25A: "/34x{0,1}",
+    F29A: "4*35x{0,1}",
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29S: {
+      Code: "4!c",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_714: {
+    @name: "Ack of Claim for payment under Guarantee",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21P: "16x{0,1}",
+    F20: "16x",
+    F21A: "16x",
+    F31C: "YYMMDD",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    F32B: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F31S: "YYMMDD",
+    F39D: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F78B: "50*65x{0,1}",
+    F29B: "4*35x{0,1}",
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29S: {
+      Code: "4!c",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_779: {
+    @name: "Notification of Claim for payment under Guarantee",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21A: "16x{0,1}",
+    F20: "16x",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    F31C: "YYMMDD",
+    F39D: {
+      Currency: "3!a",
+      Amount: "15d"
+    },
+    F49J: "50*65x{0,1}",
+    F78B: "50*65x{0,1}",
+    F29B: "4*35x{0,1}",
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29S: {
+      Code: "4!c",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_781: {
+    @name: "Settlement of Claim for payment under Guarantee",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21A: "16x{0,1}",
+    F20: "16x",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    F22R: "4!c",
+    F39D: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F34K: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F34L: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F34M: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F71B: "6*35x{0,1}",
+    F34S: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F34T: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F22S: "4!c{0,1}",
+    F31J: "YYMMDD{0,1}",
+    F31K: "YYMMDD{0,1}",
+    F37J: "12d{0,1}",
+    F34U: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F53C: "/34x{0,1}",
+    F34V: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F25A: "/34x{0,1}",
+    F34W: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F30: "YYMMDD{0,1}",
+    F36: "12d{0,1}",
+    F34X: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F78B: "50*65x{0,1}",
+    F29B: "4*35x{0,1}",
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29S: {
+      Code: "4!c",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_783: {
+    @name: "Request for Guarantee release",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21A: "16x",
+    F20: "16x",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    F33B: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F22N: "4!c",
+    F49K: "6*35x{0,1}",
+    F29A: "4*35x{0,1}",
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29S: {
+      Code: "4!c",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_766: {
+    @name: "Advice of Reduction or Release index",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21A: "16x",
+    F20: "16x",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    F29B: "4*35x{0,1}",
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29S: {
+      Code: "4!c",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_769: {
+    @name: "Advice of Reduction or Release detail",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21A: "16x",
+    F20: "16x",
+    F21: "16x",
+    F25: "35x{0,1}",
+    F30: "YYMMDD{0,1}",
+    Choice_32BD: {
+      F32B: {
+        Currency: "3!a",
+        Amount: "15d"
+      },
+      F32D: {
+        Date: "YYMMDD",
+        Currency: "3!a",
+        Amount: "15d"
+      },
+      @occur: "{0,1}"
+    },
+    F33B: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F34B: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F39C: "4*35x{0,1}",
+    Choice_57ABD: {
+      F57A: {
+        @type: "bank_a"
+      },
+      F57B: {
+        @type: "bank_b"
+      },
+      F57D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F71B: "6*35x{0,1}",
+    F72: "6*35x{0,1}"
+  },
+  MT798_790: {
+    @name: "Notification of Settlement or charges detail",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21P: "16x",
+    F20: "16x",
+    F21: "16x",
+    F25: "35x",
+    Choice_32CD: {
+      F32C: {
+        Date: "YYMMDD",
+        Currency: "3!a",
+        Amount: "15d"
+      },
+      F32D: {
+        Date: "YYMMDD",
+        Currency: "3!a",
+        Amount: "15d"
+      }
+    },
+    Choice_52AD: {
+      F52A: {
+        @type: "bank_a"
+      },
+      F52D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F71B: "6*35x",
+    F72: "6*35x{0,1}"
+  },
+  MT798_791: {
+    @name: "Request of Settlement or charges detail",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21P: "16x",
+    F20: "16x",
+    F21: "16x",
+    F32B: {
+      Currency: "3!a",
+      Amount: "15d"
+    },
+    Choice_52AD: {
+      F52A: {
+        @type: "bank_a"
+      },
+      F52D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    Choice_57ABD: {
+      F57A: {
+        @type: "bank_a"
+      },
+      F57B: {
+        @type: "bank_b"
+      },
+      F57D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F71B: "6*35x",
+    F72: "6*35x{0,1}"
+  },
+  MT798_793: {
+    @name: "Notification of Settlement or charges index",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21P: "16x",
+    F20: "16x",
+    F21A: "16x",
+    F31C: "YYMMDD{0,1}",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29S: {
+      Code: "4!c",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_794: {
+    @name: "Request for Settlement of charges index",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21P: "16x",
+    F20: "16x",
+    F21A: "16x",
+    F31C: "YYMMDD{0,1}",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    Choice_52AD: {
+      F52A: {
+        @type: "bank_a"
+      },
+      F52D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F29B: "4*35x{0,1}",
+    Choice_58AD: {
+      F58A: {
+        @type: "bank_a"
+      },
+      F58D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F29D: "4*35x{0,1}",
+    F32B: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F72C: "6*35x{0,1}",
+    F29S: {
+      Code: "4!c",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_788: {
+    @name: "Corp to Bank message index",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21A: "16x",
+    F21R: "16x",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    F29A: "4*35x{0,1}",
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29S: {
+      Code: "4!c",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_789: {
+    @name: "Bank to Corp message index",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21A: "16x",
+    F21R: "16x",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    F29B: "4*35x{0,1}",
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29S: {
+      Code: "4!c",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_799: {
+    @name: "free message detail",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21A: "16x",
+    F20: "16x",
+    F21: "16x{0,1}",
+    F79: "35*50x"
+  },
+  MT798_784: {
+    @name: "Application for Standby LC index",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21A: "16x",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    F40A: "24x",
+    F50: "4*35x",
+    F50M: "4*35x{0,1}",
+    F33E: {
+      Currency: "3!a",
+      Amount: "15d"
+    },
+    F39A: {
+      Tolerance1: "2n'/'",
+      Tolerance2: "2n",
+      @occur: "{0,1}"
+    },
+    F39B: "13x{0,1}",
+    F31L: "YYMMDD",
+    F35L: "4*35x{0,1}",
+    F23F: {
+      Code: "4!c",
+      AdditionalInformation: "30x{0,1}",
+      @occur: "{0,1}"
+    },
+    F38A: "3n{0,1}",
+    F31S: "YYMMDD{0,1}",
+    F23E: {
+      Type: "4!c",
+      AdditionalInformation: "30x{0,1}",
+      @occur: "{0,1}"
+    },
+    F24E: {
+      Type: "4!c",
+      AdditionalInformation: "30x{0,1}",
+      @occur: "{0,1}"
+    },
+    F22G: "4!c{0,1}",
+    F50B: "4*35x{0,1}",
+    F25A: "/34x{0,1}",
+    F22P: {
+      Code1: "4!c{0,1}",
+      Code2: "4!c{0,1}",
+      @occur: "{0,1}"
+    },
+    F45C: "100*65x",
+    F59: {
+      Account: "[/34x]{0,1'\r\n'}",
+      NameAndAddress: "4*35x"
+    },
+    F29D: "4*35x{0,1}",
+    F50N: "4*35x{0,1}",
+    F29C: "35x{0,1}",
+    F22K: {
+      TypeOfGuarantee: "4!c",
+      Narrative: "35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F33F: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F31V: "YYMMDD{0,1}",
+    Choice_52AD: {
+      F52A: {
+        @type: "bank_a"
+      },
+      F52D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    Choice_58AD: {
+      F58A: {
+        @type: "bank_a"
+      },
+      F58D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F49: "7!x{0,1}",
+    F26D: "30*65x",
+    F29A: "4*35x{0,1}",
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29S: {
+      Code: "4!c",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}",
+    F21R: "16x{0,1}"
+  },
+  MT798_785: {
+    @name: "Notification of Standby LC index",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21A: "16x",
+    F20: "16x",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    F40A: "24x",
+    F50: "4*35x",
+    F50M: "4*35x{0,1}",
+    F33E: {
+      Currency: "3!a",
+      Amount: "15d"
+    },
+    F39A: {
+      Tolerance1: "2n'/'",
+      Tolerance2: "2n",
+      @occur: "{0,1}"
+    },
+    F39B: "13x{0,1}",
+    F31L: "YYMMDD",
+    F35L: "4*35x{0,1}",
+    F23F: {
+      Code: "4!c",
+      AdditionalInformation: "30x{0,1}",
+      @occur: "{0,1}"
+    },
+    F38A: "3n{0,1}",
+    F31S: "YYMMDD{0,1}",
+    F23E: {
+      Type: "4!c",
+      AdditionalInformation: "30x{0,1}",
+      @occur: "{0,1}"
+    },
+    F24E: {
+      Type: "4!c",
+      AdditionalInformation: "30x{0,1}",
+      @occur: "{0,1}"
+    },
+    F22G: "4!c{0,1}",
+    F50B: "4*35x{0,1}",
+    F25A: "/34x{0,1}",
+    F22P: {
+      Code1: "4!c{0,1}",
+      Code2: "4!c{0,1}",
+      @occur: "{0,1}"
+    },
+    F45C: "100*65x",
+    F59: {
+      Account: "[/34x]{0,1'\r\n'}",
+      NameAndAddress: "4*35x"
+    },
+    F29D: "4*35x{0,1}",
+    F50N: "4*35x{0,1}",
+    F29C: "35x{0,1}",
+    F22K: {
+      TypeOfGuarantee: "4!c",
+      Narrative: "35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F33F: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F31V: "YYMMDD{0,1}",
+    Choice_52AD: {
+      F52A: {
+        @type: "bank_a"
+      },
+      F52D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    Choice_58AD: {
+      F58A: {
+        @type: "bank_a"
+      },
+      F58D: {
+        @type: "bank_d"
+      },
+      @occur: "{0,1}"
+    },
+    F49: "7!x{0,1}",
+    F26D: "30*65x",
+    F29B: "4*35x{0,1}",
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29S: {
+      Code: "4!c",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_786: {
+    @name: "Request for Amendment of Standby LC index",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21A: "16x",
+    F20: "16x",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    F32B: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F33B: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F39A: {
+      Tolerance1: "2n{'/'}",
+      Tolerance2: "2n",
+      @occur: "{0,1}"
+    },
+    F31L: "YYMMDD{0,1}",
+    F35L: "4*35x{0,1}",
+    F23F: {
+      Code: "4!c",
+      AdditionalInformation: "30x{0,1}",
+      @occur: "{0,1}"
+    },
+    F38A: "3n{0,1}",
+    F31S: "YYMMDD{0,1}",
+    F23E: {
+      Type: "4!c",
+      AdditionalInformation: "30x{0,1}",
+      @occur: "{0,1}"
+    },
+    F24E: {
+      Type: "4!c",
+      AdditionalInformation: "30x{0,1}",
+      @occur: "{0,1}"
+    },
+    F22G: "4!c{0,1}",
+    F50B: "4*35x{0,1}",
+    F29A: "4*35x{0,1}",
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F26E: "2n{0,1}",
+    F29S: {
+      Code: "4!c",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  MT798_787: {
+    @name: "Notification of Amendment of Standby LC index",
+    F20Z: "16x",
+    F12: "3!n",
+    F77E: "0x",
+    F27A: {
+      Number: "1!n'/'",
+      Total: "1!n"
+    },
+    F21A: "16x",
+    F20: "16x",
+    F13E: {
+      Date: "YYYYMMDD",
+      Time: "HHMM"
+    },
+    F32B: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F33B: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F34B: {
+      Currency: "3!a",
+      Amount: "15d",
+      @occur: "{0,1}"
+    },
+    F39A: {
+      Tolerance1: "2n{'/'}",
+      Tolerance2: "2n",
+      @occur: "{0,1}"
+    },
+    F31L: "YYMMDD{0,1}",
+    F35L: "4*35x{0,1}",
+    F23F: {
+      Code: "4!c",
+      AdditionalInformation: "30x{0,1}",
+      @occur: "{0,1}"
+    },
+    F38A: "3n{0,1}",
+    F31S: "YYMMDD{0,1}",
+    F23E: {
+      Type: "4!c",
+      AdditionalInformation: "30x{0,1}",
+      @occur: "{0,1}"
+    },
+    F24E: {
+      Type: "4!c",
+      AdditionalInformation: "30x{0,1}",
+      @occur: "{0,1}"
+    },
+    F22G: "4!c{0,1}",
+    F50B: "4*35x{0,1}",
+    F29B: "4*35x{0,1}",
+    F72C: "6*35x{0,1}",
+    F23X: {
+      Code: "4!c",
+      Narrative: "/65x{0,1}",
+      @occur: "{0,1}"
+    },
+    F26E: "2n{0,1}",
+    F29S: {
+      Code: "4!c",
+      Narrative: "/35x{0,1}",
+      @occur: "{0,1}"
+    },
+    F29P: "35x{0,1}",
+    F29U: "35x{0,1}"
+  },
+  Document: {
+    MT799_788: "Free Msg, Corporate to Bank",
+    MT799_789: "Free Msg, Bank to Corporate",
+    MT700_770: "LC Application Req",
+    MT700_771: "LC Issuance Noti",
+    MT700_774: "LC Issuance Noti",
+    MT707_772: "LC Amendment Req",
+    MT707_773: "LC Amendment Noti",
+    MT760_761: "GT Application Req",
+    MT760_762: "GT Issuance Noti",
+    MT760_745: "Advice of issued Guarantee",
+    MT760_420: "Guarantee Applicant refusal",
+    MT767_763: "GT Amendment Req",
+    MT767_764: "GT Amendment Noti",
+    MT767_743: "Advice of issued Guarantee",
+    MT767_420: "Guarantee Amendment refusal",
+    MT769_766: "Guarantee Reduction/release Noti"
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "MT364": {
+    "SeqA": {
+      "F15A": "NULL_Type",
+      "F20": "16x",
+      "F21": "16x{0,1}",
+      "F22A": "4!c(AMND|CANC|DUPL|NEWT)",
+      "F94A": "4!c(AGNT|BILA){0,1}",
+      "F22B": "4!c(PTRC|PTRM|RCPN|TERM)",
+      "F22C": "4!a2!c4!n4!a2!c",
+      "F23A": {
+        "TypeOfSwap": "10a(CAPBUYER|CAPSELLER|COLLARBYER|COLLARSLLR|FIXEDFIXED|FIXEDFLOAT|FLOATFIXED|FLOATFLOAT|FLOORBUYER|FLOORSLLER)'/'",
+        "SettlementMethod": "5a(NET)"
+      },
+      "F21N": "16x",
+      "F21B": "16x{0,1}",
+      "F30T": "YYYYMMDD",
+      "F30Q": "YYYYMMDD",
+      "F30P": "YYYYMMDD",
+      "F30V": "YYYYMMDD",
+      "F32B": {
+        "Currency": "3!a",
+        "Amount": "15d"
+      },
+      "Choice_82AD": {
+        "F82A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F82D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        }
+      },
+      "Choice_87AD": {
+        "F87A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F87D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        }
+      },
+      "Choice_83ADJ": {
+        "F83A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F83D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "F83J": "5*40x",
+        "@occur": "{0,1}"
+      },
+      "F22D": "4!c(LAST|NEXT|OTHR){0,1}",
+      "F32G": {
+        "Currency": "3!a",
+        "Amount": "15d",
+        "@occur": "{0,1}"
+      },
+      "F37N": "6*35x{0,1}",
+      "F29A": "4*35x{0,1}",
+      "F72": "6*35x{0,1}"
+    },
+    "SeqB": {
+      "F15B": "NULL_Type",
+      "F37U": "12d",
+      "F37P": "12d{0,1}",
+      "@occur": "{0,1}"
+    },
+    "SeqE": {
+      "F15E": "NULL_Type",
+      "F37U": "12d",
+      "F37P": "12d{0,1}",
+      "@occur": "{0,1}"
+    },
+    "SeqL": {
+      "F15L": "NULL_Type",
+      "F30F": "YYYYMMDD",
+      "F32M": {
+        "Currency": "3!a",
+        "Amount": "15d"
+      },
+      "Choice_53AD": {
+        "F53A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F53D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "@occur": "{0,1}"
+      },
+      "Choice_56AD": {
+        "F56A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F56D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "@occur": "{0,1}"
+      },
+      "Choice_86AD": {
+        "F86A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F86D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "@occur": "{0,1}"
+      },
+      "Choice_57AD": {
+        "F57A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F57D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        }
+      },
+      "@occur": "{0,1}"
+    },
+    "SeqM": {
+      "F15M": "NULL_Type",
+      "F30F": "YYYYMMDD",
+      "F32M": {
+        "Currency": "3!a",
+        "Amount": "15d"
+      },
+      "Choice_53AD": {
+        "F53A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F53D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "@occur": "{0,1}"
+      },
+      "Choice_56AD": {
+        "F56A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F56D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "@occur": "{0,1}"
+      },
+      "Choice_86AD": {
+        "F86A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F86D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        },
+        "@occur": "{0,1}"
+      },
+      "Choice_57AD": {
+        "F57A": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "IdentifierCode": "BIC"
+        },
+        "F57D": {
+          "PartyIdentifier": "/36x'\r\n'{0,1}",
+          "NameAndAddress": "4*35x"
+        }
+      },
+      "@occur": "{0,1}"
+    }
+  }
+}

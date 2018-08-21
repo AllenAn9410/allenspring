@@ -5,16 +5,16 @@ import tools.ExcelWrite;
 
 public class TestExcelLoad {
     @Test
-    public void testExcelLoad(){
-        String excelPath = "./target/target.xls";
-        String[] params = {"name","age"};
-        String[] values = {"allen","24"};
-        ExcelWrite el = new ExcelWrite(excelPath,params);
-        try{
+    public void testExcelLoad() {
+        String excelPath = "./target/target10.xls";
+        String[] params = {"name", "age"};
+        String[] values = {"allen", "24"};
+        ExcelWrite el = new ExcelWrite(excelPath, params);
+        try {
             el.load(values);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             el.close();
         }
     }

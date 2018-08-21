@@ -9,10 +9,7 @@ import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
 import org.dom4j.io.XMLWriter;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.UnsupportedEncodingException;
+import java.io.*;
 import java.util.*;
 
 public class SwiftTemplate {
@@ -86,11 +83,11 @@ public class SwiftTemplate {
             // System.out.println(str);
             String start = str.substring(0,1);
             String end = str.substring(str.length()-1);
-            if ( !start.equals("{")  && !end.equals("}") ){
+            if ( !start.equals("{") || !end.equals("}") ){
                 int[] segment = calculateLen(str);
                 tag.addElement("segment-1")
                         .addAttribute("cols",segment[0]+"")
-                        .addAttribute("illegal-char","")
+                        .addAttribute( "illegal-char","")
                         .addAttribute("rows",segment[1]+"");
             } else {
                 boolean isMutiSegm = false;
@@ -117,8 +114,8 @@ public class SwiftTemplate {
                                 .addAttribute("illegal-char","")
                                 .addAttribute("rows",segment[1]+"");
                     } else {
-                        temp[1] += segment[1];
-                        temp[0] = temp[0] > segment[0] ? temp[0] : segment[0];
+                        temp[0] += segment[0];
+                        temp[1] = temp[1] > segment[1] ? temp[1] : segment[1];
                     }
 
                 }
@@ -132,9 +129,12 @@ public class SwiftTemplate {
         }
         try {
             XMLWriter writer = new XMLWriter(new FileOutputStream(new File("./test.xml")));
+            writer.write(document);
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

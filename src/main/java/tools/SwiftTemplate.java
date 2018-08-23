@@ -87,10 +87,11 @@ public class SwiftTemplate {
             String start = str.substring(0,1);
             String end = str.substring(str.length()-1);
             if ( !start.equals("{")  || !end.equals("}") ){
+
                 int[] segment = calculateLen(str);
                 tag.addElement("segment-1")
                         .addAttribute("cols",segment[0]+"")
-                        .addAttribute("illegal-char","")
+                        .addAttribute( "illegal-char","")
                         .addAttribute("rows",segment[1]+"");
             } else {
                 boolean isMutiSegm = false;
@@ -131,6 +132,7 @@ public class SwiftTemplate {
             }
         }
         try {
+
             OutputFormat format = OutputFormat.createPrettyPrint();
             XMLWriter writer = new XMLWriter(new FileOutputStream(new File("./swt_template_MT707.xml")),format );
             writer.write(document);

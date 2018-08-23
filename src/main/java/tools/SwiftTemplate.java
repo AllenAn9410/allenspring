@@ -7,13 +7,13 @@ import org.apache.commons.io.FileUtils;
 import org.dom4j.Document;
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;
+import org.dom4j.io.OutputFormat;
 import org.dom4j.io.XMLWriter;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.UnsupportedEncodingException;
+import java.io.*;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class SwiftTemplate {
     public SwiftTemplate() {}
@@ -66,13 +66,13 @@ public class SwiftTemplate {
             ts.traverse(jsonArray);
         }
         List<TemplateBean> list = ts.getHashMap();
-        generateXML(list);
+        generateXML(list,mt);
         return "";
     }
 
-    public void generateXML(List list) throws JSONException {
+    private static void generateXML(List list,String mt) throws JSONException {
         Document document = DocumentHelper.createDocument();
-        Element root = document.addElement("root");
+        Element root = document.addElement("root").addAttribute("type", mt);
         Element tags = root.addElement("tags");
         for(int i=0;i<list.size();i++){
             TemplateBean tb = (TemplateBean) list.get(i);
@@ -86,7 +86,7 @@ public class SwiftTemplate {
             // System.out.println(str);
             String start = str.substring(0,1);
             String end = str.substring(str.length()-1);
-            if ( !start.equals("{")  && !end.equals("}") ){
+            if ( !start.equals("{")  || !end.equals("}") ){
                 int[] segment = calculateLen(str);
                 tag.addElement("segment-1")
                         .addAttribute("cols",segment[0]+"")
@@ -112,13 +112,13 @@ public class SwiftTemplate {
                 for(int j=0;j<segmList.size();j++){
                     int[] segment = calculateLen(segmList.get(j));
                     if( isMutiSegm ){
-                        tag.addElement("segment-"+j+1)
+                        tag.addElement("segment-"+(j+1))
                                 .addAttribute("cols",segment[0]+"")
                                 .addAttribute("illegal-char","")
                                 .addAttribute("rows",segment[1]+"");
                     } else {
-                        temp[1] += segment[1];
-                        temp[0] = temp[0] > segment[0] ? temp[0] : segment[0];
+                        temp[0] += segment[0];
+                        temp[1] = temp[1] > segment[1] ? temp[1] : segment[1];
                     }
 
                 }
@@ -131,25 +131,50 @@ public class SwiftTemplate {
             }
         }
         try {
-            XMLWriter writer = new XMLWriter(new FileOutputStream(new File("./test.xml")));
+            OutputFormat format = OutputFormat.createPrettyPrint();
+            XMLWriter writer = new XMLWriter(new FileOutputStream(new File("./swt_template_MT707.xml")),format );
+            writer.write(document);
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
+    /**
+     *  It returns 0 when a very special str is not considered
+     * @param str
+     * @return {rols,rows}
+     */
     private static int[] calculateLen(String str){
+        int total = 0;
+        if(str.contains("BIC")){
+            total = 11;
+        }
+        if(str.contains("HHMM")){
+            total = 4;
+        }
+        if(str.contains("YYMMDD")){
+            total = 6;
+        }
         int rows = 1;
         String regNum = "[0-9]";
         int start = 0;
         int end = 0;
+        /**
+         *  Remove the excess
+         */
         if ( str.contains("(")){
             start = str.indexOf("(");
             end = str.indexOf(")");
             String temp = str.substring(start,end+1);
             String replace = "";
-            if ( !temp.contains("|")){
+            /**
+             * some speical str need sepcial dispose
+             */
+            if ( !temp.contains("|") &&  hasDigit(temp)){
                 String tempp = str.substring(start+1, end);
                 replace = calculateLen(tempp)[0]+"";
                 str = str.replace(temp,replace);
@@ -166,14 +191,16 @@ public class SwiftTemplate {
             str = str.replace(temp,"");
         }
         str = str.trim();
-        int total = 0;
         String temp = "";
         for(int i=0;i<str.length();i++){
             String a = String.valueOf(str.charAt(i));
             if ("/".equals(a)){
                 total += 1;
             }
-            if ( "x".equals(a) || "c".equals(a) || "d".equals(a) || "n".equals(a) || "a".equals(a) ){
+            /**
+             *  All length Numbers must be followed by the following characters (Or an exclamation point before a character)
+             */
+            if ( "x".equals(a) || "c".equals(a) || "d".equals(a) || "n".equals(a) || "a".equals(a) || "z".equals(a) ){
                 boolean isExcla = false;
                 int ii = i;
                 while (true){
@@ -219,5 +246,13 @@ public class SwiftTemplate {
         }
         int[] t = {total,rows};
         return t;
+    }
+    private static boolean hasDigit(String content) {
+        boolean flag = false;
+        Pattern p = Pattern.compile(".*\\d+.*");
+        Matcher m = p.matcher(content);
+        if (m.matches())
+            flag = true;
+        return flag;
     }
 }

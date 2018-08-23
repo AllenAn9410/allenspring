@@ -1,8 +1,5 @@
 package tools;
 
-
-
-import com.cs.esp.org.json.JSONArray;
 import com.cs.esp.org.json.JSONException;
 import com.cs.esp.org.json.JSONObject;
 
@@ -39,7 +36,7 @@ public class TraverseJson {
                 }
                 continue;
             }
-            if (key.contains("@occur")) {
+            if (key.contains("@occur") || key.contains("@len")) {
                 continue;
             }
             tb.setTagCode(key);
@@ -47,10 +44,7 @@ public class TraverseJson {
             list.add(tb);
         }
         // System.out.println(jsonObject);
-
-
     }
-
 
     public void f20z(String value) {
         TemplateBean tb = new TemplateBean();

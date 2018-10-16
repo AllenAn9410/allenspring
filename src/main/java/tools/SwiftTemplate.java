@@ -134,7 +134,7 @@ public class SwiftTemplate {
         try {
 
             OutputFormat format = OutputFormat.createPrettyPrint();
-            XMLWriter writer = new XMLWriter(new FileOutputStream(new File("./swt_template_MT707.xml")),format );
+            XMLWriter writer = new XMLWriter(new FileOutputStream(new File("./swt_template_MT101.xml")),format );
             writer.write(document);
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();

@@ -1,38 +1,26 @@
 package thread;
 
-public class Thread1 extends Thread{
-    private String name;
-    int i = 0;
-    public Thread1( String name ){
-        this.name = name;
+public class Thread1 implements Runnable {
+    private Object object;
+    Thread1(Object object){
+        this.object = object;
     }
 
-    public void run(){
-
-        while( true ){
-            System.out.println( name + " : " + i++);
-            try {
-                sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+    public void run() {
+        try{
+            synchronized (object){
+                System.out.println("prepare to wait");
+                for(int i=0;i<10;i++){
+                    System.out.println(i);
+                    if( i == 5 ){
+                        object.wait();
+                    }
+                    Thread.sleep(1000);
+                }
+                System.out.println("finish to wait");
             }
-        }
-    }
-
-    public static void main(String[] args){
-        Thread1 t1 = new Thread1("t1");
-        // Thread1 t2 = new Thread1("t2");
-        t1.start();
-        //  t2.start();
-        try {
-            Thread.sleep(2000);
-            sleep(10000);
-            System.out.println("1111");
-            // t1.interrupt();
-        } catch (InterruptedException e) {
+        } catch (InterruptedException e){
             e.printStackTrace();
         }
-
     }
-
 }

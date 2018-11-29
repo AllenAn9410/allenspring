@@ -2,3 +2,6 @@ target
 .idea
 *.iml
 *test*
+*/netty.wiki/*
+*.MF
+jy.txt

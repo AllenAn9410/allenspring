@@ -8,6 +8,17 @@ import java.text.DecimalFormat;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * @author allen.an
+ * This class will be difficult to maintain.
+ * It contains extremely special situations that I can't think of when I finish the code( TranslateCCCCode.splitMsg() ).
+ * Happily, though, this code doesn't come in many places.
+ * If the unfortunate thing is your turn to maintain this code.
+ * I am terribly sorry about that i did not add detailed annotations.
+ * You better start a new code to do this function.
+ *
+ */
+
 public class TranslateCCCCode {
     private final static String ZH ="chinese";
     private final static String CCCCODE ="ccc";

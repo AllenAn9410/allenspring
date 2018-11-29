@@ -31,7 +31,7 @@ public class TestSwiftTemplate {
 
 //        S jsonObject = st.loadJson(path);
 //        System.out.println(jsonObject);
-        String a = st.analysisJson("./src/main/test/2018/fin.101.ESP.json","MT101");
+        String a = st.analysisJson("./src/main/test/2018/fin.700.ESP.json","MT700");
 
 
     }

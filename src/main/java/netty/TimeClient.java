@@ -22,7 +22,7 @@ public class TimeClient {
             b.handler(new ChannelInitializer<SocketChannel>() {
                 @Override
                 protected void initChannel(SocketChannel ch) throws Exception {
-                    ch.pipeline().addLast(new TimerClientHandler());
+                    ch.pipeline().addLast(new TimeDecoder(),new TimeClientHandler());
                 }
             });
             ChannelFuture f = b.connect(host,port).sync();

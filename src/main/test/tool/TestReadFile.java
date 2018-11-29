@@ -6,8 +6,7 @@ import tools.ReadFile;
 public class TestReadFile {
     @Test
     public void test(){
-        ReadFile rf = new ReadFile("pom.xml");
-        String a = rf.read();
+        int a = ReadFile.count("jy.txt");
         System.out.println(a);
     }
 }

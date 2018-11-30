@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-@RequestMapping("/allen")
 public class MvcController {
     @Autowired
     UserService userService;
@@ -20,21 +19,35 @@ public class MvcController {
         String res = "";
         try {
             UserInfo userInfo = userService.login(user,password);
-            if(userInfo == null){
+            if(isEmpty(userInfo.getPassword())){
                 userInfo.setName(user);
                 userInfo.setPassword("error");
                 model.addAttribute("userInfo",userInfo);
                 System.out.println(userInfo.toString());
                 res = "login";
             } else {
-
+                model.addAttribute("userInfo",userInfo);
+                res = "welcome";
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
         return res;
-
     }
+
+    @RequestMapping("/index.do")
+    public String index(){
+        System.out.println("welcome");
+        return "login";
+    }
+
+    public static boolean isEmpty(String str) {
+        if (str == null || str.length() == 0) {
+            return true;
+        }
+        return false;
+    }
+
 
 
 }

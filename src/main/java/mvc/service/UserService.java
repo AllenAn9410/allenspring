@@ -16,7 +16,7 @@ public class UserService {
         if(pwd.equalsIgnoreCase(userInfo.getPassword())){
             return userInfo;
         } else {
-            return null;
+            return new UserInfo();
         }
     }
 }

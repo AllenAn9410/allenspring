@@ -7,11 +7,10 @@
 
 </head>
 <body>
-<form method="post" action="/allen/login.do">
-    <p>user:<input type="text" name ="user"/></p>
-    <p>password:<input type="password" name="password"/></p>
+<form method="post" action="/login.do">
+    <p>user:<input type="text" name ="user" value="${ userInfo.name }" /></p>
+    <p>password:<input type="password" name="password" />${ userInfo.password }</p>
     <input type="submit" value="login"/>
-    <h6>${message}</h6>
 </form>
 </body>
 </html>

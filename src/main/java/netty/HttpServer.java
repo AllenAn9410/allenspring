@@ -14,21 +14,21 @@ import io.netty.handler.codec.http.HttpResponseEncoder;
 public class HttpServer {
     private final int port;
 
-    public HttpServer(int port){
+    public HttpServer(int port) {
         this.port = port;
     }
 
     public static void main(String[] args) throws Exception {
-        if(args.length != 1){
+        if (args.length != 1) {
             System.err.println("Usage: " + HttpServer.class.getSimpleName() +
-            " <port>");
+                    " <port>");
             return;
         }
         int port = Integer.parseInt(args[0]);
         new HttpServer(port).start();
     }
 
-    public void start() throws Exception{
+    public void start() throws Exception {
         ServerBootstrap b = new ServerBootstrap();
         NioEventLoopGroup group = new NioEventLoopGroup();
         b.group(group)
@@ -38,14 +38,14 @@ public class HttpServer {
                     protected void initChannel(SocketChannel ch) throws Exception {
                         System.out.println("initChannel ch : " + ch);
                         ch.pipeline()
-                                .addLast("decoder",new HttpRequestDecoder())
-                                .addLast("encoder",new HttpResponseEncoder())
-                                .addLast("aggregator",new HttpObjectAggregator(512 * 1024))
-                                .addLast("handler",new HttpHandler());
+                                .addLast("decoder", new HttpRequestDecoder())
+                                .addLast("encoder", new HttpResponseEncoder())
+                                .addLast("aggregator", new HttpObjectAggregator(512 * 1024))
+                                .addLast("handler", new HttpHandler());
                     }
                 })
-                .option(ChannelOption.SO_BACKLOG,128)
-                .childOption(ChannelOption.SO_KEEPALIVE,true);
+                .option(ChannelOption.SO_BACKLOG, 128)
+                .childOption(ChannelOption.SO_KEEPALIVE, true);
 
         b.bind(port).sync();
     }

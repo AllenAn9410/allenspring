@@ -20,7 +20,7 @@ public class EchoClientHandler extends SimpleChannelInboundHandler<ByteBuf> {
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         super.channelActive(ctx);
         System.err.println("Connect to Server");
-        ctx.write(Unpooled.copiedBuffer("There is client",CharsetUtil.UTF_8));
+        ctx.write(Unpooled.copiedBuffer("There is client", CharsetUtil.UTF_8));
         ctx.flush();
     }
 

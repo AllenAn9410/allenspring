@@ -54,7 +54,7 @@ public class TraverseJson {
     }
 
 
-    public List<TemplateBean> getHashMap(){
+    public List<TemplateBean> getHashMap() {
         return list;
     }
 }

@@ -8,6 +8,7 @@ import java.util.Date;
 
 public class TimeClientHandler extends ChannelInboundHandlerAdapter {
     private ByteBuf byteBuf;
+
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
         super.exceptionCaught(ctx, cause);
@@ -27,7 +28,7 @@ public class TimeClientHandler extends ChannelInboundHandlerAdapter {
         byteBuf.writeBytes(m);
         m.release();
 
-        if( byteBuf.readableBytes() >= 4 ){
+        if (byteBuf.readableBytes() >= 4) {
             long currentTimeMillis = (byteBuf.readUnsignedInt() - 2208988800L) * 1000L;
             System.out.println(new Date(currentTimeMillis));
             ctx.close();

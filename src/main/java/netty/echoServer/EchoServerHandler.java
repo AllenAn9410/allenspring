@@ -15,7 +15,7 @@ public class EchoServerHandler extends ChannelInboundHandlerAdapter {
         super.channelRead(ctx, msg);
         ByteBuf m = (ByteBuf) msg;
         System.out.println("Server received : " + ByteBufUtil.hexDump(m.readBytes(m.readableBytes())));
-        ctx.write(Unpooled.copiedBuffer("There is Server",CharsetUtil.UTF_8));
+        ctx.write(Unpooled.copiedBuffer("There is Server", CharsetUtil.UTF_8));
     }
 
     @Override

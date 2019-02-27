@@ -1,5 +1,6 @@
 package mvc.controller;
 
+import mvc.dao.UserDao;
 import mvc.entity.UserInfo;
 import mvc.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,24 +10,26 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import javax.annotation.Resource;
+
 @Controller
 public class MvcController {
-    @Autowired
-    UserService userService;
+    @Autowired(required = false)
+    public UserService userService;
 
-    @RequestMapping(path="/login.do",method = RequestMethod.POST)
-    public String login(@RequestParam("user")String user,@RequestParam("password")String password,Model model){
+    @RequestMapping(path = "/login.do", method = RequestMethod.POST)
+    public String login(@RequestParam("user") String user, @RequestParam("password") String password, Model model) {
         String res = "";
         try {
-            UserInfo userInfo = userService.login(user,password);
-            if(isEmpty(userInfo.getPassword())){
+            UserInfo userInfo = userService.login(user, password);
+            if (isEmpty(userInfo.getPassword())) {
                 userInfo.setName(user);
                 userInfo.setPassword("error");
-                model.addAttribute("userInfo",userInfo);
+                model.addAttribute("userInfo", userInfo);
                 System.out.println(userInfo.toString());
                 res = "login";
             } else {
-                model.addAttribute("userInfo",userInfo);
+                model.addAttribute("userInfo", userInfo);
                 res = "welcome";
             }
         } catch (Exception e) {
@@ -36,7 +39,7 @@ public class MvcController {
     }
 
     @RequestMapping("/index.do")
-    public String index(){
+    public String index() {
         System.out.println("welcome");
         return "login";
     }
@@ -47,7 +50,6 @@ public class MvcController {
         }
         return false;
     }
-
 
 
 }

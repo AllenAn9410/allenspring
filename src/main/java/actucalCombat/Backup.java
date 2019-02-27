@@ -2,13 +2,14 @@ package actucalCombat;
 
 public class Backup {
     private boolean prevIsA = true;
-    synchronized public void backupA(){
+
+    synchronized public void backupA() {
         try {
-            while( !prevIsA ){
+            while (!prevIsA) {
                 wait();
             }
-            for(int i=0;i<5;i++){
-                System.out.println( " backup AAA " + i );
+            for (int i = 0; i < 5; i++) {
+                System.out.println(" backup AAA " + i);
             }
             prevIsA = false;
             notifyAll();
@@ -17,24 +18,24 @@ public class Backup {
         }
     }
 
-    synchronized public void backupB(){
-        try{
-            while( prevIsA ){
+    synchronized public void backupB() {
+        try {
+            while (prevIsA) {
                 wait();
             }
-            for(int i=0;i<5;i++){
-                System.out.println( " backup BBB " + i );
+            for (int i = 0; i < 5; i++) {
+                System.out.println(" backup BBB " + i);
             }
             prevIsA = true;
             notifyAll();
-        } catch (InterruptedException e){
+        } catch (InterruptedException e) {
             e.printStackTrace();
         }
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Backup backup = new Backup();
-        for(int i=0;i<4;i++){
+        for (int i = 0; i < 4; i++) {
             new Thread(new BackupA(backup)).start();
             new Thread(new BackupB(backup)).start();
 

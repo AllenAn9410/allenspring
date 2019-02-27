@@ -7,35 +7,37 @@
     <context:component-scan base-package="mvc.dao" />
     <bean id="propertyConfigurer"
           class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="location" value="WEB-INF/jdbc.properties" />
+        <property name="location" value="WEB-INF/jdbc.properties"/>
     </bean>
 
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
-        <property name="driverClassName" value="${dataSource.mysql.diverClassName}" />
-        <property name="url" value="${dataSource.mysql.url}" />
-        <property name="username" value="${dataSource.mysql.username}" />
-        <property name="password" value="${dataSource.mysql.password}" />
-        <property name="initialSize" value="${dataSource.initialSize}" />
-        <property name="maxActive" value="${dataSource.maxActive}" />
+        <property name="driverClassName" value="${dataSource.mysql.diverClassName}"/>
+        <property name="url" value="${dataSource.mysql.url}"/>
+        <property name="username" value="${dataSource.mysql.username}"/>
+        <property name="password" value="${dataSource.mysql.password}"/>
+        <property name="initialSize" value="${dataSource.initialSize}"/>
+        <property name="maxActive" value="${dataSource.maxActive}"/>
         <property name="maxWait" value="${dataSource.maxWait}"/>
     </bean>
 
     <!-- spring和MyBatis完美整合，不需要mybatis的配置映射文件 -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="dataSource" ref="dataSource" />
+        <property name="dataSource" ref="dataSource"/>
+        <!-- 扫描entity包 使用别名 -->
+        <!--<property name="typeAliasesPackage" value="mvc.entity" />-->
         <!-- 自动扫描mapping.xml文件 -->
-        <property name="mapperLocations" value="classpath:mvc/mapping/*.xml"></property>
+        <property name="mapperLocations" value="classpath:mvc/mapping/*.xml"/>
     </bean>
 
     <!-- DAO接口所在包名，Spring会自动查找其下的类 -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.cn.hnust.dao" />
-        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+        <property name="basePackage" value="mvc.dao"/>
     </bean>
 
     <!-- (事务管理)transaction manager, use JtaTransactionManager for global tx -->
     <bean id="transactionManager"
           class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-        <property name="dataSource" ref="dataSource" />
+        <property name="dataSource" ref="dataSource"/>
     </bean>
 </beans>

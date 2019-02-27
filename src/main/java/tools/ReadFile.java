@@ -3,9 +3,11 @@ package tools;
 import java.io.*;
 
 public class ReadFile {
-    public ReadFile(){}
+    public ReadFile() {
+    }
+
     //public String read(){
-    public static int count(String path){
+    public static int count(String path) {
         File file = new File(path);
         StringBuffer buffer = new StringBuffer();
         InputStream is;
@@ -14,7 +16,7 @@ public class ReadFile {
             is = new FileInputStream(file);
             String line;
             BufferedReader reader = new BufferedReader(new InputStreamReader(is));
-            while (( line = reader.readLine()) != null) {
+            while ((line = reader.readLine()) != null) {
 //                buffer.append(line);
 //                buffer.append("\n");
                 int len = line.length();
@@ -31,7 +33,7 @@ public class ReadFile {
         return count;
     }
 
-    public static String read(String path){
+    public static String read(String path) {
         File file = new File(path);
         StringBuffer buffer = new StringBuffer();
         InputStream is;
@@ -39,7 +41,7 @@ public class ReadFile {
             String line;
             is = new FileInputStream(file);
             BufferedReader reader = new BufferedReader(new InputStreamReader(is));
-            while (( line = reader.readLine()) != null) {
+            while ((line = reader.readLine()) != null) {
                 buffer.append(line);
                 buffer.append("\n");
             }

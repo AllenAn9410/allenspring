@@ -6,10 +6,10 @@ import java.io.PrintStream;
 import java.net.Socket;
 
 public class Client {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Socket client = null;
         try {
-            client = new Socket("127.0.0.1",8080);
+            client = new Socket("127.0.0.1", 8080);
             client.setSoTimeout(10000);
             PrintStream ps = new PrintStream(client.getOutputStream());
             ps.println("this is my request");

@@ -15,9 +15,11 @@ import java.io.StringWriter;
 
 public class XMLTools {
     private String path;
-    public XMLTools(){}
 
-    public XMLTools(String path){
+    public XMLTools() {
+    }
+
+    public XMLTools(String path) {
         this.path = path;
     }
 
@@ -30,19 +32,19 @@ public class XMLTools {
     }
 
     public static String xmlToString(Object object) throws Exception {
-        if(object == null){
+        if (object == null) {
             throw new Exception("node is null");
         }
-        if ( object instanceof Document) {
+        if (object instanceof Document) {
             return documentToString((Document) object);
-        } else if( object instanceof Node){
+        } else if (object instanceof Node) {
             return nodeToString((Element) object);
         }
         throw new Exception("paramters is invalid");
     }
 
 
-    private static String nodeToString(Element element) throws Exception{
+    private static String nodeToString(Element element) throws Exception {
         StringWriter sw = new StringWriter();
 
         Transformer t = TransformerFactory.newInstance().newTransformer();

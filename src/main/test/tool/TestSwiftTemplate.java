@@ -1,6 +1,5 @@
 package tool;
 
-import org.json.JSONObject;
 import org.junit.jupiter.api.Test;
 import tools.SwiftTemplate;
 
@@ -31,11 +30,10 @@ public class TestSwiftTemplate {
 
 //        S jsonObject = st.loadJson(path);
 //        System.out.println(jsonObject);
-        String a = st.analysisJson("./src/main/test/2018/fin.700.ESP.json","MT700");
+        String a = st.analysisJson("./src/main/test/2018/fin.700.ESP.json", "MT700");
 
 
     }
-
 
 
 }

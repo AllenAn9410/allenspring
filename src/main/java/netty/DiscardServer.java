@@ -17,11 +17,11 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 public class DiscardServer {
     private int port;
 
-    public DiscardServer(int port){
+    public DiscardServer(int port) {
         this.port = port;
     }
 
-    public void run() throws Exception{
+    public void run() throws Exception {
         /*
          *  We are implementing a server-side application in this example,
          *  and therefore two NioEventLoopGroup will be used.
@@ -33,12 +33,12 @@ public class DiscardServer {
          */
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
-        try{
+        try {
             /*
              *   ServerBootstrap is a helper class that sets up a server.
              */
             ServerBootstrap b = new ServerBootstrap();
-            b.group(bossGroup,workerGroup)
+            b.group(bossGroup, workerGroup)
                     /*
                      * NioServerSocketChannel is used to instantiate a new Channel to accept incoming connections.
                      */
@@ -48,24 +48,24 @@ public class DiscardServer {
                      * The ChannelInitializer is a special handler that is purposed to help a user configure a new Channel
                      */
                     .childHandler(new ChannelInitializer<SocketChannel>() {
-                        public void initChannel(SocketChannel ch) throws Exception{
+                        public void initChannel(SocketChannel ch) throws Exception {
                             ch.pipeline().addLast(new TimeServerHandler());
                         }
                     })
-                    .option(ChannelOption.SO_BACKLOG,128)
-                    .childOption(ChannelOption.SO_KEEPALIVE,true);
+                    .option(ChannelOption.SO_BACKLOG, 128)
+                    .childOption(ChannelOption.SO_KEEPALIVE, true);
             ChannelFuture f = b.bind(port).sync();
             f.channel().closeFuture().sync();
-        } finally{
+        } finally {
             workerGroup.shutdownGracefully();
             bossGroup.shutdownGracefully();
         }
 
     }
 
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) throws Exception {
         int port;
-        if(args.length > 0){
+        if (args.length > 0) {
             port = Integer.parseInt(args[0]);
         } else {
             port = 8080;

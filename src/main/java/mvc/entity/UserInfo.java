@@ -1,24 +1,24 @@
 package mvc.entity;
 
 public class UserInfo {
-    private int key;
-    private String name;
+    private int userId;
+    private String username;
     private String password;
 
     public int getKey() {
-        return key;
+        return userId;
     }
 
     public void setKey(int key) {
-        this.key = key;
+        this.userId = key;
     }
 
     public String getName() {
-        return name;
+        return username;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.username = name;
     }
 
     public String getPassword() {
@@ -32,8 +32,8 @@ public class UserInfo {
     @Override
     public String toString() {
         return "UserInfo{" +
-                "key=" + key +
-                ", name='" + name + '\'' +
+                "userId=" + userId +
+                ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 '}';
     }

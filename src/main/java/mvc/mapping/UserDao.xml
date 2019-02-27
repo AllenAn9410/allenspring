@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="mvc.dao.UserDao">
-    <select id="findByName" resultType="UserInfo" parameterType="String">
-      Select * from user_info where user_name = #(user_name)
+    <select id="findByName" resultType="mvc.entity.UserInfo" parameterType="string">
+      Select user_id,user_name,user_password from ssm.user_info where user_name = #(userName);
     </select>
 </mapper>

@@ -12,14 +12,14 @@ public class EchoClient {
     private int port;
     private String host;
 
-    public EchoClient(String host,int port){
+    public EchoClient(String host, int port) {
         this.port = port;
         this.host = host;
     }
 
     public void start() throws InterruptedException {
         EventLoopGroup group = new NioEventLoopGroup();
-        try{
+        try {
             Bootstrap b = new Bootstrap();
             b.group(group)
                     .channel(NioSocketChannel.class)
@@ -29,7 +29,7 @@ public class EchoClient {
                             ch.pipeline().addLast(new EchoClientHandler());
                         }
                     });
-            ChannelFuture f = b.connect(host,port).sync();
+            ChannelFuture f = b.connect(host, port).sync();
             f.channel().closeFuture().sync();
         } finally {
             group.shutdownGracefully();
@@ -37,6 +37,6 @@ public class EchoClient {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        new EchoClient("localhost",51515).start();
+        new EchoClient("localhost", 51515).start();
     }
 }

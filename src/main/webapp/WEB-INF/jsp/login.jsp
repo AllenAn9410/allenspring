@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"%>
+<%@ page language="java" contentType="text/html; charset=utf-8" %>
+<@% page import="" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,8 +9,8 @@
 </head>
 <body>
 <form method="post" action="/login.do">
-    <p>user:<input type="text" name ="user" value="${ userInfo.name }" /></p>
-    <p>password:<input type="password" name="password" />${ userInfo.password }</p>
+    <p>user:<input type="text" name="user" value="${ userInfo.name }"/>
+    <p>password:<input type="password" name="password"/>${ userInfo.password }
     <input type="submit" value="login"/>
 </form>
 </body>

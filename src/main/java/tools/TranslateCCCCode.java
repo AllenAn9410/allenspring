@@ -10,41 +10,35 @@ import java.util.regex.Pattern;
 
 /**
  * @author allen.an
- * This class will be difficult to maintain.
- * It contains extremely special situations that I can't think of when I finish the code( TranslateCCCCode.splitMsg() ).
- * Happily, though, this code doesn't come in many places.
- * If the unfortunate thing is your turn to maintain this code.
- * I am terribly sorry about that i did not add detailed annotations.
- * You better start a new code to do this function.
  *
  */
 
 public class TranslateCCCCode {
-    private final static String ZH ="chinese";
-    private final static String CCCCODE ="ccc";
-    private final static String UNICODE ="unicode";
-    private final static String UNICODESC ="uni-sc";
-    private final static String UNICODETC ="uni-tc";
-    private final static String ZHCN ="zh-CN";
-    private final static String ZHTW ="zh-TW";
+    private final static String ZH = "chinese";
+    private final static String CCCCODE = "ccc";
+    private final static String UNICODE = "unicode";
+    private final static String UNICODESC = "uni-sc";
+    private final static String UNICODETC = "uni-tc";
+    private final static String ZHCN = "zh-CN";
+    private final static String ZHTW = "zh-TW";
     JSONObject jsonObject = null;
 
-    public String seekSource(String msg,String lang) throws Exception {
+    public String seekSource(String msg, String lang) throws Exception {
         System.out.println(this);
-        if( jsonObject == null ){
+        if (jsonObject == null) {
             jsonObject = readCCCJsonFile();
         }
         String inputType = judgeInputType(msg);
-        String[] arr = splitMsg(msg,inputType);
+        String[] arr = splitMsg(msg, inputType);
         String backMsg = "";
-        try{
-            for (int i =0;i<arr.length;i++) {
-                backMsg += seek(arr[i],jsonObject,inputType,lang);
+        try {
+            for (int i = 0; i < arr.length; i++) {
+                backMsg += seek(arr[i], jsonObject, inputType, lang);
             }
-        }catch(Exception e){
+        } catch (Exception e) {
             //CONST.log.debug("Failed to translate");
         }
-        backMsg = backMsg.replaceAll("\r\n ","\r\n");
+        backMsg = backMsg.replaceAll("\r\n ", "\r\n");
         return backMsg.trim();
 
     }
@@ -57,9 +51,9 @@ public class TranslateCCCCode {
         if (!file.exists()) {
             throw new Exception("can not find ccc.json");
         } else {
-            try{
+            try {
                 FileInputStream fis = new FileInputStream(file);
-                InputStreamReader isr = new InputStreamReader(fis,"UTF-8");
+                InputStreamReader isr = new InputStreamReader(fis, "UTF-8");
                 reader = new BufferedReader(isr);
                 String temp = null;
                 while ((temp = reader.readLine()) != null) {
@@ -82,7 +76,7 @@ public class TranslateCCCCode {
         return jsonObject;
     }
 
-    private boolean validatorLang(String lang){
+    private boolean validatorLang(String lang) {
         boolean isLang = false;
         if (CCCCODE.equals(lang)) {
             isLang = true;
@@ -102,33 +96,33 @@ public class TranslateCCCCode {
         return isLang;
     }
 
-    private String seek(String input,JSONObject jsonObject,String inputType,String lang) throws JSONException {
+    private String seek(String input, JSONObject jsonObject, String inputType, String lang) throws JSONException {
         String result = null;
         if (isEmpty(input)) {
             return " ";
         }
-        DecimalFormat df=new DecimalFormat("0000");
+        DecimalFormat df = new DecimalFormat("0000");
         String cccCode = null;
         String simplifiedChinese = null;
         String traditionalChinese = null;
         JSONObject jsonC = null;
         if (CCCCODE.equals(inputType) && (ZHCN.equals(lang) || ZHTW.equals(lang))) {
-            if(jsonObject.has(input)){
+            if (jsonObject.has(input)) {
                 cccCode = input;
                 jsonC = jsonObject.getJSONObject(cccCode);
                 simplifiedChinese = jsonC.getString(ZHCN);
                 traditionalChinese = jsonC.getString(ZHTW);
-                if((ZHCN).equals(lang)){
+                if ((ZHCN).equals(lang)) {
                     result = simplifiedChinese;
-                }else if((ZHTW).equals(lang)){
+                } else if ((ZHTW).equals(lang)) {
                     result = traditionalChinese;
                 }
             } else {
-                result = otherCharacter(result,lang,input);
+                result = otherCharacter(result, lang, input);
             }
         } else {
-            for (int i = 0;i < jsonObject.length();i++ ) {
-                cccCode = df.format(i+1);
+            for (int i = 0; i < jsonObject.length(); i++) {
+                cccCode = df.format(i + 1);
                 jsonC = jsonObject.getJSONObject(cccCode);
                 simplifiedChinese = jsonC.getString(ZHCN);
                 traditionalChinese = jsonC.getString(ZHTW);
@@ -147,18 +141,19 @@ public class TranslateCCCCode {
                 }
             }
         }
-        result = otherCharacter(result,lang,input);
-        return (ZHCN.equals(lang) || ZHTW.equals(lang) || "\r\n".equals(result)) ? result : result +" ";
+        result = otherCharacter(result, lang, input);
+        return (ZHCN.equals(lang) || ZHTW.equals(lang) || "\r\n".equals(result)) ? result : result + " ";
     }
 
-    private String[] splitMsg (String msg,String inputType) {
+    // It's best not to maintain this code
+    private String[] splitMsg(String msg, String inputType) {
         String[] arr = null;
         String regCh = "[\\u4e00-\\u9fa5]+";
         String regEn = "[a-zA-Z]";
         String regNum = "[0-9]";
         String inputMsg = convertChineseSymbols(msg);
         int cnNum = chNum(inputMsg);
-        if( ZH.equals(inputType)){
+        if (ZH.equals(inputType)) {
             String lastMsg = "";
             String tempMsg = "";
             int times = 0;
@@ -166,8 +161,8 @@ public class TranslateCCCCode {
             boolean isLetter = false;
             boolean isBlank = false;
             boolean isNum = false;
-            for(int i = 0;i<inputMsg.length();i++){
-                tempMsg =  String.valueOf(inputMsg.charAt(i));
+            for (int i = 0; i < inputMsg.length(); i++) {
+                tempMsg = String.valueOf(inputMsg.charAt(i));
                 if (" ".equals(tempMsg) && !isBracket) {
                     isBlank = true;
                     isLetter = false;
@@ -177,7 +172,7 @@ public class TranslateCCCCode {
                     continue;
                 }
                 // if(tempMsg.matches(regCh)){
-                if(tempMsg.matches(regCh) && !isBracket){
+                if (tempMsg.matches(regCh) && !isBracket) {
                     times += 1;
                     tempMsg = " " + tempMsg;
                     if (times == (cnNum)) {
@@ -189,15 +184,15 @@ public class TranslateCCCCode {
                     lastMsg += tempMsg;
                     continue;
                 }
-                if(tempMsg.matches(regEn)){
-                    if( !isBlank && i != 0 && times != (cnNum) && !isBracket){
-                        if(!String.valueOf(inputMsg.charAt(i-1)).matches(regEn)){
+                if (tempMsg.matches(regEn)) {
+                    if (!isBlank && i != 0 && times != (cnNum) && !isBracket) {
+                        if (!String.valueOf(inputMsg.charAt(i - 1)).matches(regEn)) {
                             tempMsg = " " + tempMsg;
                             lastMsg += tempMsg;
-                        }else{
+                        } else {
                             lastMsg += tempMsg;
                         }
-                    }else{
+                    } else {
                         lastMsg += tempMsg;
                     }
                     isBlank = false;
@@ -205,9 +200,9 @@ public class TranslateCCCCode {
                     isNum = false;
                     continue;
                 }
-                if(tempMsg.matches(regNum) || tempMsg.equals("(") || tempMsg.equals(")")){
+                if (tempMsg.matches(regNum) || tempMsg.equals("(") || tempMsg.equals(")")) {
                     //Numbers have brackets
-                    if("(".equals(tempMsg)){
+                    if ("(".equals(tempMsg)) {
                         isBracket = true;
                         lastMsg += " " + tempMsg;
                         isBlank = false;
@@ -215,7 +210,7 @@ public class TranslateCCCCode {
                         isLetter = false;
                         continue;
                     }
-                    if(")".equals(tempMsg)){
+                    if (")".equals(tempMsg)) {
                         lastMsg += tempMsg;
                         isBracket = false;
                         isBlank = false;
@@ -223,7 +218,7 @@ public class TranslateCCCCode {
                         isLetter = false;
                         continue;
                     }
-                    if(isBracket){
+                    if (isBracket) {
                         lastMsg += tempMsg;
                         isBlank = false;
                         isNum = true;
@@ -232,19 +227,19 @@ public class TranslateCCCCode {
                     }
                     //Numbers do not have brackets
                     if (!isNum) {
-                        if( i !=0 && " ".equals(String.valueOf(inputMsg.charAt(i-1))) ){
+                        if (i != 0 && " ".equals(String.valueOf(inputMsg.charAt(i - 1)))) {
                             tempMsg = "(" + tempMsg;
                         } else {
                             tempMsg = " (" + tempMsg;
                         }
                         isNum = true;
                     }
-                    if (isNum && i!= (inputMsg.length()-1) && !(String.valueOf(inputMsg.charAt(i+1))).matches(regNum)) {
-                        tempMsg = tempMsg+")";
+                    if (isNum && i != (inputMsg.length() - 1) && !(String.valueOf(inputMsg.charAt(i + 1))).matches(regNum)) {
+                        tempMsg = tempMsg + ")";
                         isNum = false;
                     }
-                    if ((i == (inputMsg.length()-1))&& (String.valueOf(inputMsg.charAt(inputMsg.length()-1))).matches(regNum)) {
-                        tempMsg = tempMsg+")";
+                    if ((i == (inputMsg.length() - 1)) && (String.valueOf(inputMsg.charAt(inputMsg.length() - 1))).matches(regNum)) {
+                        tempMsg = tempMsg + ")";
                         isNum = false;
                     }
                     lastMsg += tempMsg;
@@ -261,9 +256,9 @@ public class TranslateCCCCode {
             inputMsg = replaceRetracement(inputMsg);
             String tempMsg = "";
             String lastMsg = "";
-            for (int i=0;i<inputMsg.length();i++) {
+            for (int i = 0; i < inputMsg.length(); i++) {
                 tempMsg = String.valueOf(inputMsg.charAt(i));
-                if("/".equals(tempMsg)){
+                if ("/".equals(tempMsg)) {
                     tempMsg = tempMsg + " ";
                 }
                 lastMsg += tempMsg;
@@ -272,13 +267,13 @@ public class TranslateCCCCode {
         }
         if (UNICODE.equals(inputType)) {
             arr = split(inputMsg);
-        }else if (isEmpty(inputType)){
+        } else if (isEmpty(inputType)) {
             arr = split(inputMsg);
         }
         return arr;
     }
 
-    private String judgeInputType(String msg){
+    private String judgeInputType(String msg) {
         String regCcc = "\\s*[0-9]{4}\\s*";
         String regU = ".*[U][\\S]{5}.*";
         Pattern p = Pattern.compile("[\u4e00-\u9fa5]");
@@ -288,7 +283,7 @@ public class TranslateCCCCode {
         }
         p = Pattern.compile(regCcc);
         m = p.matcher(msg);
-        if (m.find()){
+        if (m.find()) {
             return CCCCODE;
         }
         if (msg.matches(regU)) {
@@ -297,7 +292,7 @@ public class TranslateCCCCode {
         return "";
     }
 
-    private String[] splitMsg(String msg){
+    private String[] splitMsg(String msg) {
         msg = msg.trim();
         String reg = " ";
         String[] arr = msg.split(reg);
@@ -309,9 +304,8 @@ public class TranslateCCCCode {
         int count = 0;
         Pattern p = Pattern.compile(regEx);
         Matcher m = p.matcher(inputMsg);
-        while (m.find())
-        {
-            count ++;
+        while (m.find()) {
+            count++;
         }
         return count;
     }
@@ -323,34 +317,37 @@ public class TranslateCCCCode {
         return arr;
     }
 
-    private static String otherCharacter(String result,String backType,String input){
+    private static String otherCharacter(String result, String backType, String input) {
         if (isEmpty(result)) {
             result = input;
-            if("<br>".equals(result)){
+            if ("<br>".equals(result)) {
                 result = "\r\n";
             }
         }
         return result;
     }
-    private String replaceRetracement(String input){
-        String msg ="";
+
+    private String replaceRetracement(String input) {
+        String msg = "";
         Pattern CRLF = Pattern.compile("(\r\n|\r|\n|\n\r)");
         Matcher m = CRLF.matcher(input);
         if (m.find()) {
             msg = m.replaceAll(" <br> ");
-        }else{
+        } else {
             return input;
         }
         return msg;
     }
+
     private static boolean isEmpty(String str) {
-        if (str == null || str.length() == 0){
+        if (str == null || str.length() == 0) {
             return true;
-        }else{
+        } else {
             return false;
         }
     }
-    private String convertChineseSymbols (String msg){
+
+    private String convertChineseSymbols(String msg) {
         String input = msg;
         input = input.replaceAll("（", "(");
         input = input.replaceAll("）", ")");

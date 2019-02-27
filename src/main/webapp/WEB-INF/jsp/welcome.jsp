@@ -11,7 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-    <a>${ userInfo.name }</a>
-    <a>${ userInfo.key }</a>
+<a>${ userInfo.name }</a>
+<a>${ userInfo.key }</a>
 </body>
 </html>

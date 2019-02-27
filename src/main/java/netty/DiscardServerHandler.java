@@ -5,7 +5,7 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 
 public class DiscardServerHandler extends ChannelInboundHandlerAdapter {
-    public void channelRead(ChannelHandlerContext ctx,Object msg){
+    public void channelRead(ChannelHandlerContext ctx, Object msg) {
         ByteBuf in = (ByteBuf) msg;
 //        ctx.write(msg);
 //        ctx.flush();
@@ -23,7 +23,7 @@ public class DiscardServerHandler extends ChannelInboundHandlerAdapter {
         System.out.print(in.toString(io.netty.util.CharsetUtil.US_ASCII));
     }
 
-    public void exceptionCaught(ChannelHandlerContext ctx,Throwable cause){
+    public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
         cause.printStackTrace();
         ctx.close();
     }

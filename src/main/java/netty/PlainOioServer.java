@@ -10,11 +10,11 @@ import java.nio.charset.Charset;
 
 public class PlainOioServer {
 
-    public  static void serve(int port) throws IOException {
+    public static void serve(int port) throws IOException {
         final ServerSocket socket = new ServerSocket(port);
         int i = 0;
-        try{
-            for(;;){
+        try {
+            for (; ; ) {
                 final Socket clientSocket = socket.accept();
                 i++;
                 System.out.println(i);
@@ -24,7 +24,7 @@ public class PlainOioServer {
                     public void run() {
                         OutputStream out;
                         BufferedReader buf;
-                        try{
+                        try {
                             out = clientSocket.getOutputStream();
                             out.write("Hi! you have benn connect me!".getBytes(Charset.forName("UTF-8")));
                             out.flush();
@@ -41,7 +41,7 @@ public class PlainOioServer {
 //                                }
 //                            }
                             clientSocket.close();
-                        } catch (Exception e ){
+                        } catch (Exception e) {
                             e.printStackTrace();
                             try {
                                 clientSocket.close();
@@ -51,7 +51,7 @@ public class PlainOioServer {
                     }
                 }).start();
             }
-        } catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

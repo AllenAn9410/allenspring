@@ -23,7 +23,7 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
 
         StringBuilder responseContent = new StringBuilder();
-        FullHttpRequest request= (FullHttpRequest) msg;
+        FullHttpRequest request = (FullHttpRequest) msg;
 
 
         String uri = getUrl(request);
@@ -31,15 +31,15 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
         System.out.println("URI : " + uri);
         System.out.println("BODY : " + body);
 
-        JSONObject res = execute(uri,body);
+        JSONObject res = execute(uri, body);
         responseContent.append(res.toString('"'));
 
         FullHttpResponse resp = returnResp(responseContent);
-        boolean isKeeplive = setResponseHeader(resp,request);
+        boolean isKeeplive = setResponseHeader(resp, request);
 
         // Write the response.
         ctx.writeAndFlush(resp);
-        if(!isKeeplive){
+        if (!isKeeplive) {
             // If keep-alive is off, close the connection once the content is fully written.
             ctx.writeAndFlush(Unpooled.EMPTY_BUFFER).addListener(ChannelFutureListener.CLOSE);
         }
@@ -57,33 +57,33 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
         return uri.toString();
     }
 
-    private String getBody(FullHttpRequest request){
+    private String getBody(FullHttpRequest request) {
         ByteBuf buf = request.content();
         return buf.toString(CharsetUtil.UTF_8);
     }
 
-    private JSONObject execute(String uri,String body){
+    private JSONObject execute(String uri, String body) {
         JSONObject json = new JSONObject();
-        if(body.length() != 0){
-            json.put("status","pass");
-            json.put("msg",body);
+        if (body.length() != 0) {
+            json.put("status", "pass");
+            json.put("msg", body);
         } else {
-            json.put("status","error");
-            json.put("msg","the body is null");
+            json.put("status", "error");
+            json.put("msg", "the body is null");
         }
         return json;
     }
 
-    private FullHttpResponse returnResp(StringBuilder responseContent){
-        FullHttpResponse response = new DefaultFullHttpResponse(HTTP_1_1,OK,Unpooled.copiedBuffer(responseContent.toString(), CharsetUtil.UTF_8));
+    private FullHttpResponse returnResp(StringBuilder responseContent) {
+        FullHttpResponse response = new DefaultFullHttpResponse(HTTP_1_1, OK, Unpooled.copiedBuffer(responseContent.toString(), CharsetUtil.UTF_8));
         response.headers().set(HttpHeaderNames.CONTENT_TYPE, "application/json;charset=UTF-8");
-        response.headers().set("Access-Control-Allow-Origin","*");
-        response.headers().set("Access-Control-Allow-Methods","POST, GET, OPTIONS");
+        response.headers().set("Access-Control-Allow-Origin", "*");
+        response.headers().set("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
         response.headers().set("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, esp_token");
         return response;
     }
 
-    private boolean setResponseHeader(FullHttpResponse response,FullHttpRequest request){
+    private boolean setResponseHeader(FullHttpResponse response, FullHttpRequest request) {
         boolean keepAlive = HttpUtil.isKeepAlive(request);
         if (keepAlive) {
             // Add 'Content-Length' header only for a keep-alive connection.
@@ -97,7 +97,7 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
             Set<io.netty.handler.codec.http.cookie.Cookie> cookies = ServerCookieDecoder.STRICT.decode(cookieString);
             if (!cookies.isEmpty()) {
                 // Reset the cookies if necessary.
-                for (io.netty.handler.codec.http.cookie.Cookie cookie: cookies) {
+                for (io.netty.handler.codec.http.cookie.Cookie cookie : cookies) {
                     response.headers().add(HttpHeaderNames.SET_COOKIE, io.netty.handler.codec.http.cookie.ServerCookieEncoder.STRICT.encode(cookie));
                 }
             }
@@ -108,8 +108,6 @@ public class ServerHandler extends ChannelInboundHandlerAdapter {
         }
         return keepAlive;
     }
-
-
 
 
 }

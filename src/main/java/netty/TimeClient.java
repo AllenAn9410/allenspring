@@ -14,18 +14,18 @@ public class TimeClient {
         String host = "localhost";
         int port = 8080;
         EventLoopGroup workerGroup = new NioEventLoopGroup();
-        try{
+        try {
             Bootstrap b = new Bootstrap();
             b.group(workerGroup);
             b.channel(NioSocketChannel.class);
-            b.option(ChannelOption.SO_KEEPALIVE,true);
+            b.option(ChannelOption.SO_KEEPALIVE, true);
             b.handler(new ChannelInitializer<SocketChannel>() {
                 @Override
                 protected void initChannel(SocketChannel ch) throws Exception {
-                    ch.pipeline().addLast(new TimeDecoder(),new TimeClientHandler());
+                    ch.pipeline().addLast(new TimeDecoder(), new TimeClientHandler());
                 }
             });
-            ChannelFuture f = b.connect(host,port).sync();
+            ChannelFuture f = b.connect(host, port).sync();
             f.channel().closeFuture().sync();
         } finally {
             workerGroup.shutdownGracefully();

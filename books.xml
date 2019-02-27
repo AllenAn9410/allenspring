@@ -2,9 +2,9 @@
     <headInfo>
         <C_BK_GROUP_ID>BM</C_BK_GROUP_ID>
         <C_CNTY_CODE>ID</C_CNTY_CODE>
-        <C_CP_UNIT_CODE> </C_CP_UNIT_CODE>
+        <C_CP_UNIT_CODE></C_CP_UNIT_CODE>
         <C_EVENT_NAME>Issue</C_EVENT_NAME>
-        <C_FRNT_USERID> </C_FRNT_USERID>
+        <C_FRNT_USERID></C_FRNT_USERID>
         <C_FUNC_ID>F05030702015</C_FUNC_ID>
         <C_FUNC_NAME>IPLC_IssueLC</C_FUNC_NAME>
         <C_LAST_MODI_BU>77108</C_LAST_MODI_BU>
@@ -16,7 +16,7 @@
         <C_RELEASE_BU>77108</C_RELEASE_BU>
         <C_RELEASE_DATE>2018-10-31</C_RELEASE_DATE>
         <C_RELEASE_OP>IMPORTCHECKER1</C_RELEASE_OP>
-        <C_STP_CODE> </C_STP_CODE>
+        <C_STP_CODE></C_STP_CODE>
         <C_SWIFT_STATE>M</C_SWIFT_STATE>
         <C_TRX_REF>MS77118000053</C_TRX_REF>
         <C_UNIT_CODE>77108</C_UNIT_CODE>
@@ -29,9 +29,9 @@
         <C_SWIFT_108>1540951259406167</C_SWIFT_108>
         <C_CONVERTED_FLAG>N</C_CONVERTED_FLAG>
         <I_EXTEND_NO>1</I_EXTEND_NO>
-        <C_MSG_STATUS> </C_MSG_STATUS>
+        <C_MSG_STATUS></C_MSG_STATUS>
         <C_COMBINED_FLAG>N</C_COMBINED_FLAG>
-        <C_RELATED_REF> </C_RELATED_REF>
+        <C_RELATED_REF></C_RELATED_REF>
     </headInfo>
     <swift-content ackFlag="" msgType="I700" notifyFlag="">
         <head-info>
@@ -107,7 +107,7 @@
             </tag>
             <tag identifier="13" seg1_cols="6" seg1_rows="1" tagcode="31C">
                 <tag-code>31C</tag-code>
-                <tag-desc>Date of  Issue</tag-desc>
+                <tag-desc>Date of Issue</tag-desc>
                 <tag-form>7</tag-form>
                 <tag-value>
                     <![CDATA[181031]]>
@@ -223,7 +223,8 @@ BY PAYMENT]]>
             :42A:AAALSARIALK&#xd;
             :49:WITHOUT&#xd;
             :20Z:MS77118000053&#xd;
-            -}</ORIGINAL_MSG>
+            -}
+        </ORIGINAL_MSG>
         <esp-fin>{1:F01BMRIIDJAXXXX0000000000}{2:I700CITIUS99XXXXN2}{3:{108:1540951259406167}}{4:&#xd;
             :27:1/1&#xd;
             :40A:IRREVOCABLE&#xd;
@@ -245,7 +246,8 @@ BY PAYMENT]]>
             :42C:PAYMENT AT SIGHT&#xd;
             :42A:AAALSARIALK&#xd;
             :49:WITHOUT&#xd;
-            -}</esp-fin>
+            -}
+        </esp-fin>
     </swift-content>
     <SWIFTDOCTYPE>CONTENTINFO</SWIFTDOCTYPE>
 </root>

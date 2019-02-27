@@ -8,6 +8,7 @@ import org.json.JSONObject;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.List;
 
 /**
  * @author allen.an
@@ -74,6 +75,10 @@ public class ExcelWrite {
         return values.length == excelHeaderLength ? true : false;
     }
 
+    private boolean checkParamsLength(List list) {
+        return list.size() == excelHeaderLength ? true : false;
+    }
+
     /**
      * @param values
      * @return it should be rebuild by json
@@ -103,6 +108,26 @@ public class ExcelWrite {
         return "";
 
     }
+
+    public String load(List list){
+        if (!checkParamsLength(list)) {
+            return "error";
+        }
+        int i = startPosition;
+        row = sheet.createRow(excelLine);
+
+        for(int ii=0;ii<list.size();ii++){
+            String temp = (String)list.get(ii);
+            if(isEmpty(temp)){
+                continue;
+            }
+            row.createCell(i).setCellValue(temp);
+            i++;
+        }
+        excelLine++;
+        return "";
+    }
+
 
     public JSONObject close() {
         JSONObject jsonObject = new JSONObject();

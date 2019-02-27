@@ -10,8 +10,12 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FGO {
+    static String[] head = {"name","lv1->lv2","lv2->lv3","lv3->lv4","lv4->lv5","lv5->lv6","lv6->lv7","lv7->lv8","lv8->lv9","lv9->lv10"};
+    static ExcelWrite ew = new ExcelWrite("./fgo_skill.xls",head);
     public static String[] getConn(String path) throws Exception {
         String[] res = new String[2];
         try{
@@ -50,6 +54,7 @@ public class FGO {
             res[0] = name;
             res[1] = buffer.toString();
         }catch (Exception e){
+            ew.close();
             e.printStackTrace();
         }
         //System.out.println(res[1]);
@@ -72,8 +77,10 @@ public class FGO {
 
 
     public static void main(String[] args) throws Exception {
-        long start = System.currentTimeMillis();
-        for(int i=1;i<400;i++){
+
+        List<String> list = null;
+        for(int i=1;i<300;i++){
+            list = new ArrayList<>();
             String path = "https://fgo.umowang.com/servant/";
             path += i;
             String[] res = getConn(path);
@@ -81,14 +88,16 @@ public class FGO {
             Document doc = Jsoup.parse(res[1].replaceAll("div","p").replaceAll("tr>","div>"));
             //System.out.println(doc);
             Elements divs = doc.getElementsByTag("div");
-            System.out.println(res[0]);
+            list.add(res[0]);
             //System.out.println(doc);
             for(Element div : divs){
-                System.out.println(analyseDiv(div));
+                list.add(analyseDiv(div));
             }
-            System.out.println("===========================");
+            ew.load(list);
+            //System.out.println("===========================");
+
         }
-        System.out.println(System.currentTimeMillis()-start);
+        ew.close();
 
 
 

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <script type="text/javascript" src="m.json"></script>
+        <script>
+            function load(){
+                var len = fgo.length;
+                //alert(len);
+                //console.log(fgo[0].name);
+                //alert(fgo[0].name);
+                // for(var o in fgo){
+                //      alert(fgo[o].name);
+                // }
+                
+                createTable();
+	        
+            }
+            function createTable() {
+                var data = new Array();
+                data.push('<table border=1 width="100% style="TABLE-LAYOUT: fixed; WORD-BREAK: break-all;><tbody>');
+                var index = 0;
+                var temp = "";
+                for (var i = 0; i < 34; i++) {
+                    data.push('<tr>');
+                    for (var j = 0; j < 7; j++){
+                        if(index < fgo.length){
+                            temp = fgo[index].name;
+                        } else {
+                            temp = "";
+                        }
+                        data.push('<td style="background-color:white" height="100px" onclick=clickT(this)  id='+ index +'>' + temp + '</td>');
+                        index++;
+                    }
+                    data.push('</tr>');
+                }
+                data.push('</tbody><table>');
+       
+                document.getElementById('table1').innerHTML = data.join('');
+            }
+        </script>
+    </head>
+    <body onload="load()">
+            <div id="table1" style="border: 1px solid black"></div>
+            <div>
+                <button onclick=calculater()>calculate material</button>
+            </div>
+    </body>
+    <script>
+        var material = new Map();
+        var inneed = new Set();
+        function clickT(td){
+            var color = document.getElementById(td.id).style.backgroundColor;
+            //alert(color);
+            if(color=="white" || color==""){
+                document.getElementById(td.id).style.backgroundColor = "green";
+            } else {
+                document.getElementById(td.id).style.backgroundColor = "";
+            }
+            
+            if(td.id < fgo.length){
+                if(inneed.has(td.id)){
+                    inneed.delete(td.id);
+                } else {
+                    inneed.add(td.id);
+                }
+            }
+        }
+
+        function calculater(){
+            for( var m of inneed){
+                readJson(m);
+            }
+        }
+
+        function readJson(posit){
+            for(var oldSkm of fgo[posit].skm){
+                for(var skmKey in oldSkm){
+                    var oldValue = 0;
+                    var newKey = 0;
+                    var newValue = 0;
+                    newKey = skmKey;
+                    newValue = eval(oldSkm[skmKey]*3);
+                    if(material.has(newKey)){
+                        oldValue = material.get(newKey);
+                        newValue = eval(newValue+oldValue);
+                        material.set(newKey,newValue);
+                    } else {
+                        material.set(newKey,newValue);
+                    }
+                
+                }
+            }
+            for(var oldSum of fgo[posit].sum){
+                for(var sumKey in oldSum){
+                    var oValue = 0;
+                    var nKey = 0;
+                    var nValue = 0;
+                    nKey = sumKey;
+                    nValue = oldSum[nKey];
+                    if(material.has(nKey)){
+                        oValue = material.get(nKey);
+                        nValue = eval(oValue+nValue);
+                        material.set(nKey,nValue);
+                    } else {
+                        material.set(nKey,nValue);
+                    }
+                }
+            }
+            inneed.clear();
+            material.clear();
+        }
+    </script>
+    
+    
+</html>

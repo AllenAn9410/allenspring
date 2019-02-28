@@ -1,5 +1,7 @@
 package tools.fgo;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,20 +37,20 @@ public class Servent {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(this.name.trim()).append(":").append("[");
-
+        //data =   { "name":"name", "sum":[...], "sm":[...] }
+        sb.append("{").append("\"name\":").append(this.name).append(",");
         if(serventUpdateMaterial.size() != 0){
-            sb.append("sum:[");
+            sb.append("\"sum\":[");
             for(int i=0;i<serventUpdateMaterial.size();i++){
                 sb.append("{").append(serventUpdateMaterial.get(i)).append("}");
                 if(i != serventUpdateMaterial.size()-1 ){
                     sb.append(",");
                 }
             }
-            sb.append("],");
+            sb.append("]").append(",");
         }
         if(skillMaterial.size() != 0){
-            sb.append("sm:[");
+            sb.append("\"sm\":[");
             for(int i=0;i<skillMaterial.size();i++){
                 sb.append("{").append(skillMaterial.get(i)).append("}");
                 if(i != skillMaterial.size()-1 ){
@@ -57,7 +59,8 @@ public class Servent {
             }
             sb.append("]");
         }
-        sb.append("]");
+        sb.append("}");
         return sb.toString();
     }
+
 }

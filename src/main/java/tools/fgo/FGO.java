@@ -119,7 +119,7 @@ public class FGO {
 
             imgName = p.child(0).attr("title");
             num = p.child(1).ownText();
-            res.append(imgName).append(":").append(num);
+            res.append("\"").append(imgName).append("\"").append(":").append("\"").append(num).append("\"");
             if( index != ps.size()-1){
                 res.append(",");
             }
@@ -139,7 +139,7 @@ public class FGO {
         for(Element p : ps){
             imgName = p.child(0).attr("title");
             num = p.child(1).ownText();
-            res.append(imgName).append(":").append(num);
+            res.append("\"").append(imgName).append("\"").append(":").append("\"").append(num).append("\"");
             if( index != ps.size()-1){
                 res.append(",");
             }
@@ -155,7 +155,6 @@ public class FGO {
 
         Servent ser = null;
         StringBuilder sb = new StringBuilder();
-        sb.append("{");
         for(int i=1;i<300;i++){
             ser = new Servent();
             String path = "https://fgo.umowang.com/servant/";
@@ -170,7 +169,7 @@ public class FGO {
                 ress = analyse(path);
                 doc = Jsoup.parse(res[1].replaceAll("div","p").replaceAll("tr>","div>"));
                 docs = Jsoup.parse(ress[1].replaceAll("div","p").replaceAll("tr>","div>"));
-                ser.setName(res[0]);
+                ser.setName("\""+ res[0].trim() + "\"");
                 Elements divs = doc.getElementsByTag("div");
                 Elements divss = docs.getElementsByTag("div");
 
@@ -189,7 +188,6 @@ public class FGO {
             }
             //System.out.println(doc);
         }
-        sb.append("}");
         //ew.close();
         System.out.println(sb.toString());
 

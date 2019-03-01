@@ -6,6 +6,32 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Servent {
+    /*
+        {
+            id:0,
+            name:"",
+            photo:"",
+            class:"",
+            limitBreak:[
+                { curlevel:1,limitbreakitemlist:[ {name:"",num:""}, {name:"",num:""} ] },
+                { curlevel:2,limitbreakitemlist:[ {name:"",num:""}, {name:"",num:""} ] },
+                { curlevel:3,limitbreakitemlist:[ {name:"",num:""}, {name:"",num:""} ] },
+                { curlevel:2,limitbreakitemlist:[ {name:"",num:""}, {name:"",num:""} ] }
+            ],
+            skillsName:[ ... , ... , ...],
+            skillsMaterials:[
+                2:[{},{}],
+                3:[{},{}],
+                4:[{},{}],
+                5:[{},{}],
+                6:[{},{}],
+                7:[{},{}],
+                8:[{},{}],
+                9:[{},{}],
+                10:[]
+            ]
+        }
+     */
     private String name;
     private List<String> serventUpdateMaterial = new ArrayList<>(6);
     private List<String> skillMaterial = new ArrayList<>(15);

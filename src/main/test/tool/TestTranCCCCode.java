@@ -8,7 +8,7 @@ public class TestTranCCCCode {
 
     @Test
     public void test() throws Exception {
-        String str = "毕竟老夫也不是什么恶魔";
+        String str = "丁程鑫是大帅逼";
         String lang = "ccc";
         String res = tc.seekSource(str, lang);
         System.out.println(res);

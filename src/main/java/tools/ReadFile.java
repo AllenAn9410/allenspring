@@ -40,7 +40,7 @@ public class ReadFile {
         try {
             String line;
             is = new FileInputStream(file);
-            BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+            BufferedReader reader = new BufferedReader(new InputStreamReader(is,"gbk"));
             while ((line = reader.readLine()) != null) {
                 buffer.append(line);
                 buffer.append("\n");
@@ -54,4 +54,7 @@ public class ReadFile {
         }
         return buffer.toString();
     }
+
+
+
 }

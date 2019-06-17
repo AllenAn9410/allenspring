@@ -1,6 +1,5 @@
 package mvc.controller;
 
-import mvc.dao.UserDao;
 import mvc.entity.UserInfo;
 import mvc.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,8 +8,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
-
-import javax.annotation.Resource;
 
 @Controller
 public class MvcController {

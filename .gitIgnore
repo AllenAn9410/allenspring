@@ -6,3 +6,5 @@ gtarget
 *.MF
 jy.txtg
 jdbc.properties
+/target/
+fgoPic/

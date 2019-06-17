@@ -1,5 +1,4 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" %>
-<@% page import="" %>
 <!DOCTYPE html>
 <html>
 <head>

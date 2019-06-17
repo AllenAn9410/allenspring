@@ -10,8 +10,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
 
 public class FGO {
 //    static String[] head = {"name","lv1->lv2","lv2->lv3","lv3->lv4","lv4->lv5","lv5->lv6","lv6->lv7","lv7->lv8","lv8->lv9","lv9->lv10"};

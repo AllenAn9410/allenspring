@@ -81,7 +81,7 @@
                     var newKey = 0;
                     var newValue = 0;
                     newKey = skmKey;
-                    newValue = eval(oldSkm[skmKey]*3);
+                    newValue = parseInt(eval(oldSkm[skmKey]*3));
                     if(material.has(newKey)){
                         oldValue = material.get(newKey);
                         newValue = eval(newValue+oldValue);
@@ -98,7 +98,7 @@
                     var nKey = 0;
                     var nValue = 0;
                     nKey = sumKey;
-                    nValue = oldSum[nKey];
+                    nValue = parseInt(oldSum[nKey]);
                     if(material.has(nKey)){
                         oValue = material.get(nKey);
                         nValue = eval(oValue+nValue);

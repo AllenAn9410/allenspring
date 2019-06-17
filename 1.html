@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+
+</body>
+</html>
+<script>
+    var inputStr = "嫯";
+    var totalLength = 0;
+    for( var i = 0 ; i < inputStr.length; i++){
+        if ( inputStr.charCodeAt(i)<= parseInt("0x7F") ){
+            totalLength += 1;
+        }
+        else if(inputStr.charCodeAt(i)<= parseInt("0x7FF")){
+            totalLength += 2;
+        }
+        else if(inputStr.charCodeAt (i) <= parseInt("0xFFFF")){
+            totalLength += 3;
+        }
+        else if(inputStr.charCodeAt (i) <= parseInt("0x1FFFFF")){
+            totalLength += 4;
+        }
+        else if(inputStr.charCodeAt (i) <= parseInt("0x3FFFFFF")){
+            totalLength += 5;
+        }
+        else{
+            totalLength += 6;
+        }
+    }
+    alert(totalLength);
+
+</script>

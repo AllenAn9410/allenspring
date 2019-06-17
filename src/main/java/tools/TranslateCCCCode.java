@@ -62,7 +62,7 @@ public class TranslateCCCCode {
                 reader.close();
                 jsonObject = new JSONObject(lastStr);
             } catch (Exception e) {
-                //CONST.log.debug("Failed to read the ccc.json");
+                e.printStackTrace();
             } finally {
                 if (reader != null) {
                     try {
